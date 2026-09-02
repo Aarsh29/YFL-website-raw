@@ -6,6 +6,7 @@ interface ProgramCardProps {
   image: string;
   icon?: string;
   wide?: boolean;
+  link?: string;
 }
 
 export function ProgramCard({
@@ -14,6 +15,7 @@ export function ProgramCard({
   image,
   icon,
   wide = false,
+  link = "/join-now",
 }: ProgramCardProps) {
   if (wide) {
     return (
@@ -31,7 +33,7 @@ export function ProgramCard({
             {description}
           </p>
           <Link
-            to="/join-now"
+            to={link}
             className="font-body font-bold text-accent-green uppercase tracking-wider text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
           >
             LEARN MORE <span>→</span>
@@ -65,7 +67,7 @@ export function ProgramCard({
         {description}
       </p>
       <Link
-        to="/join-now"
+        to={link}
         className="border-[1.5px] border-white/80 text-white rounded-full px-8 py-3 font-body text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-primary transition-colors"
       >
         Learn more

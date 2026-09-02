@@ -9,6 +9,7 @@ const programs = [
       "A structured program combining movement and mindful eating guidance to help you reach your goals sustainably.",
     image: "/assets/image 4.png",
     icon: "/assets/Dumbbell.png",
+    link: "/join-now",
   },
   {
     title: "Prenatal Yoga",
@@ -16,6 +17,7 @@ const programs = [
       "Build strength for labor, ease pregnancy discomforts, and connect with your baby through breath and movement.",
     image: "/assets/image 2.png",
     icon: "/assets/Mommy Fitness.png",
+    link: "/program/prenatal-yoga",
   },
   {
     title: "Postnatal Yoga",
@@ -23,6 +25,7 @@ const programs = [
       "Gentle core and pelvic floor recovery designed for the postpartum body.",
     image: "/assets/image 1.png",
     icon: "/assets/Mommy Fitness.png",
+    link: "/program/postnatal-yoga",
   },
   {
     title: "Strength & Toning",
@@ -30,13 +33,14 @@ const programs = [
       "Enhance muscle tone, increase flexibility, and move with greater confidence.",
     image: "/assets/image 3.png",
     icon: "/assets/Yoga (1).png",
+    link: "/program/strength-toning",
   },
 ];
 
 export function Program() {
   return (
     <div className="w-full overflow-hidden">
-      <section className="relative w-full h-[325px] sm:h-[380px] md:h-[430px] lg:h-[470px] overflow-hidden bg-[#f2f7e8]">
+      <section className="relative w-full h-[325px] sm:h-[380px] md:h-[430px] lg:h-[470px] overflow-hidden bg-primary-50">
         <img
           src="/assets/Untitled design (2) 1.png"
           alt="Yoga program"
@@ -136,14 +140,14 @@ export function Program() {
         </div>
       </section>
 
-      <section className="relative bg-gradient-to-br from-[#e9f5d9] via-[#c4dda3] to-[#94bd68] px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
+      <section className="relative bg-gradient-to-br from-primary-100 via-primary-200 to-primary-400 px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
         <div className="mx-auto max-w-[1280px]">
           <div className="mb-12">
-            <h2 className="font-heading text-3xl font-bold text-[#587d42] sm:text-4xl">
+            <h2 className="font-heading text-3xl font-bold text-primary-700 sm:text-4xl">
               Our Yoga Programs
             </h2>
 
-            <p className="mt-5 max-w-[1050px] font-body text-base leading-7 text-[#42533a]">
+            <p className="mt-5 max-w-[1050px] font-body text-base leading-7 text-primary-800">
               Discover a range of thoughtfully designed yoga programs tailored
               to support your unique wellness goals. Whatever your goal, we have
               a program that's right for you.
@@ -161,8 +165,8 @@ export function Program() {
                   overflow-hidden
                   rounded-[18px]
                   border
-                  border-[#71965a]
-                  bg-[#f7faf1]
+                  border-primary-500
+                  bg-primary-50
                   shadow-[0_8px_22px_rgba(58,86,43,0.18)]
                   transition-transform
                   duration-300
@@ -189,7 +193,7 @@ export function Program() {
                       inset-y-0
                       left-[-115px]
                       w-[230px]
-                      bg-[#f7faf1]
+                      bg-primary-50
                     "
                     style={{
                       borderRadius: "0 50% 50% 0 / 0 50% 50% 0",
@@ -220,7 +224,7 @@ export function Program() {
                       items-center
                       justify-center
                       rounded-full
-                      bg-[#91b86d]
+                      bg-primary-300
                     "
                   >
                     <img
@@ -278,8 +282,10 @@ export function Program() {
                       hover:gap-4
                     "
                   >
-                    LEARN MORE
-                    <span className="text-[22px] leading-none">⟶</span>
+                    <Link to={program.link} className="flex items-center gap-3">
+                      LEARN MORE
+                      <span className="text-[22px] leading-none">⟶</span>
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -360,7 +366,7 @@ export function Program() {
         />
 
         <img
-          src="/assets/flag (1) 1.png"
+          src="/assets/flag (1) 1.svg"
           alt=""
           className="
             absolute

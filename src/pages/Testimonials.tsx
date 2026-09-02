@@ -77,8 +77,8 @@ export function Testimonials() {
             z-[1]
             w-full
             bg-gradient-to-r
-            from-[#f7f7dd]
-            via-[#f7f7dd]/95
+            from-primary-50
+            via-primary-50/95
             to-transparent
             md:w-[68%]
           "
@@ -107,14 +107,14 @@ export function Testimonials() {
                 font-bold
                 leading-[0.98]
                 tracking-[-0.03em]
-                text-[#183b25]
+                text-secondary-900
                 md:text-[64px]
                 lg:text-[70px]
               "
             >
               <span className="block">Real Stories.</span>
 
-              <span className="block text-[#739f5b]">
+              <span className="block text-primary-400">
                 Real Transformations.
               </span>
             </h1>
@@ -126,7 +126,7 @@ export function Testimonials() {
                 font-body
                 text-[17px]
                 leading-[1.55]
-                text-[#263b2c]
+                text-secondary-700
                 md:text-[19px]
               "
             >
@@ -145,7 +145,7 @@ export function Testimonials() {
                 items-center
                 justify-center
                 rounded-[10px]
-                bg-[#7da95d]
+                bg-primary-400
                 px-8
                 font-body
                 text-[17px]
@@ -154,7 +154,7 @@ export function Testimonials() {
                 text-white
                 shadow-[0_5px_12px_rgba(65,91,48,0.18)]
                 transition
-                hover:bg-[#6d984f]
+                hover:bg-primary-500
               "
             >
               START YOUR JOURNEY
@@ -185,7 +185,7 @@ export function Testimonials() {
                 font-body
                 text-[17px]
                 leading-[1.65]
-                text-[#3f493e]
+                text-primary-700
               "
             >
               Every journey is unique, but each story reflects the positive
@@ -215,7 +215,7 @@ export function Testimonials() {
         </div>
       </section>
 
-      <section className="bg-[#f1f5e9] px-6 py-20 md:px-10 md:py-24">
+      <section className="bg-primary-50 px-6 py-20 md:px-10 md:py-24">
         <div className="mx-auto max-w-[1280px]">
           <div className="text-center">
             <p
@@ -273,7 +273,7 @@ export function Testimonials() {
                     items-center
                     justify-center
                     rounded-full
-                    bg-[#dce9cc]
+                    bg-primary-100
                   "
                 >
                   <img
@@ -291,7 +291,7 @@ export function Testimonials() {
                     text-[18px]
                     font-bold
                     leading-[1.05]
-                    text-[#314b31]
+                    text-primary-800
                   "
                 >
                   {feature.title}
@@ -304,7 +304,7 @@ export function Testimonials() {
                     font-body
                     text-[13px]
                     leading-[1.45]
-                    text-[#71806c]
+                    text-primary-700
                   "
                 >
                   {feature.description}

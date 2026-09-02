@@ -79,23 +79,23 @@ export function About() {
   ];
 
   return (
-    <div className="overflow-hidden bg-[#F4F7EF]">
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-[#F4F7EF]">
+    <div className="overflow-hidden bg-background">
+      <section className="py-16 md:py-24 px-6 md:px-10 bg-background">
         <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row gap-16 items-center">
           <div className="md:w-5/12 relative z-10">
             <h1 className="font-heading text-[4.5rem] md:text-[5.5rem] font-bold leading-[1] mb-6">
-              <span className="block text-[#6A8A4A]">Yoga Refined.</span>
+              <span className="block text-primary-600">Yoga Refined.</span>
 
-              <span className="block text-[#6A8A4A]">Mind Restored.</span>
+              <span className="block text-primary-600">Mind Restored.</span>
             </h1>
 
-            <p className="font-body text-[#3F4F30] font-semibold text-lg leading-relaxed mb-10 max-w-md">
+            <p className="font-body text-primary-800 font-semibold text-lg leading-relaxed mb-10 max-w-md">
               Discover our story, our mission, and the values that inspire us to
               help people live healthier, more balanced lives through the
               practice of yoga.
             </p>
 
-            <Button className="bg-[#799C59] hover:bg-[#608044] text-white rounded-md px-8 py-4 font-bold text-sm tracking-widest shadow-md">
+            <Button className="bg-primary-500 hover:bg-primary-600 text-white rounded-md px-8 py-4 font-bold text-sm tracking-widest shadow-md">
               MEET OUR INSTRUCTORS
             </Button>
           </div>
@@ -110,11 +110,11 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 px-6 md:px-10 bg-[#F4F7EF] relative">
+      <section className="py-16 lg:py-24 px-6 md:px-10 bg-background relative">
         <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row gap-8 lg:gap-16 items-center">
           <div className="md:w-1/2 relative h-[300px] lg:h-[500px] flex items-center justify-center">
             <div className="relative w-[300px] h-[300px] lg:w-[360px] lg:h-[360px]">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[15%] w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-[#F4F7EF] bg-white">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[15%] w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-background bg-white">
                 <img
                   src="/assets/Mask group.png"
                   alt=""
@@ -122,7 +122,7 @@ export function About() {
                 />
               </div>
 
-              <div className="absolute top-1/2 left-0 -translate-x-[15%] -translate-y-1/2 w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-[#F4F7EF] bg-white">
+              <div className="absolute top-1/2 left-0 -translate-x-[15%] -translate-y-1/2 w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-background bg-white">
                 <img
                   src="/assets/Mask group (1).png"
                   alt=""
@@ -130,7 +130,7 @@ export function About() {
                 />
               </div>
 
-              <div className="absolute top-1/2 right-0 translate-x-[15%] -translate-y-1/2 w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-[#F4F7EF] bg-white">
+              <div className="absolute top-1/2 right-0 translate-x-[15%] -translate-y-1/2 w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-background bg-white">
                 <img
                   src="/assets/Mask group (2).png"
                   alt=""
@@ -138,7 +138,7 @@ export function About() {
                 />
               </div>
 
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[15%] w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-[#F4F7EF] bg-white">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[15%] w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-background bg-white">
                 <img
                   src="/assets/Mask group (3).png"
                   alt=""
@@ -149,11 +149,11 @@ export function About() {
           </div>
 
           <div className="md:w-1/2 text-right relative z-10 md:pr-4 lg:pr-10">
-            <span className="font-body text-xs font-black uppercase tracking-[0.2em] text-[#5E774C] mb-6 block">
+            <span className="font-body text-xs font-black uppercase tracking-[0.2em] text-primary-600 mb-6 block">
               OUR STORY
             </span>
 
-            <p className="font-body text-sm lg:text-base text-[#3F4F30] font-medium lg:font-semibold leading-relaxed md:pl-12 lg:pl-20 text-right">
+            <p className="font-body text-sm lg:text-base text-primary-800 font-medium lg:font-semibold leading-relaxed md:pl-12 lg:pl-20 text-right">
               Yoga for Life was founded with a simple vision—make the benefits
               of yoga accessible to everyone. We believe that true wellness
               comes from nurturing both the body and the mind. Through authentic
@@ -165,15 +165,15 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-14 md:py-16 px-6 md:px-10 bg-white relative border-y border-[#E6ECD9]">
+      <section className="py-14 md:py-16 px-6 md:px-10 bg-white relative border-y border-border-soft">
         <div className="max-w-[1320px] mx-auto">
-          <span className="font-heading text-xl md:text-2xl font-bold text-[#6A8A4A] tracking-wide block mb-12 md:mb-14">
+          <span className="font-heading text-xl md:text-2xl font-bold text-primary-600 tracking-wide block mb-12 md:mb-14">
             OUR MISSION & VISION
           </span>
 
           <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-24">
-            <div className="w-full max-w-[300px] h-[330px] bg-[#F4F7EF] rounded-[1rem] border border-[#789C59] px-7 py-5 flex flex-col items-center text-center relative shadow-sm">
-              <div className="absolute -top-8 bg-[#F4F7EF] border border-[#789C59] w-16 h-16 rounded-full flex items-center justify-center">
+            <div className="w-full max-w-[300px] h-[330px] bg-background rounded-[1rem] border border-primary px-7 py-5 flex flex-col items-center text-center relative shadow-sm">
+              <div className="absolute -top-8 bg-background border border-primary w-16 h-16 rounded-full flex items-center justify-center">
                 <img
                   src="/assets/Goal.png"
                   alt=""
@@ -182,20 +182,20 @@ export function About() {
               </div>
 
               <div className="flex items-center justify-center gap-4 w-full mt-12 mb-3">
-                <div className="h-px bg-[#D8E4CC] flex-1" />
+                <div className="h-px bg-primary-soft flex-1" />
 
-                <span className="text-[11px] font-medium text-[#799C59]">
+                <span className="text-[11px] font-medium text-primary">
                   OUR
                 </span>
 
-                <div className="h-px bg-[#D8E4CC] flex-1" />
+                <div className="h-px bg-primary-soft flex-1" />
               </div>
 
-              <h3 className="font-heading text-[1.7rem] text-[#5E774C] font-bold mb-3 tracking-wide">
+              <h3 className="font-heading text-[1.7rem] text-primary-mid font-bold mb-3 tracking-wide">
                 MISSION
               </h3>
 
-              <p className="font-body text-[#3F4F30] text-[12px] leading-[1.5] font-medium max-w-[245px]">
+              <p className="font-body text-text-body text-[12px] leading-[1.5] font-medium max-w-[245px]">
                 To inspire healthier lifestyles by offering accessible,
                 personalized yoga programs that support physical strength,
                 mental clarity, and emotional well-being.
@@ -210,8 +210,8 @@ export function About() {
               </div>
             </div>
 
-            <div className="w-full max-w-[300px] h-[330px] bg-[#F4F7EF] rounded-[1rem] border border-[#789C59] px-7 py-5 flex flex-col items-center text-center relative shadow-sm">
-              <div className="absolute -top-8 bg-[#F4F7EF] border border-[#789C59] w-16 h-16 rounded-full flex items-center justify-center">
+            <div className="w-full max-w-[300px] h-[330px] bg-background rounded-[1rem] border border-primary px-7 py-5 flex flex-col items-center text-center relative shadow-sm">
+              <div className="absolute -top-8 bg-background border border-primary w-16 h-16 rounded-full flex items-center justify-center">
                 <img
                   src="/assets/Eye.png"
                   alt=""
@@ -220,20 +220,20 @@ export function About() {
               </div>
 
               <div className="flex items-center justify-center gap-4 w-full mt-12 mb-3">
-                <div className="h-px bg-[#D8E4CC] flex-1" />
+                <div className="h-px bg-primary-soft flex-1" />
 
-                <span className="text-[11px] font-medium text-[#799C59]">
+                <span className="text-[11px] font-medium text-primary">
                   OUR
                 </span>
 
-                <div className="h-px bg-[#D8E4CC] flex-1" />
+                <div className="h-px bg-primary-soft flex-1" />
               </div>
 
-              <h3 className="font-heading text-[1.7rem] text-[#5E774C] font-bold mb-3 tracking-wide">
+              <h3 className="font-heading text-[1.7rem] text-primary-mid font-bold mb-3 tracking-wide">
                 VISION
               </h3>
 
-              <p className="font-body text-[#3F4F30] text-[12px] leading-[1.5] font-medium max-w-[245px]">
+              <p className="font-body text-text-body text-[12px] leading-[1.5] font-medium max-w-[245px]">
                 To create a community where people of all ages can embrace yoga
                 as a lifelong journey to inner peace. We strive to inspire
                 positive lifestyle changes through mindful practice and
@@ -252,18 +252,18 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 px-6 md:px-10 bg-[#F4F7EF]">
+      <section className="py-16 md:py-20 px-6 md:px-10 bg-background">
         <div className="max-w-[1320px] mx-auto">
           <div className="mb-12">
-            <span className="font-heading text-sm md:text-base font-bold text-[#6A8A4A] tracking-[0.15em] block mb-3">
+            <span className="font-heading text-sm md:text-base font-bold text-primary-600 tracking-[0.15em] block mb-3">
               OUR TEAM
             </span>
 
-            <h2 className="font-heading text-[2.5rem] md:text-[3rem] text-[#6A8A4A] font-bold mb-5">
+            <h2 className="font-heading text-[2.5rem] md:text-[3rem] text-primary-600 font-bold mb-5">
               Meet Our Instructors
             </h2>
 
-            <p className="font-body text-[#2F3B24] text-base md:text-lg font-medium leading-relaxed max-w-[1200px]">
+            <p className="font-body text-primary-800 text-base md:text-lg font-medium leading-relaxed max-w-[1200px]">
               Our certified instructors are passionate about helping you achieve
               your wellness goals. With years of experience and a personalized
               approach, they create a supportive environment where every student
@@ -280,9 +280,9 @@ export function About() {
                   overflow-hidden
                   flex
                   flex-col
-                  bg-[#F5FAED]
+                  bg-surface
                   border-[2px]
-                  border-[#A9C48E]
+                  border-primary-400
                   rounded-[1.5rem]
                   min-h-[730px]
                   shadow-[0_3px_10px_rgba(72,95,45,0.08)]
@@ -323,7 +323,7 @@ export function About() {
                         h-[205px]
                         rounded-full
                         border-[3px]
-                        border-[#A9C48E]
+                        border-primary-400
                         bg-white
                         p-[5px]
                         shadow-sm
@@ -348,7 +348,7 @@ export function About() {
                         w-[62px]
                         h-[62px]
                         rounded-full
-                        bg-[#79A653]
+                        bg-primary-300
                         border-[3px]
                         border-white
                         flex
@@ -370,7 +370,7 @@ export function About() {
                       font-heading
                       text-[2.15rem]
                       md:text-[2.25rem]
-                      text-[#6A8A4A]
+                      text-primary-600
                       font-bold
                       leading-none
                       mb-2
@@ -384,7 +384,7 @@ export function About() {
                       font-body
                       text-[14px]
                       font-medium
-                      text-[#26321D]
+                      text-text
                       tracking-wide
                       mb-5
                     "
@@ -398,8 +398,8 @@ export function About() {
                       items-center
                       justify-center
                       gap-2
-                      bg-[#E5EFD1]
-                      text-[#2F3B24]
+                      bg-primary-100
+                      text-primary-900
                       px-5
                       py-2
                       rounded-full
@@ -409,7 +409,7 @@ export function About() {
                       mb-5
                     "
                   >
-                    <span className="text-[#79A653] text-[17px] leading-none">
+                    <span className="text-primary-300 text-[17px] leading-none">
                       ★
                     </span>
 
@@ -419,7 +419,7 @@ export function About() {
                   <div
                     className="
                       w-[calc(100%-10px)]
-                      bg-[#E8F0D5]
+                      bg-surface-soft
                       rounded-[1rem]
                       px-6
                       py-5
@@ -429,7 +429,7 @@ export function About() {
                     <p
                       className="
                         font-body
-                        text-[#56614A]
+                        text-primary-700
                         text-[15px]
                         leading-[1.45]
                         font-medium
@@ -476,13 +476,13 @@ export function About() {
                     className="
                       relative
                       z-20
-                      bg-[#DCE8BD]
+                      bg-surface-strong
                       px-5
                       pt-8
                       pb-7
                     "
                   >
-                    <div className="grid grid-cols-3 divide-x divide-[#A9C48E]">
+                    <div className="grid grid-cols-3 divide-x divide-primary-400">
                       {instructor.stats.map((stat, statIdx) => (
                         <div
                           key={statIdx}
@@ -500,8 +500,8 @@ export function About() {
                               h-[54px]
                               rounded-full
                               border-[2px]
-                              border-[#A9C48E]
-                              bg-[#E8F0D5]
+                              border-primary-400
+                              bg-surface-soft
                               flex
                               items-center
                               justify-center
@@ -564,7 +564,7 @@ export function About() {
         "
       >
         <img
-          src="/assets/flag (1) 3.png"
+          src="/assets/flag (1) 3.svg"
           alt=""
           aria-hidden="true"
           className="
@@ -585,7 +585,7 @@ export function About() {
         />
 
         <img
-          src="/assets/flag (1) 2.png"
+          src="/assets/flag (1) 2.svg"
           alt=""
           aria-hidden="true"
           className="
@@ -646,11 +646,11 @@ export function About() {
                 w-full
                 max-w-[550px]
                 h-[72px]
-                bg-[#7FA55D]
-                hover:bg-[#6F914F]
+                bg-primary-500
+                hover:bg-primary-600
                 text-white
                 border
-                border-[#A8C487]
+                border-accent
                 rounded-[14px]
                 font-body
                 font-bold

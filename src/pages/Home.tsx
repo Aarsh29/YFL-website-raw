@@ -66,8 +66,8 @@ export function Home() {
   ];
 
   return (
-    <div className="w-full overflow-hidden bg-[#F4F7EF]">
-      <section className="relative min-h-[430px] md:min-h-[500px] lg:min-h-[520px] flex items-center overflow-hidden bg-[#F4F7EF]">
+    <div className="w-full overflow-hidden bg-background">
+      <section className="relative min-h-[430px] md:min-h-[500px] lg:min-h-[520px] flex items-center overflow-hidden bg-background">
         <div className="absolute inset-0">
           <img
             src="/assets/yfl 1.png"
@@ -80,8 +80,8 @@ export function Home() {
               absolute
               inset-0
               bg-gradient-to-r
-              from-[#F4F0DF]
-              via-[#F4F0DF]/95
+              from-primary-50
+              via-primary-50/95
               via-[55%]
               to-transparent
             "
@@ -110,7 +110,7 @@ export function Home() {
                 font-bold
                 uppercase
                 tracking-[0.18em]
-                text-[#6A8A4A]
+                text-primary-600
                 mb-5
                 block
               "
@@ -130,15 +130,15 @@ export function Home() {
                 mb-6
               "
             >
-              <span className="block text-[#26351D]">Find Balance.</span>
+              <span className="block text-primary-900">Find Balance.</span>
 
-              <span className="block text-[#7FA55D]">Live Better.</span>
+              <span className="block text-primary-400">Live Better.</span>
             </h1>
 
             <p
               className="
                 font-body
-                text-[#4D5844]
+                text-primary-700
                 text-sm
                 md:text-base
                 leading-relaxed
@@ -153,8 +153,8 @@ export function Home() {
             <Link to="/join-now">
               <Button
                 className="
-                  bg-[#7FA55D]
-                  hover:bg-[#6D914D]
+                  bg-primary-400
+                  hover:bg-primary-600
                   text-white
                   rounded-md
                   px-8
@@ -173,7 +173,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="relative bg-[#F8FAF2] border-y border-[#E8EEDD]">
+      <section className="relative bg-primary-50 border-y border-primary-100">
         <div
           className="
             relative
@@ -186,7 +186,7 @@ export function Home() {
           "
         >
           <img
-            src="/assets/flag (1) 2.png"
+            src="/assets/flag (1) 2.svg"
             alt=""
             aria-hidden="true"
             className="
@@ -207,7 +207,7 @@ export function Home() {
           />
 
           <img
-            src="/assets/flag (1) 3.png"
+            src="/assets/flag (1) 3.svg"
             alt=""
             aria-hidden="true"
             className="
@@ -264,7 +264,7 @@ export function Home() {
                       text-[2.3rem]
                       md:text-[2.8rem]
                       leading-none
-                      text-[#7BA258]
+                      text-primary-400
                       font-normal
                     "
                   >
@@ -276,7 +276,7 @@ export function Home() {
                       font-body
                       text-[10px]
                       md:text-[12px]
-                      text-[#26351D]
+                      text-primary-900
                       mt-2
                       whitespace-nowrap
                     "
@@ -290,7 +290,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="py-14 md:py-20 px-6 md:px-10 bg-[#F4F7EF]">
+      <section className="py-14 md:py-20 px-6 md:px-10 bg-background">
         <div className="max-w-[1180px] mx-auto">
           <div className="text-center max-w-[760px] mx-auto mb-10">
             <span
@@ -301,7 +301,7 @@ export function Home() {
                 font-bold
                 uppercase
                 tracking-[0.18em]
-                text-[#6A8A4A]
+                text-primary-600
                 mb-3
                 block
               "
@@ -312,7 +312,7 @@ export function Home() {
             <p
               className="
                 font-body
-                text-[#4A5740]
+                text-primary-700
                 text-xs
                 md:text-sm
                 leading-relaxed
@@ -329,7 +329,7 @@ export function Home() {
                 font-heading
                 text-2xl
                 md:text-3xl
-                text-[#5E774C]
+                text-primary-600
                 font-bold
               "
             >
@@ -396,7 +396,7 @@ export function Home() {
                 font-bold
                 uppercase
                 tracking-[0.18em]
-                text-[#6A8A4A]
+                text-primary-600
                 mb-3
                 block
               "
@@ -409,7 +409,7 @@ export function Home() {
                 font-heading
                 text-2xl
                 md:text-3xl
-                text-[#5E774C]
+                text-primary-600
                 font-bold
                 leading-tight
                 mb-4
@@ -423,7 +423,7 @@ export function Home() {
             <p
               className="
                 font-body
-                text-[#4B5742]
+                text-primary-700
                 text-xs
                 md:text-sm
                 leading-relaxed
@@ -441,8 +441,8 @@ export function Home() {
               <Button
                 variant="outline-light"
                 className="
-                  text-[#6A8A4A]
-                  border-[#7FA55D]
+                  text-primary-600
+                  border-primary-400
                   text-xs
                   px-6
                   py-2
@@ -474,8 +474,8 @@ export function Home() {
                   md:p-4
                   rounded-lg
                   border
-                  border-[#DCE5D3]
-                  bg-[#F9FBF6]
+                  border-primary-100
+                  bg-primary-50
                 "
               >
                 <div
@@ -483,7 +483,7 @@ export function Home() {
                     w-9
                     h-9
                     rounded-full
-                    bg-[#EAF1E0]
+                    bg-primary-100
                     flex
                     items-center
                     justify-center
@@ -502,7 +502,7 @@ export function Home() {
                     font-body
                     text-[10px]
                     md:text-[11px]
-                    text-[#38442F]
+                    text-primary-800
                     leading-relaxed
                   "
                 >
@@ -522,7 +522,7 @@ export function Home() {
           md:py-20
           px-6
           md:px-10
-          bg-[#F4F7EF]
+          bg-background
         "
       >
         <div className="max-w-[1180px] mx-auto relative z-10">
@@ -535,7 +535,7 @@ export function Home() {
                 font-bold
                 uppercase
                 tracking-[0.18em]
-                text-[#6A8A4A]
+                text-primary-600
                 mb-3
                 block
               "
@@ -548,7 +548,7 @@ export function Home() {
                 font-heading
                 text-2xl
                 md:text-3xl
-                text-[#5E774C]
+                text-primary-600
                 font-bold
                 mb-3
               "
@@ -559,7 +559,7 @@ export function Home() {
             <p
               className="
                 font-body
-                text-[#4B5742]
+                text-primary-700
                 text-xs
                 md:text-sm
                 leading-relaxed
@@ -606,7 +606,7 @@ export function Home() {
               font-bold
               uppercase
               tracking-[0.18em]
-              text-[#6A8A4A]
+              text-primary-600
               mb-3
               block
             "
@@ -617,7 +617,7 @@ export function Home() {
           <p
             className="
               font-body
-              text-[#4B5742]
+              text-primary-700
               text-xs
               md:text-sm
               mb-3
@@ -632,7 +632,7 @@ export function Home() {
               font-heading
               text-2xl
               md:text-3xl
-              text-[#5E774C]
+              text-primary-600
               font-bold
             "
           >
@@ -651,12 +651,12 @@ export function Home() {
           md:py-20
           px-6
           md:px-10
-          bg-[#F4F7EF]
+          bg-background
           overflow-hidden
         "
       >
         <img
-          src="/assets/flag (1) 2.png"
+          src="/assets/flag (1) 2.svg"
           alt=""
           aria-hidden="true"
           className="
@@ -672,7 +672,7 @@ export function Home() {
         />
 
         <img
-          src="/assets/flag (1) 3.png"
+          src="/assets/flag (1) 3.svg"
           alt=""
           aria-hidden="true"
           className="
@@ -697,7 +697,7 @@ export function Home() {
                 font-bold
                 uppercase
                 tracking-[0.18em]
-                text-[#6A8A4A]
+                text-primary-600
                 mb-3
                 block
               "
@@ -707,7 +707,7 @@ export function Home() {
 
             <div className="flex items-center justify-center gap-3 mb-3">
               <img
-                src="/assets/flag (1) 2.png"
+                src="/assets/flag (1) 2.svg"
                 alt=""
                 className="
                   w-8
@@ -723,7 +723,7 @@ export function Home() {
                   font-heading
                   text-xl
                   md:text-3xl
-                  text-[#5E774C]
+                  text-primary-600
                   font-bold
                 "
               >
@@ -731,7 +731,7 @@ export function Home() {
               </h2>
 
               <img
-                src="/assets/flag (1) 3.png"
+                src="/assets/flag (1) 3.svg"
                 alt=""
                 className="
                   w-8
@@ -745,7 +745,7 @@ export function Home() {
             <p
               className="
                 font-body
-                text-[#4B5742]
+                text-primary-700
                 text-xs
                 leading-relaxed
               "
@@ -810,7 +810,7 @@ export function Home() {
               bg-white
               rounded-xl
               border
-              border-[#D9E2CF]
+              border-primary-200
               px-5
               py-5
               flex
@@ -828,7 +828,7 @@ export function Home() {
                   font-heading
                   text-sm
                   md:text-base
-                  text-[#5E774C]
+                  text-primary-600
                   font-semibold
                   mb-1
                 "
@@ -839,7 +839,7 @@ export function Home() {
               <p
                 className="
                   font-body
-                  text-[#5D6757]
+                  text-primary-700
                   text-[10px]
                   md:text-xs
                   leading-relaxed
@@ -926,7 +926,7 @@ export function Home() {
         "
       >
         <img
-          src="/assets/flag (1) 2.png"
+          src="/assets/flag (1) 2.svg"
           alt=""
           aria-hidden="true"
           className="
@@ -946,7 +946,7 @@ export function Home() {
         />
 
         <img
-          src="/assets/flag (1) 3.png"
+          src="/assets/flag (1) 3.svg"
           alt=""
           aria-hidden="true"
           className="

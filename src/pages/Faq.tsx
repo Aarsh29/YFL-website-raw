@@ -33,17 +33,17 @@ export function Faq() {
 
   return (
     <main className="w-full overflow-hidden">
-      <section className="w-full bg-[#eff8e9]">
+      <section className="w-full bg-primary-50">
         <div className="grid min-h-[430px] md:min-h-[500px] grid-cols-1 md:grid-cols-2">
           <div className="flex items-center px-8 py-16 md:px-12 md:py-20 lg:px-16 xl:px-20">
             <div className="w-full max-w-[560px]">
-              <h1 className="font-heading text-[38px] leading-[1.08] text-[#193b25] md:text-[48px] lg:text-[52px]">
+              <h1 className="font-heading text-[38px] leading-[1.08] text-secondary-900 md:text-[48px] lg:text-[52px]">
                 We're Here to
                 <br />
                 Answer Your Questions
               </h1>
 
-              <p className="mt-4 max-w-[500px] font-body text-[15px] leading-7 text-[#334735] md:text-[17px]">
+              <p className="mt-4 max-w-[500px] font-body text-[15px] leading-7 text-secondary-600 md:text-[17px]">
                 Find answers to the most common questions about our yoga
                 programs, classes, memberships, and more.
               </p>
@@ -76,7 +76,7 @@ export function Faq() {
                 items-center
                 justify-center
                 rounded-[10px]
-                bg-[#7ea65c]
+                bg-primary-400
                 px-6
                 py-3
                 text-center
@@ -100,8 +100,8 @@ export function Faq() {
                   overflow-hidden
                   rounded-[7px]
                   border
-                  border-[#dce6d8]
-                  bg-[#f5f8f3]
+                  border-primary-100
+                  bg-primary-50
                   transition-all
                 "
               >
@@ -118,10 +118,10 @@ export function Faq() {
                 className="absolute left-0 top-0 w-16 opacity-80 pointer-events-none"
               />
 
-              <div className="absolute inset-0 rounded-full bg-[#dce9d2]" />
+              <div className="absolute inset-0 rounded-full bg-primary-100" />
 
               <Mail
-                className="relative z-10 h-12 w-12 text-[#7ea65c]"
+                className="relative z-10 h-12 w-12 text-primary-400"
                 strokeWidth={1.7}
               />
             </div>
@@ -133,7 +133,7 @@ export function Faq() {
                 font-medium
                 uppercase
                 leading-tight
-                text-[#1c3322]
+                text-secondary-900
                 md:text-[34px]
               "
             >
@@ -148,7 +148,7 @@ export function Faq() {
                 font-body
                 text-[15px]
                 leading-7
-                text-[#435344]
+                text-primary-700
                 md:text-[17px]
               "
             >
@@ -176,11 +176,11 @@ export function Faq() {
           relative
           overflow-hidden
           border-y
-          border-[#d2dfc8]
+          border-primary-200
           bg-gradient-to-r
-          from-[#9ab87d]
-          via-[#dce8d1]
-          to-[#ffffff]
+          from-primary-300
+          via-primary-100
+          to-white
         "
       >
         <div
@@ -207,7 +207,7 @@ export function Faq() {
                 font-bold
                 uppercase
                 tracking-[0.16em]
-                text-[#35512f]
+                text-primary-700
               "
             >
               STILL HAVE QUESTIONS?
@@ -221,7 +221,7 @@ export function Faq() {
                 font-bold
                 uppercase
                 leading-tight
-                text-[#193a24]
+                text-secondary-900
                 md:text-[34px]
               "
             >
@@ -235,7 +235,7 @@ export function Faq() {
                 font-body
                 text-[15px]
                 leading-7
-                text-[#263a2b]
+                text-secondary-700
                 md:text-[17px]
               "
             >

@@ -167,16 +167,16 @@ export function JoinNow() {
           <div className="max-w-[1180px] mx-auto px-6">
             <div className="mb-8">
               <div className="flex items-start gap-4">
-                <div className="w-7 h-7 rounded-full border-2 border-[#7BA258] text-[#6A8A4A] flex items-center justify-center font-body font-bold text-sm shrink-0">
+                  <div className="w-7 h-7 rounded-full border-2 border-primary-500 text-primary-600 flex items-center justify-center font-body font-bold text-sm shrink-0">
                   1
                 </div>
 
                 <div>
-                  <h2 className="font-heading text-lg md:text-xl font-bold text-[#5E774C]">
+                    <h2 className="font-heading text-lg md:text-xl font-bold text-primary-600">
                     CHOOSE YOUR PROGRAM
                   </h2>
 
-                  <p className="font-body text-sm md:text-base text-[#34432A] mt-2">
+                  <p className="font-body text-sm md:text-base text-primary-800 mt-2">
                     Select the program that best matches your goals.
                   </p>
                 </div>
@@ -206,12 +206,12 @@ export function JoinNow() {
                       transition-all
                       ${
                         selected
-                          ? "border-[#7BA258] bg-[#F4F7EF] shadow-sm"
-                          : "border-[#AEB9A5] bg-[#F7F9F4] hover:border-[#7BA258]"
+                          ? "border-primary-500 bg-background shadow-sm"
+                          : "border-primary-300 bg-primary-50 hover:border-primary-500"
                       }
                     `}
                   >
-                    <div className="w-14 h-14 rounded-full bg-[#E8EFDF] flex items-center justify-center mb-4">
+                    <div className="w-14 h-14 rounded-full bg-primary-100 flex items-center justify-center mb-4">
                       <img
                         src={program.icon}
                         alt=""
@@ -219,13 +219,13 @@ export function JoinNow() {
                       />
                     </div>
 
-                    <h3 className="font-heading text-[13px] md:text-sm font-bold text-[#5E774C] underline underline-offset-2">
+                    <h3 className="font-heading text-[13px] md:text-sm font-bold text-primary-600 underline underline-offset-2">
                       {program.title}
                     </h3>
 
-                    <div className="w-full h-px bg-[#D8E0D2] my-3" />
+                    <div className="w-full h-px bg-primary-200 my-3" />
 
-                    <p className="font-body text-[11px] leading-[1.35] text-[#1F261B] max-w-[180px]">
+                    <p className="font-body text-[11px] leading-[1.35] text-primary-900 max-w-[180px]">
                       {program.description}
                     </p>
 
@@ -241,8 +241,8 @@ export function JoinNow() {
                         justify-center
                         ${
                           selected
-                            ? "border-[#7BA258] bg-[#7BA258]"
-                            : "border-[#7BA258] bg-transparent"
+                            ? "border-primary-500 bg-primary-500"
+                            : "border-primary-500 bg-transparent"
                         }
                       `}
                     >

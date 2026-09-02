@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 export function Contact() {
   return (
     <div className="w-full bg-white">
-      <section className="w-full bg-bg-cream relative overflow-hidden min-h-[550px] md:min-h-[700px]">
+      <section className="w-full bg-background relative overflow-hidden min-h-[550px] md:min-h-[700px]">
         <img
           src="/assets/hero-yoga-studio.png"
           alt="Yoga studio"
@@ -15,11 +15,11 @@ export function Contact() {
 
         <div className="relative z-10 w-full h-full flex items-center">
           <div className="w-full max-w-[650px] px-8 sm:px-12 lg:px-16 xl:px-24">
-            <h1 className="font-heading text-primary-dark font-bold leading-[1.1] text-[52px] sm:text-[64px] lg:text-[72px] xl:text-[80px] mb-8">
+            <h1 className="font-heading text-primary-900 font-bold leading-[1.1] text-[52px] sm:text-[64px] lg:text-[72px] xl:text-[80px] mb-8">
               Let's Begin Your Wellness Journey Together.
             </h1>
 
-            <p className="font-body text-text-dark text-base sm:text-lg lg:text-[18px] leading-[1.6] max-w-[620px] mb-10">
+            <p className="font-body text-primary-800 text-base sm:text-lg lg:text-[18px] leading-[1.6] max-w-[620px] mb-10">
               Have questions about our yoga classes, programs, or memberships?
               We're here to help. Contact us today and take the first step
               toward a healthier, more balanced life!
@@ -49,7 +49,7 @@ export function Contact() {
                 Contact Information
               </h2>
 
-              <p className="font-body text-text-muted text-[15px] sm:text-[16px] leading-[1.7] max-w-[520px] mb-8">
+              <p className="font-body text-primary-700 text-[15px] sm:text-[16px] leading-[1.7] max-w-[520px] mb-8">
                 Have a question or need guidance? Connect with our team using
                 any of the methods below, and we'll get back to you as soon as
                 possible.
@@ -57,8 +57,8 @@ export function Contact() {
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4 px-4 py-3.5 rounded-xl border border-border-soft bg-bg-cream/60">
-                  <div className="w-11 h-11 rounded-full bg-accent-light/30 flex items-center justify-center shrink-0">
-                    <MapPin size={20} className="text-accent-green" />
+                  <div className="w-11 h-11 rounded-full bg-primary-100 flex items-center justify-center shrink-0">
+                    <MapPin size={20} className="text-primary-500" />
                   </div>
 
                   <div>
@@ -126,7 +126,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="hidden lg:block w-px bg-[#cdd8c5] self-stretch mx-4 xl:mx-8" />
+            <div className="hidden lg:block w-px bg-primary-200 self-stretch mx-4 xl:mx-8" />
 
             <div className="w-full lg:w-1/2 mt-14 lg:mt-0 lg:pl-8 xl:pl-10">
               <span className="block font-body text-[11px] sm:text-[12px] font-bold tracking-[0.2em] text-accent-green mb-4">
@@ -137,7 +137,7 @@ export function Contact() {
                 Message Your Information
               </h2>
 
-              <p className="font-body text-text-muted text-[15px] sm:text-[16px] leading-[1.7] mb-8">
+              <p className="font-body text-primary-700 text-[15px] sm:text-[16px] leading-[1.7] mb-8">
                 Fill out the form below, and our team will get back to you
                 shortly.
               </p>
