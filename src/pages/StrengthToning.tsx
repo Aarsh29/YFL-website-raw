@@ -22,7 +22,7 @@ export function StrengthToning() {
 
   return (
     <div className="w-full overflow-hidden">
-      {/* Hero Section */}
+ 
       <section className="relative w-full h-[325px] sm:h-[380px] md:h-[430px] lg:h-[500px] overflow-hidden bg-primary-50">
         <img
           src="/assets/image 3.png"
@@ -52,7 +52,7 @@ export function StrengthToning() {
         </div>
       </section>
 
-      {/* About Program Section */}
+   
       <section className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24 py-16 md:py-20">
         <div className="mb-8">
           <h2 className="font-heading text-primary-600 font-medium text-2xl md:text-3xl mb-6">
@@ -64,7 +64,7 @@ export function StrengthToning() {
         </div>
       </section>
 
-      {/* What You'll Gain Section */}
+     
       <section className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24 py-16 md:py-20">
         <h2 className="font-heading text-primary-600 font-medium text-2xl md:text-3xl mb-12">
           WHAT YOU'LL GAIN
@@ -82,7 +82,7 @@ export function StrengthToning() {
         </div>
       </section>
 
-      {/* Who Is It For Section */}
+      
       <section className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24 py-16 md:py-20">
         <h2 className="font-heading text-primary-600 font-medium text-2xl md:text-3xl mb-6">
           WHO IS IT FOR?
@@ -92,7 +92,7 @@ export function StrengthToning() {
         </p>
       </section>
 
-      {/* CTA Section */}
+  
       <section className="w-full bg-primary-100 py-16 md:py-24">
         <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24 text-center">
           <h2 className="font-heading text-primary-600 font-semibold text-3xl md:text-4xl mb-4">

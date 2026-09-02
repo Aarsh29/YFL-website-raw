@@ -201,7 +201,7 @@ export function PrenatalYoga() {
 
           </div>
 
-          {/* Decorative leaf */}
+  
           <img
             src="/assets/leaves.png"
             alt=""
@@ -218,14 +218,11 @@ export function PrenatalYoga() {
             "
           />
 
-          {/* Divider */}
+      
           <div className="mt-7 h-px w-full bg-[#cfdac5]" />
         </div>
       </section>
 
-      {/* =========================================================
-          WHAT YOU'LL GAIN
-      ========================================================= */}
       <section className="w-full bg-white px-8 pb-[58px] pt-[0px] lg:px-12">
 
         <div className="mx-auto max-w-[1200px]">
@@ -298,14 +295,11 @@ export function PrenatalYoga() {
 
           </div>
 
-          {/* Divider */}
+          
           <div className="mt-7 h-px w-full bg-[#d9e0d4]" />
         </div>
       </section>
 
-      {/* =========================================================
-          WHO IS IT FOR
-      ========================================================= */}
       <section className="w-full bg-white px-8 pb-[65px] pt-[0px] lg:px-12">
 
         <div className="mx-auto max-w-[1200px]">
@@ -342,9 +336,7 @@ export function PrenatalYoga() {
         </div>
       </section>
 
-      {/* =========================================================
-          CTA SECTION
-      ========================================================= */}
+  
       <section
         className="
           relative
@@ -360,7 +352,7 @@ export function PrenatalYoga() {
         }}
       >
 
-        {/* Light overlay */}
+        
         <div className="absolute inset-0 bg-[#dce7c5]/30" />
 
         <div

@@ -29,9 +29,7 @@ export function WeightLossYoga() {
   return (
     <main className="w-full overflow-hidden bg-white">
 
-      {/* =========================================================
-          HERO
-      ========================================================= */}
+      
       <section className="relative w-full h-[400px] md:h-[430px] lg:h-[450px] overflow-hidden">
 
         <img
@@ -40,13 +38,10 @@ export function WeightLossYoga() {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        {/* Very light overlay only.
-            The image itself already contains the visual design. */}
         <div className="absolute inset-0 bg-white/5" />
 
         <div className="relative z-10 h-full max-w-[1200px] mx-auto px-6 md:px-10 lg:px-0">
 
-          {/* Hero content */}
           <div className="h-full flex items-center">
 
             <div className="w-full lg:w-[52%] lg:ml-auto pt-8 md:pt-10">
@@ -93,9 +88,7 @@ export function WeightLossYoga() {
       </section>
 
 
-      {/* =========================================================
-          ABOUT THE PROGRAM
-      ========================================================= */}
+\
       <section className="w-full bg-white px-6 md:px-10 lg:px-0 pt-[52px] md:pt-[62px] lg:pt-[68px] pb-[42px]">
 
         <div className="max-w-[1200px] mx-auto">
@@ -143,7 +136,7 @@ export function WeightLossYoga() {
 
             </div>
 
-            {/* Decorative leaf */}
+         
             <img
               src="/assets/leaves.png"
               alt=""
@@ -161,16 +154,13 @@ export function WeightLossYoga() {
 
           </div>
 
-          {/* Divider */}
+  
           <div className="mt-9 border-b border-[#d5dfcd]" />
 
         </div>
       </section>
 
 
-      {/* =========================================================
-          WHAT YOU'LL GAIN
-      ========================================================= */}
       <section className="w-full bg-white px-6 md:px-10 lg:px-0 pt-[22px] pb-[42px]">
 
         <div className="max-w-[1200px] mx-auto">
@@ -244,16 +234,14 @@ export function WeightLossYoga() {
 
           </div>
 
-          {/* Divider */}
+     
           <div className="mt-9 border-b border-[#d5dfcd]" />
 
         </div>
       </section>
 
 
-      {/* =========================================================
-          WHO IS IT FOR?
-      ========================================================= */}
+
       <section className="w-full bg-white px-6 md:px-10 lg:px-0 pt-[18px] pb-[54px]">
 
         <div className="max-w-[1200px] mx-auto">
@@ -311,9 +299,6 @@ export function WeightLossYoga() {
       </section>
 
 
-      {/* =========================================================
-          CTA
-      ========================================================= */}
       <section
         className="
           relative
