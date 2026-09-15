@@ -209,7 +209,7 @@ export function Testimonials() {
             </h2>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-9">
             <TestimonialGrid />
           </div>
         </div>
@@ -475,21 +475,6 @@ export function Testimonials() {
           "
         >
           <div className="w-full max-w-[850px]">
-            <p
-              className="
-                mb-5
-                font-body
-                text-[11px]
-                font-bold
-                uppercase
-                tracking-[0.22em]
-                text-[#64854d]
-                md:text-[13px]
-              "
-            >
-              READY TO WRITE YOUR SUCCESS STORY?
-            </p>
-
             <h2
               className="
                 font-heading
@@ -501,7 +486,7 @@ export function Testimonials() {
                 lg:text-[48px]
               "
             >
-              READY TO WRITE YOUR SUCCESS STORY?
+              Ready to write your success story?
             </h2>
 
             <p

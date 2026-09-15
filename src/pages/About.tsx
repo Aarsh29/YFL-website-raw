@@ -3,11 +3,11 @@ import { Button } from "../components/ui/Button";
 export function About() {
   const instructors = [
     {
-      name: "Ananya Sharma",
-      role: "LEAD YOGA INSTRUCTOR",
-      specialty: "Certified Prenatal Yoga Instructor",
-      desc: "8+ years of experience in Hatha and Vinyasa Yoga. She believes in making yoga accessible, enjoyable, and life-changing for everyone.",
-      image: "/assets/instructor-ananya.png",
+      name: "Kiruthika Devi R",
+      role: "WELLNESS EXPERT",
+      specialty: "Prenatal & Postnatal Yoga Instructor",
+      desc: "With over 3 years of experience and RPYT Certified Yoga Trainer, making yoga accessible, enjoyable, and life-changing for everyone.",
+      image: "/assets/WhatsApp Image 2026-09-03 at 15.00.33 1.png",
       stats: [
         {
           label: "Prenatal",
@@ -28,15 +28,15 @@ export function About() {
     },
 
     {
-      name: "Meera Iyer",
-      role: "PRENATAL & WELLNESS EXPERT",
-      specialty: "Strength & Yoga Expert",
-      desc: "Certified prenatal yoga instructor with 6+ years of experience. She supports women at every stage of pregnancy and beyond, with care and compassion.",
-      image: "/assets/instructor-meera.png",
+      name: "Rakshitaa R",
+      role: "LEAD YOGA INSTRUCTOR",
+      specialty: "Yoga Expert",
+      desc: "She has completed her M.Sc Diploma in Yoga Teacher Training and is an RYT 200 and RPYT Certified Yoga Trainer with 6 years of experience.",
+      image: "/assets/WhatsApp Image 2026-09-03 at 18.59.48 1.png",
       stats: [
         {
-          label: "Core",
-          sub: "Training",
+          label: "Holistic",
+          sub: "Wellness",
           icon: "/assets/Meditation.png",
         },
         {
@@ -45,45 +45,78 @@ export function About() {
           icon: "/assets/Natural Food.png",
         },
         {
-          label: "Inner",
-          sub: "Balance",
+          label: "Flexibility",
+          sub: "Expert",
           icon: "/assets/Lotus.png",
         },
       ],
     },
 
     {
-      name: "Aruna Das",
-      role: "MEDITATION & MINDFULNESS COACH",
-      specialty: "Meditation & Mindfulness Coach",
-      desc: "Guides students in meditation, breathwork, and mindfulness practices to bring balance, clarity, and inner peace. Specializes in strength yoga.",
-      image: "/assets/hero-yoga-studio.png",
+      name: "SRAVANI S",
+      role: "YOGA TRAINER",
+      specialty: "Mindfulness Coach",
+      desc: "She has completed her Intermediate Teachers’ Training Course (500 Hours) in Yoga, gaining understanding of mindfulness yoga.",
+      image: "/assets/pexels-karola-g-4498516 1.png",
       stats: [
         {
-          label: "Strength",
-          sub: "Trainer",
+          label: "Mindfulness",
+          sub: "Coach",
           icon: "/assets/Meditation.png",
         },
         {
-          label: "Flexibility",
-          sub: "Expert",
+          label: "2+ Years",
+          sub: "Experience",
           icon: "/assets/Natural Food.png",
         },
         {
-          label: "Holistic",
-          sub: "Wellness",
+          label: "Wellness",
+          sub: "Expert",
           icon: "/assets/Lotus.png",
         },
       ],
     },
   ];
 
+  const storyImages = [
+    "/assets/Mask group.png",
+    "/assets/Mask group (1).png",
+    "/assets/Mask group (2).png",
+    "/assets/Mask group (3).png",
+  ];
+
+  const storyCollage = (reverse = false) => (
+    <div className="relative mx-auto h-[280px] w-[280px] lg:h-[360px] lg:w-[360px]">
+      {storyImages.map((image, index) => {
+        const positions = [
+          "top-0 left-1/2 -translate-x-1/2 -translate-y-[15%]",
+          "top-1/2 left-0 -translate-x-[15%] -translate-y-1/2",
+          "top-1/2 right-0 translate-x-[15%] -translate-y-1/2",
+          "bottom-0 left-1/2 -translate-x-1/2 translate-y-[15%]",
+        ];
+
+        return (
+          <div
+            key={`${image}-${reverse}`}
+            className={`absolute h-28 w-28 rotate-45 overflow-hidden rounded-[1.5rem] border-6 border-background bg-white shadow-lg lg:h-40 lg:w-40 lg:rounded-[2rem] lg:border-8 ${positions[reverse ? 3 - index : index]}`}
+          >
+            <img
+              src={image}
+              alt=""
+              className="h-[150%] w-[150%] max-w-none -translate-x-[15%] -translate-y-[15%] -rotate-45 object-cover"
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
+
   return (
     <div className="overflow-hidden bg-background">
       <section className="py-16 md:py-24 px-6 md:px-10 bg-background">
         <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row gap-16 items-center">
           <div className="md:w-5/12 relative z-10">
-            <h1 className="font-heading text-[4.5rem] md:text-[5.5rem] font-bold leading-[1] mb-6">
+            <h1 className="font-heading text-[3.5rem] md:text-[5.5rem] font-bold leading-none mb-6">
               <span className="block text-primary-600">Yoga Refined.</span>
 
               <span className="block text-primary-600">Mind Restored.</span>
@@ -96,7 +129,7 @@ export function About() {
             </p>
 
             <Button className="bg-primary-500 hover:bg-primary-600 text-white rounded-md px-8 py-4 font-bold text-sm tracking-widest shadow-md">
-              MEET OUR INSTRUCTORS
+              MEET OUR INSTRUCTORS <span className="ml-3 text-lg">→</span>
             </Button>
           </div>
 
@@ -110,57 +143,43 @@ export function About() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 px-6 md:px-10 bg-background relative">
-        <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row gap-8 lg:gap-16 items-center">
-          <div className="md:w-1/2 relative h-[300px] lg:h-[500px] flex items-center justify-center">
-            <div className="relative w-[300px] h-[300px] lg:w-[360px] lg:h-[360px]">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[15%] w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-background bg-white">
-                <img
-                  src="/assets/Mask group.png"
-                  alt=""
-                  className="w-[150%] h-[150%] max-w-none -translate-x-[15%] -translate-y-[15%] -rotate-45 object-cover"
-                />
-              </div>
-
-              <div className="absolute top-1/2 left-0 -translate-x-[15%] -translate-y-1/2 w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-background bg-white">
-                <img
-                  src="/assets/Mask group (1).png"
-                  alt=""
-                  className="w-[150%] h-[150%] max-w-none -translate-x-[15%] -translate-y-[15%] -rotate-45 object-cover"
-                />
-              </div>
-
-              <div className="absolute top-1/2 right-0 translate-x-[15%] -translate-y-1/2 w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-background bg-white">
-                <img
-                  src="/assets/Mask group (2).png"
-                  alt=""
-                  className="w-[150%] h-[150%] max-w-none -translate-x-[15%] -translate-y-[15%] -rotate-45 object-cover"
-                />
-              </div>
-
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[15%] w-28 h-28 lg:w-40 lg:h-40 rounded-[1.5rem] lg:rounded-[2rem] overflow-hidden shadow-lg transform rotate-45 border-6 lg:border-8 border-background bg-white">
-                <img
-                  src="/assets/Mask group (3).png"
-                  alt=""
-                  className="w-[150%] h-[150%] max-w-none -translate-x-[15%] -translate-y-[15%] -rotate-45 object-cover"
-                />
-              </div>
+      <section className="relative overflow-hidden bg-background px-6 py-16 lg:px-10 lg:py-24">
+        <img src="/assets/leaves.png" alt="" className="pointer-events-none absolute bottom-0 right-0 w-24 opacity-70 lg:w-40" />
+        <div className="mx-auto grid max-w-[1320px] grid-cols-1 items-center gap-14 md:grid-cols-2 lg:gap-20">
+          <div>
+            {storyCollage()}
+            <div className="mx-auto mt-12 max-w-[430px] text-left">
+              <span className="mb-4 block font-body text-xs font-black uppercase tracking-[0.12em] text-primary-600">
+                YOGA REIMAGINED FOR REAL LIFE
+              </span>
+              <p className="font-body text-sm font-medium leading-relaxed text-primary-800 lg:text-base">
+                It is about how you feel when you wake up.<br />
+                How you breathe when life gets stressful.<br />
+                How you care for your body and<br />
+                How you quiet your mind<br />
+                And how consciously you choose to live.<br />
+                At YFL, we bring yoga beyond the mat and into everyday life.
+              </p>
+              <h3 className="mt-5 font-body text-lg font-bold text-primary-600">
+                Move, Breathe, Restore, Transform
+              </h3>
             </div>
           </div>
 
-          <div className="md:w-1/2 text-right relative z-10 md:pr-4 lg:pr-10">
-            <span className="font-body text-xs font-black uppercase tracking-[0.2em] text-primary-600 mb-6 block">
+          <div className="text-center md:pt-8">
+            <span className="mb-6 block font-body text-xs font-black uppercase tracking-[0.2em] text-primary-600">
               OUR STORY
             </span>
-
-            <p className="font-body text-sm lg:text-base text-primary-800 font-medium lg:font-semibold leading-relaxed md:pl-12 lg:pl-20 text-right">
-              Yoga for Life was founded with a simple vision—make the benefits
-              of yoga accessible to everyone. We believe that true wellness
-              comes from nurturing both the body and the mind. Through authentic
-              yoga practices, mindful breathing, and compassionate guidance, we
-              help individuals build healthier habits and achieve lasting
-              balance in their everyday lives.
+            <p className="font-body text-sm font-medium leading-relaxed text-primary-800 lg:text-base">
+              YFL began in Nov 2021 with a simple belief - Yoga should not be
+              limited to the mat. It should become a part of everyday life.
+              What started as a passion for helping people move better, breathe
+              better & feel better has grown into a journey of transformation,
+              Connection & mindful living. Since our beginning in 2021, over 200
+              participants have benefited from YFL journey, each with their own
+              goals, challenges and stories of transformation.
             </p>
+            <div className="mt-12">{storyCollage(true)}</div>
           </div>
         </div>
       </section>
@@ -348,7 +367,7 @@ export function About() {
                         w-[62px]
                         h-[62px]
                         rounded-full
-                        bg-primary-300
+                        bg-[#789c59]
                         border-[3px]
                         border-white
                         flex

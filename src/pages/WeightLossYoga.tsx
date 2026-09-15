@@ -317,14 +317,9 @@ export function WeightLossYoga() {
         }}
       >
 
-        {/* 
-          If your CTA has a separate background image,
-          replace the URL above with that image.
-        */}
 
         <div className="absolute inset-0 bg-[#dce9b7]/35" />
 
-        {/* Decorative soft shapes */}
         <div className="
           absolute
           -left-20

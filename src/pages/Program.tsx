@@ -6,15 +6,15 @@ const programs = [
   {
     title: "Weight Loss Yoga",
     description:
-      "A structured program combining movement and mindful eating guidance to help you reach your goals sustainably.",
+      "Burn calories, improve metabolism, and build healthy habits through yoga and mindful movement.",
     image: "/assets/image 4.png",
     icon: "/assets/Dumbbell.png",
-    link: "/join-now",
+    link: "/program/weight-loss-yoga",
   },
   {
     title: "Prenatal Yoga",
     description:
-      "Build strength for labor, ease pregnancy discomforts, and connect with your baby through breath and movement.",
+      "Gentle yoga practices designed to support a healthy pregnancy and prepare your body for childbirth.",
     image: "/assets/image 2.png",
     icon: "/assets/Mommy Fitness.png",
     link: "/program/prenatal-yoga",
@@ -22,25 +22,41 @@ const programs = [
   {
     title: "Postnatal Yoga",
     description:
-      "Gentle core and pelvic floor recovery designed for the postpartum body.",
+      "Recover safely after childbirth, rebuild strength, and restore balance with guided sessions.",
     image: "/assets/image 1.png",
     icon: "/assets/Mommy Fitness.png",
     link: "/program/postnatal-yoga",
   },
   {
-    title: "Strength & Toning",
+    title: "General Yoga",
     description:
-      "Enhance muscle tone, increase flexibility, and move with greater confidence.",
+      "Move better, feel stronger, and live better with a balanced practice of yoga to support your everyday health.",
     image: "/assets/image 3.png",
     icon: "/assets/Yoga (1).png",
-    link: "/program/strength-toning",
+    link: "/program/general-yoga",
+  },
+  {
+    title: "Senior Yoga",
+    description:
+      "Safe and mindful practices designed to support flexibility, strength, balance, and overall well-being.",
+    image: "/assets/ChatGPT Image Aug 28, 2026, 04_56_39 PM 1.png",
+    icon: "/assets/Yoga (1).png",
+    link: "/program/general-yoga",
+  },
+  {
+    title: "Private session",
+    description:
+      "Personalized one-to-one guidance designed around your needs, lifestyle, wellness goals, and practice.",
+    image: "/assets/pexels-shootsaga-30945104 1.png",
+    icon: "/assets/Yoga (1).png",
+    link: "/consultation",
   },
 ];
 
 export function Program() {
   return (
     <div className="w-full overflow-hidden">
-      <section className="relative w-full h-[325px] sm:h-[380px] md:h-[430px] lg:h-[470px] overflow-hidden bg-primary-50">
+      <section className="relative w-full h-[272px] sm:h-[380px] md:h-[430px] lg:h-[470px] overflow-hidden bg-primary-50">
         <img
           src="/assets/Untitled design (2) 1.png"
           alt="Yoga program"
@@ -128,8 +144,7 @@ export function Program() {
                   mb-6
                 "
               >
-                Personalized programs designed to help you move better, feel
-                stronger, and live healthier.
+                Every body is different, Every journey is unique.
               </p>
 
               <Link to="/join-now">
@@ -140,30 +155,34 @@ export function Program() {
         </div>
       </section>
 
-      <section className="relative bg-gradient-to-br from-primary-100 via-primary-200 to-primary-400 px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
+      <section className="relative bg-gradient-to-br from-primary-100 via-primary-200 to-primary-400 px-5 py-12 sm:px-8 lg:px-12 lg:py-16">
         <div className="mx-auto max-w-[1280px]">
-          <div className="mb-12">
-            <h2 className="font-heading text-3xl font-bold text-primary-700 sm:text-4xl">
+          <div className="mb-8">
+            <h2 className="font-heading text-2xl font-bold text-primary-700 sm:text-4xl">
               Our Yoga Programs
             </h2>
 
-            <p className="mt-5 max-w-[1050px] font-body text-base leading-7 text-primary-800">
-              Discover a range of thoughtfully designed yoga programs tailored
-              to support your unique wellness goals. Whatever your goal, we have
-              a program that's right for you.
+            <p className="mt-4 max-w-[1050px] font-body text-xs leading-6 text-primary-800 sm:text-base sm:leading-7">
+              Whether you are starting your yoga journey, looking to become stronger, manage your weight,
+              or improve your flexibility, there&apos;s a place for you at YFL.
             </p>
           </div>
 
-          <div className="mx-auto grid max-w-[1100px] grid-cols-1 gap-x-14 gap-y-12 md:grid-cols-2">
+          <p className="mb-7 text-center font-heading text-sm font-bold text-primary-700 sm:text-lg">
+            Choose the practice that feels right for you&apos;s journey
+          </p>
+
+          <div className="mx-auto grid max-w-[980px] grid-cols-2 gap-x-7 gap-y-10 sm:gap-x-16 sm:gap-y-14">
             {programs.map((program) => (
               <div
                 key={program.title}
                 className="
                   relative
-                  h-[335px]
+                  h-[190px]
+                  sm:h-[310px]
                   w-full
                   overflow-hidden
-                  rounded-[18px]
+                  rounded-[10px]
                   border
                   border-primary-500
                   bg-primary-50
@@ -191,8 +210,10 @@ export function Program() {
                     className="
                       absolute
                       inset-y-0
-                      left-[-115px]
-                      w-[230px]
+                      left-[-55px]
+                      w-[110px]
+                      sm:left-[-90px]
+                      sm:w-[180px]
                       bg-primary-50
                     "
                     style={{
@@ -207,19 +228,21 @@ export function Program() {
                     z-10
                     flex
                     h-full
-                    w-[58%]
+                    w-[50%]
                     flex-col
-                    px-7
-                    py-7
-                    sm:px-8
+                    px-5
+                    py-4
+                    sm:px-9
                     sm:py-8
                   "
                 >
                   <div
                     className="
                       flex
-                      h-[60px]
-                      w-[60px]
+                      h-[30px]
+                      w-[30px]
+                      sm:h-[50px]
+                      sm:w-[50px]
                       shrink-0
                       items-center
                       justify-center
@@ -230,16 +253,19 @@ export function Program() {
                     <img
                       src={program.icon}
                       alt=""
-                      className="h-[34px] w-[34px] object-contain brightness-0 invert"
+                      className="h-[18px] w-[18px] object-contain brightness-0 invert sm:h-[28px] sm:w-[28px]"
                     />
                   </div>
 
                   <h3
                     className="
-                      mt-4
-                      max-w-[230px]
+                      mt-2
+                      max-w-[150px]
+                      sm:mt-4
+                      sm:max-w-[185px]
                       font-heading
-                      text-[21px]
+                      text-[10px]
+                      sm:text-[18px]
                       font-bold
                       leading-[1.15]
                       text-[#6f994f]
@@ -248,25 +274,30 @@ export function Program() {
                     {program.title}
                   </h3>
 
-                  <div className="mt-3 h-[1px] w-[90px] bg-[#91ad7c]" />
+                  <div className="mt-1 h-[1px] w-[52px] bg-[#91ad7c] sm:mt-3 sm:w-[90px]" />
 
                   <p
                     className="
-                      mt-5
-                      max-w-[205px]
+                      mt-2
+                      max-w-[115px]
+                      sm:mt-5
+                      sm:max-w-[175px]
                       font-body
-                      text-[15px]
-                      leading-[1.45]
+                      text-[8px]
+                      leading-[1.25]
+                      sm:text-[13px]
+                      sm:leading-[1.4]
                       text-[#6f994f]
                     "
                   >
                     {program.description}
                   </p>
 
-                  <button
-                    type="button"
+                  <Link
+                    to={program.link}
                     className="
-                      mt-auto
+                      mt-2
+                      sm:mt-auto
                       flex
                       w-fit
                       items-center
@@ -275,18 +306,17 @@ export function Program() {
                       bg-transparent
                       p-0
                       font-body
-                      text-[14px]
+                      text-[8px]
+                      sm:text-[12px]
                       font-bold
                       text-[#456d32]
                       transition-all
                       hover:gap-4
                     "
                   >
-                    <Link to={program.link} className="flex items-center gap-3">
-                      LEARN MORE
-                      <span className="text-[22px] leading-none">⟶</span>
-                    </Link>
-                  </button>
+                    LEARN MORE
+                    <span className="text-[14px] leading-none sm:text-[20px]">⟶</span>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -294,18 +324,18 @@ export function Program() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
+      <section className="bg-white px-6 py-14 sm:px-10 lg:px-16 lg:py-20">
         <div className="mx-auto max-w-[1200px]">
-          <div className="mb-12 max-w-[700px]">
+          <div className="mb-9 max-w-[700px]">
             <span className="font-body text-xs font-bold tracking-[0.22em] text-[#729657]">
               HOW IT WORKS
             </span>
 
-            <h2 className="mt-4 font-heading text-3xl font-bold text-[#456536] sm:text-4xl">
+            <h2 className="mt-3 font-heading text-2xl font-bold text-[#456536] sm:text-4xl">
               Your Journey Starts in 3 Simple Steps
             </h2>
 
-            <p className="mt-5 font-body text-base leading-7 text-[#596456]">
+            <p className="mt-4 font-body text-sm leading-6 text-[#596456] sm:text-base sm:leading-7">
               Begin your wellness journey with a simple, personalized process
               designed to help you find the right yoga program and achieve
               lasting results.

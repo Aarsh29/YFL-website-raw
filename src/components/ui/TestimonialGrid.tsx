@@ -1,4 +1,4 @@
-import { Quote, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -23,38 +23,47 @@ const testimonials = [
 
 export function TestimonialGrid() {
   return (
-    <div className="relative max-w-[1320px] mx-auto px-6 md:px-10">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="relative mx-auto max-w-[1240px] px-0 sm:px-10">
+      <button
+        type="button"
+        aria-label="Previous testimonials"
+        className="absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#b9d0a9] text-[#709a58] transition hover:bg-primary-50 md:flex"
+      >
+        <ChevronLeft size={26} />
+      </button>
+
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.name}
-            className="bg-bg-cream rounded-2xl p-8 relative shadow-sm border border-border-soft"
+            className="relative flex min-h-[310px] flex-col rounded-[16px] border border-[#99aa91] bg-[#f7f9f3] px-7 py-6 shadow-sm"
           >
-            <Quote className="text-accent-light/30 w-12 h-12 absolute top-6 right-6" />
-            <div className="flex gap-1 mb-6">
+            <Quote className="absolute left-7 top-5 h-8 w-8 text-accent-green" />
+            <div className="mt-8 flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className="w-4 h-4 fill-accent-green text-accent-green"
+                  className="h-3 w-3 fill-accent-green text-accent-green"
                 />
               ))}
             </div>
-            <p className="font-body text-text-muted leading-relaxed mb-8 relative z-10 italic">
-              "{testimonial.text}"
+            <p className="relative z-10 mt-4 flex-1 text-center font-body text-[13px] leading-[1.45] text-text-muted">
+              {testimonial.text}
             </p>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-white border border-border-soft">
+            <div className="my-4 border-t border-[#d4dfcc]" />
+            <div className="flex items-center gap-3">
+              <div className="h-12 w-12 overflow-hidden rounded-full border border-border-soft bg-white">
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-full h-full object-cover opacity-50"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div>
-                <h4 className="font-heading text-lg text-primary-dark font-bold">
+                <h4 className="font-heading text-base font-bold text-primary-dark">
                   {testimonial.name}
                 </h4>
-                <p className="font-body text-xs text-accent-green font-medium uppercase tracking-wider">
+                <p className="font-body text-xs font-medium text-accent-green">
                   {testimonial.tag}
                 </p>
               </div>
@@ -63,6 +72,19 @@ export function TestimonialGrid() {
         ))}
       </div>
 
+      <button
+        type="button"
+        aria-label="Next testimonials"
+        className="absolute right-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#b9d0a9] text-[#709a58] transition hover:bg-primary-50 md:flex"
+      >
+        <ChevronRight size={26} />
+      </button>
+
+      <div className="mt-6 flex justify-center gap-2" aria-label="Testimonial pages">
+        <span className="h-3 w-3 rounded-full bg-[#24341d]" />
+        <span className="h-3 w-3 rounded-full bg-[#d5e0d0]" />
+        <span className="h-3 w-3 rounded-full bg-[#d5e0d0]" />
+      </div>
     </div>
   );
 }
