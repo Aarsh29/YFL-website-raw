@@ -14,6 +14,7 @@ import { StrengthToning } from "./pages/StrengthToning";
 import { PostnatalYoga } from "./pages/PostnatalYoga";
 import { WeightLossYoga } from "./pages/WeightLossYoga";
 import ScrollToTop from "./components/utils/ScrollToTop";
+import Test from './pages/Test'
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="consultation" element={<Consultation />} />
         </Route>
         <Route path="/join-now" element={<JoinNow />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </Router>
   );
