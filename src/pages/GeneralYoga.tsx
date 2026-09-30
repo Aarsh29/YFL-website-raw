@@ -1,5 +1,12 @@
+import {
+  Activity,
+  Brain,
+  Flower2,
+  HeartPulse,
+  ArrowRight,
+} from "lucide-react";
+
 import { Button } from "../components/ui/Button";
-import { Activity, Brain, Flower2, Wind } from "lucide-react";
 
 export function GeneralYoga() {
   const benefits = [
@@ -8,7 +15,7 @@ export function GeneralYoga() {
       title: "Move with Ease & improve mobility",
     },
     {
-      icon: Wind,
+      icon: HeartPulse,
       title: "Develop Breath Control",
     },
     {
@@ -22,191 +29,566 @@ export function GeneralYoga() {
   ];
 
   return (
-    <div className="w-full bg-[#f7f3ee] text-[#1d2d22]">
-      <section className="mx-auto max-w-[1280px] px-4 md:px-8 lg:px-0">
-        <div className="relative overflow-hidden bg-[#f4efe7]">
-          <div className="absolute left-0 top-0 h-full w-[120px] md:w-[180px] bg-gradient-to-r from-[#e7efe0]/80 to-transparent" />
-          <div className="absolute right-0 top-0 h-full w-[140px] md:w-[220px] bg-gradient-to-l from-[#e3ead6]/80 to-transparent" />
+    <main className="w-full overflow-hidden bg-white text-body">
 
-          <div className="relative z-10 mx-auto max-w-[1200px] px-4 md:px-8 lg:px-0 pt-4 md:pt-5">
-            <div className="flex items-center gap-2 text-[10px] md:text-[11px] uppercase tracking-[0.14em] text-[#3b4d3d] opacity-80">
-              <span>Home</span>
-              <span>›</span>
-              <span>Programs</span>
-              <span>›</span>
-              <span>General Yoga</span>
-            </div>
-          </div>
 
-          <div className="relative z-10 mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 px-4 pb-6 pt-6 md:px-8 lg:flex-row lg:px-0 lg:pb-0 lg:pt-0">
-            <div className="relative w-full lg:w-[48%]">
-              <div className="absolute left-[-20px] bottom-[-18px] h-[200px] w-[200px] rounded-full border border-[#d2dbc7] bg-[#edf3e8]/80 opacity-80" />
-              <img
-                src="/assets/Weight Loss Yoga.png"
-                alt="General Yoga"
-                className="relative z-10 mx-auto h-[280px] w-auto object-contain md:h-[360px] lg:h-[420px]"
-              />
-            </div>
+      <section
+        className="
+          relative
+          min-h-[470px]
+          w-full
+          overflow-hidden
+          bg-[#eee8c5]
+          sm:min-h-[490px]
+          lg:min-h-[675px]
+        "
+      >
 
-            <div className="w-full px-2 pb-6 lg:w-[52%] lg:max-w-[560px] lg:px-0 lg:pb-10">
-              <h1 className="font-heading text-[42px] leading-none tracking-[-0.04em] text-[#1d2d22] sm:text-[52px] md:text-[62px] lg:text-[72px]">
-                General Yoga
-              </h1>
 
-              <p className="mt-5 max-w-[500px] font-heading text-[18px] leading-[1.4] text-[#3b4d3d] sm:text-[20px] md:text-[23px]">
-                Move better. Breathe deeper. Live better.
-              </p>
+        <img
+          src="/assets/mr%20sons%20(14)%201.png"
+          alt=""
+          aria-hidden="true"
+          className="
+            absolute
+            inset-0
+            h-full
+            w-full
+            object-cover
+            object-center
+          "
+        />
 
-              <p className="mt-4 max-w-[500px] font-body text-[14px] leading-[1.7] text-[#2f3e32] sm:text-[15px] md:text-[16px]">
-                Whether you are a beginner or an experienced practitioner, the
-                program is thoughtfully structured to help you improve
-                flexibility, strength, posture, balance, and inner awareness—
-                one step at a time.
-              </p>
 
-              <div className="mt-8">
-                <a href="/consultation">
-                  <Button
-                    className="
-                      h-[46px]
-                      min-w-[250px]
-                      rounded-md
-                      bg-[#7da65c]
-                      px-7
-                      font-body
-                      text-sm
-                      font-bold
-                      tracking-wide
-                      text-white
-                      shadow-[0_8px_18px_rgba(98,126,74,0.20)]
-                      transition-all
-                      hover:bg-[#6e9650]
-                    "
-                  >
-                    BOOK A FREE CONSULTATION →
-                  </Button>
-                </a>
-              </div>
-            </div>
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            bg-gradient-to-r
+            from-[#eee5bd]/20
+            via-transparent
+            to-[#f4f3df]/10
+          "
+        />
+
+
+        <div
+          className="
+            relative
+            z-10
+            mx-auto
+            min-h-[470px]
+            max-w-[1240px]
+            px-6
+            pt-[70px]
+            sm:px-8
+            sm:pt-[65px]
+            lg:min-h-[510px]
+            lg:px-10
+            xl:px-12
+          "
+        >
+
+
+          <div
+            className="
+              ml-auto
+              flex
+              w-full
+              max-w-[650px]
+              flex-col
+              justify-center
+              pt-[75px]
+              sm:pt-[70px]
+              lg:pt-[65px]
+              xl:pt-[60px]
+            "
+          >
+
+            <h1
+              className="
+                font-heading
+                text-[50px]
+                font-medium
+                leading-[1.03]
+                tracking-[-0.025em]
+                text-[#19351d]
+                sm:text-[58px]
+                md:text-[64px]
+                lg:text-[70px]
+                xl:text-[74px]
+              "
+            >
+              General Yoga
+            </h1>
+
+            <p
+              className="
+                mt-[12px]
+                font-heading
+                text-[18px]
+                leading-[1.15]
+                text-[#71965a]
+                sm:text-[19px]
+                md:text-[20px]
+                lg:text-[21px]
+              "
+            >
+              Move better. Breathe deeper. Live better.
+            </p>
+
+            <p
+              className="
+                mt-[8px]
+                max-w-[610px]
+                font-body
+                text-[13px]
+                leading-[1.7]
+                text-body-copy
+                sm:text-[14px]
+                md:text-[15px]
+                lg:text-[16px]
+              "
+            >
+              Whether you are a beginner or an experienced practitioner,
+              the program is thoughtfully structured to help you improve
+              flexibility, strength, posture, balance, and inner awareness—
+              one step at a time.
+            </p>
+
+            <a
+              href="/consultation"
+              className="mt-[18px] inline-flex"
+            >
+              <Button
+                className="
+                  flex
+                  h-[40px]
+                  min-w-[295px]
+                  items-center
+                  justify-center
+                  rounded-[6px]
+                  bg-link
+                  px-[25px]
+                  font-body
+                  text-[12px]
+                  font-bold
+                  tracking-[0.035em]
+                  text-white
+                  shadow-[0_4px_8px_rgba(70,90,50,0.25)]
+                  transition-all
+                  duration-200
+                  hover:bg-action-dark
+                "
+              >
+                BOOK A FREE CONSULTATION
+
+                <ArrowRight
+                  className="ml-[8px] h-[15px] w-[15px]"
+                  strokeWidth={2.5}
+                />
+              </Button>
+            </a>
+
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-[#f7f3ee] px-4 pb-[42px] pt-[56px] md:px-8 lg:px-0">
-        <div className="mx-auto max-w-[1200px] relative">
-          <h2 className="font-heading text-[22px] font-bold uppercase leading-tight text-[#5c7648] md:text-[24px]">
+
+
+      <section
+        className="
+          bg-white
+          px-6
+          pb-[28px]
+          pt-[48px]
+          sm:px-8
+          sm:pb-[32px]
+          sm:pt-[52px]
+          lg:px-10
+          lg:pb-[35px]
+          lg:pt-[55px]
+        "
+      >
+
+        <div
+          className="
+            relative
+            mx-auto
+            max-w-[1130px]
+            border-b
+            border-border-sage
+            pb-[12px]
+          "
+        >
+
+          <h2
+            className="
+              font-heading
+              text-[18px]
+              font-bold
+              uppercase
+              leading-none
+              text-heading
+              sm:text-[19px]
+            "
+          >
             About the Program
           </h2>
 
-          <div className="mt-6 max-w-[980px]">
-            <p className="font-body text-[15px] leading-[1.8] text-[#2a3d2f] md:text-[16px]">
-              Our Regular Yoga Program is a holistic practice designed to
-              strengthen the body, calm the mind, and create balance in everyday
-              life. Through a combination of yoga asanas, mobility movements,
-              pranayama, meditation, and mindful practices, each session supports
-              your overall physical and mental well-being. One breath and one
-              moment at a time.
-            </p>
-          </div>
+          <p
+            className="
+              mt-[16px]
+              max-w-[900px]
+              font-body
+              text-[13px]
+              leading-[1.8]
+              text-[#2b3d2d]
+              sm:text-[14px]
+              lg:text-[15px]
+            "
+          >
+            Our Regular Yoga Program is a holistic practice designed to
+            strengthen the body, calm the mind, and create balance in
+            everyday life. Through a combination of yoga asanas, mobility
+            movements, pranayama, meditation, and mindful practices, each
+            session supports your overall physical and mental well-being.
+          </p>
+
+          <p
+            className="
+              mt-[1px]
+              font-body
+              text-[13px]
+              font-bold
+              leading-[1.7]
+              text-body
+              sm:text-[14px]
+              lg:text-[15px]
+            "
+          >
+            One breath and one moment at a time.
+          </p>
+
 
           <img
             src="/assets/Leaf.png"
             alt=""
-            className="absolute right-0 top-0 hidden h-[140px] w-[140px] object-contain opacity-80 lg:block"
+            aria-hidden="true"
+            className="
+              pointer-events-none
+              absolute
+              bottom-[-1px]
+              right-[-5px]
+              hidden
+              h-[125px]
+              w-[125px]
+              object-contain
+              sm:block
+              lg:h-[135px]
+              lg:w-[135px]
+            "
           />
+
         </div>
       </section>
 
-      <section className="w-full bg-[#f7f3ee] px-4 pb-[42px] pt-[8px] md:px-8 lg:px-0">
-        <div className="mx-auto max-w-[1200px]">
-          <h2 className="font-heading text-[22px] font-bold uppercase leading-tight text-[#5c7648] md:text-[24px]">
+
+
+      <section
+        className="
+          bg-white
+          px-6
+          pb-[38px]
+          pt-[4px]
+          sm:px-8
+          sm:pb-[45px]
+          lg:px-10
+        "
+      >
+
+        <div
+          className="
+            mx-auto
+            max-w-[1130px]
+            border-b
+            border-[#d5dfce]
+            pb-[45px]
+          "
+        >
+
+          <h2
+            className="
+              font-heading
+              text-[18px]
+              font-bold
+              uppercase
+              text-heading
+              sm:text-[19px]
+            "
+          >
             What You'll Gain
           </h2>
 
-          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
+          <div
+            className="
+              mt-[27px]
+              grid
+              grid-cols-2
+              gap-[17px]
+              lg:grid-cols-4
+            "
+          >
 
-              return (
-                <div
-                  key={index}
-                  className="flex h-[132px] items-center justify-center rounded-xl border border-[#dfe5d7] bg-[#f0f4ea] px-4 py-4 shadow-[0_3px_12px_rgba(49,66,40,0.06)]"
+            {benefits.map(({ icon: Icon, title }) => (
+              <div
+                key={title}
+                className="
+                  flex
+                  min-h-[126px]
+                  flex-col
+                  items-center
+                  justify-center
+                  rounded-[8px]
+                  border
+                  border-[#eee9ca]
+                  bg-[#fffef1]
+                  px-[15px]
+                  py-[17px]
+                  text-center
+                  shadow-[0_4px_8px_rgba(0,0,0,0.13)]
+                  transition-transform
+                  duration-200
+                  hover:-translate-y-[2px]
+                "
+              >
+
+                <Icon
+                  className="
+                    mb-[13px]
+                    h-[25px]
+                    w-[25px]
+                    text-[#76a25b]
+                  "
+                  strokeWidth={2.3}
+                />
+
+                <p
+                  className="
+                    max-w-[165px]
+                    font-body
+                    text-[11px]
+                    leading-[1.45]
+                    text-ink
+                    sm:text-[12px]
+                    lg:text-[13px]
+                  "
                 >
-                  <div className="flex w-full items-center gap-3 md:gap-4">
-                    <div className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-[#dfe9d0] text-[#5b7b48]">
-                      <Icon size={20} className="stroke-[2.2]" />
-                    </div>
-                    <p className="font-body text-[14px] leading-[1.4] text-[#2b3d2f] md:text-[15px]">
-                      {benefit.title}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+                  {title}
+                </p>
+
+              </div>
+            ))}
+
           </div>
         </div>
       </section>
 
-      <section className="w-full bg-[#f7f3ee] px-4 py-[18px] md:px-8 lg:px-0">
-        <div className="mx-auto max-w-[1200px]">
-          <h2 className="font-heading text-[22px] font-bold uppercase leading-tight text-[#5c7648] md:text-[24px]">
+
+
+      <section
+        className="
+          bg-white
+          px-6
+          pb-[34px]
+          pt-0
+          sm:px-8
+          sm:pb-[38px]
+          lg:px-10
+        "
+      >
+
+        <div className="mx-auto max-w-[1130px]">
+
+          <h2
+            className="
+              font-heading
+              text-[18px]
+              font-bold
+              uppercase
+              text-heading
+              sm:text-[19px]
+            "
+          >
             Who Is It For?
           </h2>
 
-          <div className="mt-5 max-w-[980px]">
-            <p className="font-body text-[15px] leading-[1.7] text-[#2a3d2f] md:text-[16px]">
-              Beginners and experienced practitioners. Anyone looking to improve
-              strength, flexibility, and mobility. People seeking better posture,
-              balance, and body awareness. Those looking to reduce everyday
-              stress and feel more relaxed. Suitable for all adults who want to
-              make yoga a part of their daily wellness routine.
+          <div
+            className="
+              mt-[17px]
+              max-w-[1000px]
+              font-body
+              text-[13px]
+              leading-[1.8]
+              text-[#293c2c]
+              sm:text-[14px]
+              lg:text-[15px]
+            "
+          >
+
+            <p>
+              Beginners and experienced practitioners, Anyone looking to
+              improve strength, flexibility, and mobility.
             </p>
+
+            <p>
+              People seeking better posture, balance, and body awareness.
+            </p>
+
+            <p>
+              Those looking to reduce everyday stress and feel more relaxed.
+            </p>
+
+            <p className="font-bold">
+              Suitable for all adults who want to make yoga a part of their
+              daily wellness routine. 🌿
+            </p>
+
           </div>
         </div>
       </section>
 
-      <section className="mt-8 w-full bg-[#dfe9cf] px-4 py-[52px] md:px-8 lg:px-0 md:py-[68px]">
-        <div className="relative mx-auto max-w-[1280px] overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.25),_transparent_55%)]" />
-          <div className="absolute left-[-100px] bottom-[-150px] h-[420px] w-[420px] rounded-full border border-white/35 opacity-60" />
-          <div className="absolute right-[-120px] top-[-100px] h-[430px] w-[430px] rounded-full border border-white/35 opacity-60" />
 
-          <div className="relative z-10 mx-auto max-w-[900px] px-4 text-center">
-            <h2 className="font-heading text-[32px] leading-[1.1] tracking-[-0.04em] text-[#4f6b43] md:text-[42px] lg:text-[50px]">
+
+      <section
+        className="
+          relative
+          min-h-[330px]
+          w-full
+          overflow-hidden
+          bg-[#bfd584]
+          sm:min-h-[350px]
+          lg:min-h-[385px]
+        "
+      >
+
+
+        <img
+          src="/assets/Yoga%20for%20Life%20-%20Review%20Post%201%20(44)%201.png"
+          alt=""
+          aria-hidden="true"
+          className="
+            absolute
+            inset-0
+            h-full
+            w-full
+            object-cover
+            object-center
+          "
+        />
+
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            bg-[#b9d17d]/20
+          "
+        />
+
+
+        <div
+          className="
+            relative
+            z-10
+            flex
+            min-h-[330px]
+            w-full
+            items-center
+            justify-center
+            px-6
+            py-[55px]
+            text-center
+            sm:min-h-[350px]
+            lg:min-h-[385px]
+          "
+        >
+
+          <div className="w-full max-w-[750px]">
+
+            <h2
+              className="
+                font-heading
+                text-[27px]
+                font-bold
+                uppercase
+                leading-[1.12]
+                tracking-[-0.015em]
+                text-[#527145]
+                sm:text-[32px]
+                lg:text-[38px]
+              "
+            >
               Find Your Balance, Feel Your Best
             </h2>
 
-            <p className="mt-4 font-body text-[16px] leading-[1.6] text-[#2d3b2d] md:text-[18px]">
-              Build strength, improve flexibility, and refresh your mind with a
-              balanced yoga practice for everyday well-being.
+            <p
+              className="
+                mx-auto
+                mt-[10px]
+                max-w-[630px]
+                font-body
+                text-[13px]
+                leading-[1.65]
+                text-[#263827]
+                sm:text-[14px]
+                lg:text-[15px]
+              "
+            >
+              Build strength, improve flexibility, and refresh your mind
+              with a balanced yoga practice for everyday well-being.
             </p>
 
-            <div className="mt-8">
-              <a href="/consultation">
-                <Button
-                  className="
-                    h-[48px]
-                    min-w-[230px]
-                    rounded-md
-                    bg-[#7da65c]
-                    px-7
-                    font-body
-                    text-sm
-                    font-bold
-                    tracking-wide
-                    text-white
-                    shadow-[0_8px_18px_rgba(98,126,74,0.18)]
-                    transition-all
-                    hover:bg-[#6e9650]
-                  "
-                >
-                  START YOUR JOURNEY →
-                </Button>
-              </a>
-            </div>
+            <a
+              href="/join-now"
+              className="mt-[22px] inline-flex"
+            >
+              <Button
+                className="
+                  flex
+                  h-[40px]
+                  min-w-[285px]
+                  items-center
+                  justify-center
+                  rounded-[6px]
+                  bg-link
+                  px-[30px]
+                  font-body
+                  text-[11px]
+                  font-bold
+                  tracking-[0.04em]
+                  text-white
+                  shadow-[0_4px_8px_rgba(70,90,50,0.25)]
+                  transition-all
+                  duration-200
+                  hover:bg-action-dark
+                "
+              >
+                START YOUR JOURNEY
+
+                <ArrowRight
+                  className="ml-[8px] h-[14px] w-[14px]"
+                  strokeWidth={2.5}
+                />
+              </Button>
+            </a>
+
           </div>
         </div>
       </section>
-    </div>
+
+    </main>
   );
 }

@@ -121,7 +121,6 @@ export function Home() {
   return (
     <main className="w-full bg-[#FCFDF9] text-[#2D3823] font-sans antialiased selection:bg-[#CCD9BE]">
       
-      {/* 1. HERO SECTION */}
       <section className="home-hero relative min-h-[520px] overflow-hidden bg-[#D9CBAE] sm:min-h-[620px] lg:min-h-[700px]">
         <img src={HERO_IMAGE} alt="Woman meditating in a peaceful yoga studio" className="absolute inset-0 h-full w-full object-cover object-center" />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(223,211,181,.88)_0%,rgba(223,211,181,.6)_43%,rgba(223,211,181,0)_72%)]" />
@@ -147,7 +146,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* 2. STATS BAR */}
       <section className="border-y border-[#DEE5D6] bg-[#F3F6EC] py-7 sm:py-9">
         <div className="mx-auto grid max-w-[1100px] grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-[#D6DFCD] md:grid-cols-4 px-4 text-center">
           {stats.map((stat) => {
@@ -155,7 +153,7 @@ export function Home() {
             return (
               <div key={stat.label} className="flex flex-col items-center justify-center p-3">
                 <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-[#E5EDDA]">
-                  <Icon className="h-4 w-4 text-[#608044]" strokeWidth={1.8} />
+                  <Icon className="h-4 w-4 text-accent-strong" strokeWidth={1.8} />
                 </div>
                 <span className="font-serif text-3xl font-bold tracking-tight text-[#486331]">
                   {stat.value}
@@ -169,10 +167,9 @@ export function Home() {
         </div>
       </section>
 
-      {/* 3. PROGRAMS / OUR GOALS */}
       <section className="relative bg-[#FAFCF6] px-6 py-20 lg:py-24">
         <div className="mx-auto max-w-[1120px] text-center">
-          <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#69854E]">
+          <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent-deep">
             OUR GOALS
           </span>
           <p className="mx-auto mt-2 max-w-[620px] text-xs leading-relaxed text-[#5F6D54]">
@@ -183,7 +180,6 @@ export function Home() {
             Helping You Build a Healthier Life
           </h2>
 
-          {/* Row 1: 4 Cards */}
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {programs.slice(0, 4).map((program) => (
               <div
@@ -200,7 +196,7 @@ export function Home() {
                 <Link to="/program" className="mt-5">
                   <Button
                     variant="outline-light"
-                    className="rounded-full border-[#92AD76] bg-white px-5 py-1.5 text-[10px] font-bold tracking-wider text-[#4E6B34] hover:bg-[#5E7E41] hover:text-white"
+                    className="rounded-full border-[#92AD76] bg-white px-5 py-1.5 text-[10px] font-bold tracking-wider text-[#4E6B34] hover:bg-forest-strong hover:text-white"
                   >
                     EXPLORE
                   </Button>
@@ -209,7 +205,6 @@ export function Home() {
             ))}
           </div>
 
-          {/* Row 2: 2 Centered Cards */}
           <div className="mt-6 flex flex-wrap justify-center gap-6">
             {programs.slice(4).map((program) => (
               <div
@@ -226,7 +221,7 @@ export function Home() {
                 <Link to="/program" className="mt-5">
                   <Button
                     variant="outline-light"
-                    className="rounded-full border-[#92AD76] bg-white px-5 py-1.5 text-[10px] font-bold tracking-wider text-[#4E6B34] hover:bg-[#5E7E41] hover:text-white"
+                    className="rounded-full border-[#92AD76] bg-white px-5 py-1.5 text-[10px] font-bold tracking-wider text-[#4E6B34] hover:bg-forest-strong hover:text-white"
                   >
                     EXPLORE
                   </Button>
@@ -237,11 +232,10 @@ export function Home() {
         </div>
       </section>
 
-      {/* 4. WHY CHOOSE US */}
       <section className="bg-[#F5F8F0] px-6 py-14 sm:px-8 sm:py-16">
         <div className="mx-auto max-w-[1100px]">
           <div className="text-left">
-            <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#69854E]">
+            <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-accent-deep">
               WHY CHOOSE YOGA FOR LIFE?
             </span>
             <h2 className="mt-2 max-w-[520px] font-sans text-xl font-bold leading-tight text-[#587B44] sm:text-2xl">
@@ -281,10 +275,9 @@ export function Home() {
         </div>
       </section>
 
-      {/* 5. HOW IT WORKS */}
       <section className="bg-[#EFF4E8] px-6 py-20">
         <div className="mx-auto max-w-[1040px] text-center">
-          <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#69854E]">
+          <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent-deep">
             HOW IT WORKS
           </span>
           <h2 className="mt-2 font-serif text-2xl font-bold text-[#425D2B] sm:text-3xl">
@@ -300,7 +293,7 @@ export function Home() {
               <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#E3ECCE] text-sm font-bold text-[#4A6734]">
                 1
               </span>
-              <h3 className="font-serif text-sm font-bold text-[#3E5929]">Book a Free Consultation</h3>
+              <h3 className="font-serif text-sm font-bold text-forest">Book a Free Consultation</h3>
               <p className="mt-2 text-xs leading-relaxed text-[#62715A]">
                 Share your goals and wellness needs with our guides for a tailored assessment.
               </p>
@@ -312,7 +305,7 @@ export function Home() {
               <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#E3ECCE] text-sm font-bold text-[#4A6734]">
                 2
               </span>
-              <h3 className="font-serif text-sm font-bold text-[#3E5929]">Choose Your Ideal Program</h3>
+              <h3 className="font-serif text-sm font-bold text-forest">Choose Your Ideal Program</h3>
               <p className="mt-2 text-xs leading-relaxed text-[#62715A]">
                 We recommend the perfect yoga path suited to your routine, health, and schedule.
               </p>
@@ -324,7 +317,7 @@ export function Home() {
               <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#E3ECCE] text-sm font-bold text-[#4A6734]">
                 3
               </span>
-              <h3 className="font-serif text-sm font-bold text-[#3E5929]">Start Your Yoga Journey</h3>
+              <h3 className="font-serif text-sm font-bold text-forest">Start Your Yoga Journey</h3>
               <p className="mt-2 text-xs leading-relaxed text-[#62715A]">
                 Join your classes, build consistency, and experience physical and mental harmony.
               </p>
@@ -333,10 +326,9 @@ export function Home() {
         </div>
       </section>
 
-      {/* 6. TESTIMONIALS */}
       <section className="bg-[#FAFBF7] px-6 py-20">
         <div className="mx-auto max-w-[1080px] text-center">
-          <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#69854E]">
+          <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent-deep">
             TESTIMONIALS
           </span>
           <h2 className="mt-2 font-serif text-2xl font-bold text-[#425E2C] sm:text-3xl">
@@ -374,39 +366,36 @@ export function Home() {
         </div>
       </section>
 
-      {/* 7. PRICING */}
       <section id="pricing" className="bg-[#EFF4EA] px-6 py-20">
         <div className="mx-auto max-w-[1100px] text-center">
-          <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#69854E]">
+          <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent-deep">
             PRICING
           </span>
           <div className="mt-2 flex items-center justify-center gap-2">
             <Sparkles className="h-4 w-4 text-[#739450]" />
-            <h2 className="font-serif text-2xl font-bold text-[#3E5929] sm:text-3xl">
+            <h2 className="font-serif text-2xl font-bold text-forest sm:text-3xl">
               Choose the Plan That Fits Your Journey
             </h2>
             <Sparkles className="h-4 w-4 text-[#739450]" />
           </div>
 
           <div className="mt-10 grid items-stretch gap-6 md:grid-cols-3">
-            {/* Starter */}
             <div className="flex flex-col justify-between rounded-2xl border border-[#D3DDC7] bg-white p-7 text-center shadow-xs">
               <div>
-                <h3 className="font-serif text-lg font-bold text-[#3E5929]">Starter</h3>
+                <h3 className="font-serif text-lg font-bold text-forest">Starter</h3>
                 <div className="mt-4 font-serif text-3xl font-bold text-[#354D22]">₹1,499<span className="text-xs font-sans text-gray-500 font-normal"> / month</span></div>
                 <ul className="mt-6 space-y-3 text-xs text-[#5D6B53]">
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#608044]" /> 3 Classes / Week</li>
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#608044]" /> Community Support</li>
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#608044]" /> Beginner Friendly</li>
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#608044]" /> Group Mentoring</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-accent-strong" /> 3 Classes / Week</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-accent-strong" /> Community Support</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-accent-strong" /> Beginner Friendly</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-accent-strong" /> Group Mentoring</li>
                 </ul>
               </div>
-              <Button className="mt-8 w-full rounded-full border border-[#89A66D] bg-transparent py-2.5 text-xs font-bold text-[#45622F] hover:bg-[#5E7E41] hover:text-white">
+              <Button className="mt-8 w-full rounded-full border border-[#89A66D] bg-transparent py-2.5 text-xs font-bold text-[#45622F] hover:bg-forest-strong hover:text-white">
                 GET STARTED
               </Button>
             </div>
 
-            {/* Popular (Highlighted Green) */}
             <div className="relative flex flex-col justify-between rounded-2xl border border-[#44602E] bg-[#4B6833] p-7 text-center text-white shadow-lg">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#7CA259] px-3 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white">
                 Most Popular
@@ -415,10 +404,10 @@ export function Home() {
                 <h3 className="font-serif text-lg font-bold">Popular</h3>
                 <div className="mt-4 font-serif text-3xl font-bold">₹2,499<span className="text-xs font-sans text-white/80 font-normal"> / month</span></div>
                 <ul className="mt-6 space-y-3 text-xs text-white/90">
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#CFE4B8]" /> 5 Classes / Week</li>
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#CFE4B8]" /> Personalized Guidance</li>
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#CFE4B8]" /> Nutrition Tips</li>
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#CFE4B8]" /> Progress Tracking</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-surface-sage-light" /> 5 Classes / Week</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-surface-sage-light" /> Personalized Guidance</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-surface-sage-light" /> Nutrition Tips</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-surface-sage-light" /> Progress Tracking</li>
                 </ul>
               </div>
               <Button className="mt-8 w-full rounded-full bg-white py-2.5 text-xs font-bold text-[#3C5427] hover:bg-[#EFF4E7]">
@@ -426,25 +415,23 @@ export function Home() {
               </Button>
             </div>
 
-            {/* Premium */}
             <div className="flex flex-col justify-between rounded-2xl border border-[#D3DDC7] bg-white p-7 text-center shadow-xs">
               <div>
-                <h3 className="font-serif text-lg font-bold text-[#3E5929]">Premium</h3>
+                <h3 className="font-serif text-lg font-bold text-forest">Premium</h3>
                 <div className="mt-4 font-serif text-3xl font-bold text-[#354D22]">₹4,499<span className="text-xs font-sans text-gray-500 font-normal"> / month</span></div>
                 <ul className="mt-6 space-y-3 text-xs text-[#5D6B53]">
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#608044]" /> Daily Classes</li>
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#608044]" /> 1-on-1 Mentoring</li>
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#608044]" /> Custom Meal Plan</li>
-                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-[#608044]" /> Lifestyle Coaching</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-accent-strong" /> Daily Classes</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-accent-strong" /> 1-on-1 Mentoring</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-accent-strong" /> Custom Meal Plan</li>
+                  <li className="flex items-center justify-center gap-2"><Check className="h-3.5 w-3.5 text-accent-strong" /> Lifestyle Coaching</li>
                 </ul>
               </div>
-              <Button className="mt-8 w-full rounded-full border border-[#89A66D] bg-transparent py-2.5 text-xs font-bold text-[#45622F] hover:bg-[#5E7E41] hover:text-white">
+              <Button className="mt-8 w-full rounded-full border border-[#89A66D] bg-transparent py-2.5 text-xs font-bold text-[#45622F] hover:bg-forest-strong hover:text-white">
                 GET STARTED
               </Button>
             </div>
           </div>
 
-          {/* Contact Bar */}
           <div className="mt-12 mx-auto flex max-w-[880px] flex-col items-center justify-between gap-4 rounded-xl border border-[#D0DBC7] bg-[#FCFDF9] p-5 md:flex-row md:px-8">
             <div className="text-left">
               <h4 className="font-serif text-sm font-bold text-[#425E2D]">
@@ -469,7 +456,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* 8. FINAL CTA BANNER */}
       <section className="relative overflow-hidden bg-[#E2ECD5] bg-cover bg-center py-20 text-center" style={{ backgroundImage: "url('/assets/Weight Loss CTA Background.png')" }}>
         <div className="relative z-10 mx-auto max-w-[620px] px-6">
           <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#5A793F]">

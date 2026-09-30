@@ -26,7 +26,6 @@ export function About() {
         },
       ],
     },
-
     {
       name: "Rakshitaa R",
       role: "LEAD YOGA INSTRUCTOR",
@@ -51,7 +50,6 @@ export function About() {
         },
       ],
     },
-
     {
       name: "SRAVANI S",
       role: "YOGA TRAINER",
@@ -85,92 +83,283 @@ export function About() {
     "/assets/Mask group (3).png",
   ];
 
-  const storyCollage = (reverse = false) => (
-    <div className="relative mx-auto h-[280px] w-[280px] lg:h-[360px] lg:w-[360px]">
-      {storyImages.map((image, index) => {
-        const positions = [
-          "top-0 left-1/2 -translate-x-1/2 -translate-y-[15%]",
-          "top-1/2 left-0 -translate-x-[15%] -translate-y-1/2",
-          "top-1/2 right-0 translate-x-[15%] -translate-y-1/2",
-          "bottom-0 left-1/2 -translate-x-1/2 translate-y-[15%]",
+  const storyCollage = (reverse = false) => {
+    const positions = reverse
+      ? [
+          "bottom-0 left-1/2 -translate-x-1/2 translate-y-[12%]",
+          "top-1/2 right-0 translate-x-[12%] -translate-y-1/2",
+          "top-1/2 left-0 -translate-x-[12%] -translate-y-1/2",
+          "top-0 left-1/2 -translate-x-1/2 -translate-y-[12%]",
+        ]
+      : [
+          "top-0 left-1/2 -translate-x-1/2 -translate-y-[12%]",
+          "top-1/2 left-0 -translate-x-[12%] -translate-y-1/2",
+          "top-1/2 right-0 translate-x-[12%] -translate-y-1/2",
+          "bottom-0 left-1/2 -translate-x-1/2 translate-y-[12%]",
         ];
 
-        return (
+    return (
+      <div className="relative mx-auto h-[210px] w-[210px] sm:h-[245px] sm:w-[245px] lg:h-[270px] lg:w-[270px]">
+        {storyImages.map((image, index) => (
           <div
             key={`${image}-${reverse}`}
-            className={`absolute h-28 w-28 rotate-45 overflow-hidden rounded-[1.5rem] border-6 border-background bg-white shadow-lg lg:h-40 lg:w-40 lg:rounded-[2rem] lg:border-8 ${positions[reverse ? 3 - index : index]}`}
+            className={`
+              absolute
+              h-[78px]
+              w-[78px]
+              rotate-45
+              overflow-hidden
+              rounded-[15px]
+              border-[5px]
+              border-[#F4F7EE]
+              bg-white
+              shadow-sm
+              sm:h-[88px]
+              sm:w-[88px]
+              lg:h-[100px]
+              lg:w-[100px]
+              lg:rounded-[18px]
+              ${positions[index]}
+            `}
           >
             <img
               src={image}
               alt=""
-              className="h-[150%] w-[150%] max-w-none -translate-x-[15%] -translate-y-[15%] -rotate-45 object-cover"
+              className="
+                h-[150%]
+                w-[150%]
+                max-w-none
+                -translate-x-[15%]
+                -translate-y-[15%]
+                -rotate-45
+                object-cover
+              "
             />
           </div>
-        );
-      })}
-    </div>
-  );
+        ))}
+      </div>
+    );
+  };
 
   return (
-    <div className="overflow-hidden bg-background">
-      <section className="py-16 md:py-24 px-6 md:px-10 bg-background">
-        <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row gap-16 items-center">
-          <div className="md:w-5/12 relative z-10">
-            <h1 className="font-heading text-[3.5rem] md:text-[5.5rem] font-bold leading-none mb-6">
-              <span className="block text-primary-600">Yoga Refined.</span>
+    <main className="w-full overflow-hidden bg-[#F7F9F2]">
 
-              <span className="block text-primary-600">Mind Restored.</span>
+      <section className="bg-white">
+        <div
+          className="
+            mx-auto
+            grid
+            max-w-[1180px]
+            grid-cols-1
+            items-center
+            gap-4
+            px-7
+            py-10
+            sm:px-10
+            md:grid-cols-[0.92fr_1.08fr]
+            md:gap-3
+            md:py-12
+            lg:px-12
+            lg:py-14
+          "
+        >
+          <div className="relative z-10">
+            <h1
+              className="
+                font-heading
+                text-[38px]
+                leading-[0.98]
+                font-medium
+                text-primary-600
+                sm:text-[44px]
+                md:text-[48px]
+                lg:text-[52px]
+              "
+            >
+              <span className="block">Yoga Refined.</span>
+              <span className="block">Mind Restored.</span>
             </h1>
 
-            <p className="font-body text-primary-800 font-semibold text-lg leading-relaxed mb-10 max-w-md">
-              Discover our story, our mission, and the values that inspire us to
-              help people live healthier, more balanced lives through the
+            <p
+              className="
+                mt-5
+                max-w-[430px]
+                font-body
+                text-[13px]
+                font-medium
+                leading-[1.65]
+                text-primary-800
+                sm:text-[14px]
+                lg:text-[15px]
+              "
+            >
+              Discover our story, our mission, and the values that inspire us
+              to help people live healthier, more balanced lives through the
               practice of yoga.
             </p>
 
-            <Button className="bg-primary-500 hover:bg-primary-600 text-white rounded-md px-8 py-4 font-bold text-sm tracking-widest shadow-md">
-              MEET OUR INSTRUCTORS <span className="ml-3 text-lg">→</span>
+            <Button
+              className="
+                mt-5
+                h-[38px]
+                min-w-[180px]
+                rounded-[6px]
+                px-5
+                text-[11px]
+                font-bold
+                tracking-wide
+                shadow-md
+              "
+            >
+              MEET OUR INSTRUCTORS
+              <span className="ml-2 text-[15px]">→</span>
             </Button>
           </div>
 
-          <div className="md:w-7/12 flex justify-center relative z-0">
+          <div className="flex items-center justify-center">
             <img
               src="/assets/Yoga for Life - Review Post 1 (12) 1.png"
               alt="Yoga For Life"
-              className="w-full max-w-2xl object-contain mix-blend-multiply"
+              className="
+                block
+                w-full
+                max-w-[672px]
+                object-contain
+                mix-blend-multiply
+              "
             />
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-background px-6 py-16 lg:px-10 lg:py-24">
-        <img src="/assets/leaves.png" alt="" className="pointer-events-none absolute bottom-0 right-0 w-24 opacity-70 lg:w-40" />
-        <div className="mx-auto grid max-w-[1320px] grid-cols-1 items-center gap-14 md:grid-cols-2 lg:gap-20">
+      <section
+        className="
+          relative
+          overflow-hidden
+          bg-[#F1F5E9]
+          px-7
+          py-12
+          sm:px-10
+          md:py-16
+          lg:px-12
+        "
+      >
+        <img
+          src="/assets/leaves.png"
+          alt=""
+          className="
+            pointer-events-none
+            absolute
+            bottom-0
+            right-0
+            w-[65px]
+            opacity-75
+            sm:w-[85px]
+            md:w-[105px]
+          "
+        />
+
+        <div
+          className="
+            mx-auto
+            grid
+            max-w-[1080px]
+            grid-cols-1
+            items-center
+            gap-12
+            md:grid-cols-2
+            md:gap-10
+            lg:gap-14
+          "
+        >
           <div>
             {storyCollage()}
-            <div className="mx-auto mt-12 max-w-[430px] text-left">
-              <span className="mb-4 block font-body text-xs font-black uppercase tracking-[0.12em] text-primary-600">
+
+            <div className="mx-auto mt-9 max-w-[400px]">
+              <span
+                className="
+                  block
+                  font-body
+                  text-[10px]
+                  font-black
+                  uppercase
+                  tracking-[0.08em]
+                  text-primary-600
+                  sm:text-[11px]
+                "
+              >
                 YOGA REIMAGINED FOR REAL LIFE
               </span>
-              <p className="font-body text-sm font-medium leading-relaxed text-primary-800 lg:text-base">
-                It is about how you feel when you wake up.<br />
-                How you breathe when life gets stressful.<br />
-                How you care for your body and<br />
-                How you quiet your mind<br />
-                And how consciously you choose to live.<br />
+
+              <p
+                className="
+                  mt-3
+                  font-body
+                  text-[11px]
+                  font-medium
+                  leading-[1.65]
+                  text-primary-800
+                  sm:text-[12px]
+                "
+              >
+                It is about how you feel when you wake up.
+                <br />
+                How you breathe when life gets stressful.
+                <br />
+                How you care for your body and
+                <br />
+                How you quiet your mind
+                <br />
+                And how consciously you choose to live.
+                <br />
                 At YFL, we bring yoga beyond the mat and into everyday life.
               </p>
-              <h3 className="mt-5 font-body text-lg font-bold text-primary-600">
+
+              <h3
+                className="
+                  mt-4
+                  font-body
+                  text-[13px]
+                  font-bold
+                  text-primary-600
+                  sm:text-[14px]
+                "
+              >
                 Move, Breathe, Restore, Transform
               </h3>
             </div>
           </div>
 
-          <div className="text-center md:pt-8">
-            <span className="mb-6 block font-body text-xs font-black uppercase tracking-[0.2em] text-primary-600">
+          <div className="text-center">
+            <span
+              className="
+                block
+                font-body
+                text-[10px]
+                font-black
+                uppercase
+                tracking-[0.12em]
+                text-primary-600
+                sm:text-[11px]
+              "
+            >
               OUR STORY
             </span>
-            <p className="font-body text-sm font-medium leading-relaxed text-primary-800 lg:text-base">
+
+            <p
+              className="
+                mx-auto
+                mt-4
+                max-w-[380px]
+                font-body
+                text-[10px]
+                font-medium
+                leading-[1.7]
+                text-primary-800
+                sm:text-[11px]
+                md:text-[12px]
+              "
+            >
               YFL began in Nov 2021 with a simple belief - Yoga should not be
               limited to the mat. It should become a part of everyday life.
               What started as a passion for helping people move better, breathe
@@ -179,147 +368,320 @@ export function About() {
               participants have benefited from YFL journey, each with their own
               goals, challenges and stories of transformation.
             </p>
-            <div className="mt-12">{storyCollage(true)}</div>
+
+            <div className="mt-8">
+              {storyCollage(true)}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-14 md:py-16 px-6 md:px-10 bg-white relative border-y border-border-soft">
-        <div className="max-w-[1320px] mx-auto">
-          <span className="font-heading text-xl md:text-2xl font-bold text-primary-600 tracking-wide block mb-12 md:mb-14">
-            OUR MISSION & VISION
-          </span>
+      <section className="bg-white px-7 py-12 sm:px-10 md:py-16">
+        <div className="mx-auto max-w-[850px]">
+          <div className="mb-10 flex items-center justify-center gap-3">
+            <span className="text-primary-500">❧</span>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-24">
-            <div className="w-full max-w-[300px] h-[330px] bg-background rounded-[1rem] border border-primary px-7 py-5 flex flex-col items-center text-center relative shadow-sm">
-              <div className="absolute -top-8 bg-background border border-primary w-16 h-16 rounded-full flex items-center justify-center">
+            <h2
+              className="
+                font-heading
+                text-[15px]
+                font-bold
+                tracking-wide
+                text-primary-600
+                sm:text-[17px]
+              "
+            >
+              OUR MISSION & VISION
+            </h2>
+
+            <span className="text-primary-500">❧</span>
+          </div>
+
+          <div
+            className="
+              grid
+              grid-cols-1
+              justify-items-center
+              gap-8
+              sm:grid-cols-2
+              sm:gap-10
+            "
+          >
+            <div
+              className="
+                relative
+                flex
+                h-[245px]
+                w-full
+                max-w-[235px]
+                flex-col
+                items-center
+                rounded-[10px]
+                border
+                border-primary-400
+                bg-[#F4F7EE]
+                px-5
+                py-4
+                text-center
+              "
+            >
+              <div
+                className="
+                  absolute
+                  -top-5
+                  flex
+                  h-[42px]
+                  w-[42px]
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#E0EBD5]
+                "
+              >
                 <img
                   src="/assets/Goal.png"
                   alt=""
-                  className="w-7 h-7 object-contain"
+                  className="h-5 w-5 object-contain"
                 />
               </div>
 
-              <div className="flex items-center justify-center gap-4 w-full mt-12 mb-3">
-                <div className="h-px bg-primary-soft flex-1" />
-
-                <span className="text-[11px] font-medium text-primary">
+              <div className="mt-8 flex w-full items-center gap-2">
+                <div className="h-px flex-1 bg-primary-soft" />
+                <span className="text-[7px] font-medium text-primary">
                   OUR
                 </span>
-
-                <div className="h-px bg-primary-soft flex-1" />
+                <div className="h-px flex-1 bg-primary-soft" />
               </div>
 
-              <h3 className="font-heading text-[1.7rem] text-primary-mid font-bold mb-3 tracking-wide">
+              <h3
+                className="
+                  mt-1
+                  font-heading
+                  text-[18px]
+                  font-bold
+                  tracking-wide
+                  text-primary-mid
+                "
+              >
                 MISSION
               </h3>
 
-              <p className="font-body text-text-body text-[12px] leading-[1.5] font-medium max-w-[245px]">
-                To inspire healthier lifestyles by offering accessible,
-                personalized yoga programs that support physical strength,
-                mental clarity, and emotional well-being.
+              <p
+                className="
+                  mt-2
+                  max-w-[185px]
+                  font-body
+                  text-[8px]
+                  font-medium
+                  leading-[1.55]
+                  text-text-body
+                  sm:text-[9px]
+                "
+              >
+                To make yoga simple, accessible and meaningful part of
+                everyday life. listening is it about taking time for yourself,
+                to your body, finding becoming a inner peace and little better
+                everyday.
               </p>
 
               <div className="mt-auto">
                 <img
                   src="/assets/Yoga for Life - Review Post 1 (14) 1 (1).png"
                   alt=""
-                  className="w-16 h-16 object-contain mix-blend-multiply"
+                  className="h-10 w-10 object-contain mix-blend-multiply"
                 />
               </div>
             </div>
 
-            <div className="w-full max-w-[300px] h-[330px] bg-background rounded-[1rem] border border-primary px-7 py-5 flex flex-col items-center text-center relative shadow-sm">
-              <div className="absolute -top-8 bg-background border border-primary w-16 h-16 rounded-full flex items-center justify-center">
+            <div
+              className="
+                relative
+                flex
+                h-[245px]
+                w-full
+                max-w-[235px]
+                flex-col
+                items-center
+                rounded-[10px]
+                border
+                border-primary-400
+                bg-[#F4F7EE]
+                px-5
+                py-4
+                text-center
+              "
+            >
+              <div
+                className="
+                  absolute
+                  -top-5
+                  flex
+                  h-[42px]
+                  w-[42px]
+                  items-center
+                  justify-center
+                  rounded-full
+                  bg-[#E0EBD5]
+                "
+              >
                 <img
                   src="/assets/Eye.png"
                   alt=""
-                  className="w-7 h-7 object-contain"
+                  className="h-5 w-5 object-contain"
                 />
               </div>
 
-              <div className="flex items-center justify-center gap-4 w-full mt-12 mb-3">
-                <div className="h-px bg-primary-soft flex-1" />
-
-                <span className="text-[11px] font-medium text-primary">
+              <div className="mt-8 flex w-full items-center gap-2">
+                <div className="h-px flex-1 bg-primary-soft" />
+                <span className="text-[7px] font-medium text-primary">
                   OUR
                 </span>
-
-                <div className="h-px bg-primary-soft flex-1" />
+                <div className="h-px flex-1 bg-primary-soft" />
               </div>
 
-              <h3 className="font-heading text-[1.7rem] text-primary-mid font-bold mb-3 tracking-wide">
+              <h3
+                className="
+                  mt-1
+                  font-heading
+                  text-[18px]
+                  font-bold
+                  tracking-wide
+                  text-primary-mid
+                "
+              >
                 VISION
               </h3>
 
-              <p className="font-body text-text-body text-[12px] leading-[1.5] font-medium max-w-[245px]">
-                To create a community where people of all ages can embrace yoga
-                as a lifelong journey to inner peace. We strive to inspire
-                positive lifestyle changes through mindful practice and
-                compassionate guidance.
+              <p
+                className="
+                  mt-2
+                  max-w-[185px]
+                  font-body
+                  text-[8px]
+                  font-medium
+                  leading-[1.55]
+                  text-text-body
+                  sm:text-[9px]
+                "
+              >
+                To inspire a healthier world, one mindful life at a time, our
+                vision is to grow YFL into a trusted wellness community where
+                every person feels empowered to take charge of their health,
+                embrace balance and become their better self.
               </p>
 
               <div className="mt-auto">
                 <img
                   src="/assets/Yoga for Life - Review Post 1 (16) 1.png"
                   alt=""
-                  className="w-16 h-16 object-contain mix-blend-multiply"
+                  className="h-10 w-10 object-contain mix-blend-multiply"
                 />
               </div>
             </div>
           </div>
+
+          <p
+            className="
+              mt-5
+              text-center
+              font-body
+              text-[9px]
+              font-bold
+              tracking-wide
+              text-primary-600
+            "
+          >
+            YFL - FIND YOUR BALANCE LIVE YOUR LIFE.
+          </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 px-6 md:px-10 bg-background">
-        <div className="max-w-[1320px] mx-auto">
-          <div className="mb-12">
-            <span className="font-heading text-sm md:text-base font-bold text-primary-600 tracking-[0.15em] block mb-3">
+      <section className="bg-[#F1F5E9] px-6 py-12 sm:px-8 md:py-16">
+        <div className="mx-auto max-w-[1080px]">
+          <div className="mb-8">
+            <span
+              className="
+                block
+                font-heading
+                text-[10px]
+                font-bold
+                tracking-[0.1em]
+                text-primary-600
+              "
+            >
               OUR TEAM
             </span>
 
-            <h2 className="font-heading text-[2.5rem] md:text-[3rem] text-primary-600 font-bold mb-5">
+            <h2
+              className="
+                mt-2
+                font-heading
+                text-[24px]
+                font-bold
+                text-primary-600
+                sm:text-[28px]
+              "
+            >
               Meet Our Instructors
             </h2>
 
-            <p className="font-body text-primary-800 text-base md:text-lg font-medium leading-relaxed max-w-[1200px]">
-              Our certified instructors are passionate about helping you achieve
-              your wellness goals. With years of experience and a personalized
-              approach, they create a supportive environment where every student
-              can grow with confidence.
+            <p
+              className="
+                mt-3
+                max-w-[930px]
+                font-body
+                text-[10px]
+                font-medium
+                leading-[1.7]
+                text-primary-800
+                sm:text-[11px]
+              "
+            >
+              Our certified instructors are passionate about helping you
+              achieve your wellness goals. With years of experience and a
+              personalized approach, they create a supportive environment
+              where every student can grow with confidence.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          <div
+            className="
+              grid
+              grid-cols-1
+              gap-5
+              md:grid-cols-3
+              md:gap-6
+            "
+          >
             {instructors.map((instructor) => (
               <div
                 key={instructor.name}
                 className="
                   relative
-                  overflow-hidden
                   flex
+                  min-h-[355px]
                   flex-col
-                  bg-surface
-                  border-[2px]
+                  overflow-hidden
+                  rounded-[11px]
+                  border
                   border-primary-400
-                  rounded-[1.5rem]
-                  min-h-[730px]
-                  shadow-[0_3px_10px_rgba(72,95,45,0.08)]
+                  bg-[#F8FAF3]
+                  shadow-[0_3px_8px_rgba(72,95,45,0.08)]
                 "
               >
                 <img
                   src="/assets/Leaf.png"
                   alt=""
                   className="
+                    pointer-events-none
                     absolute
-                    top-0
                     right-0
-                    w-[120px]
-                    h-[120px]
+                    top-0
+                    z-0
+                    h-[65px]
+                    w-[65px]
                     object-contain
                     opacity-20
-                    pointer-events-none
-                    z-0
                   "
                 />
 
@@ -330,56 +692,52 @@ export function About() {
                     flex
                     flex-col
                     items-center
+                    px-4
+                    pt-6
                     text-center
-                    px-7
-                    pt-10
                   "
                 >
-                  <div className="relative mb-5">
-                    <div
-                      className="
-                        w-[205px]
-                        h-[205px]
-                        rounded-full
-                        border-[3px]
-                        border-primary-400
-                        bg-white
-                        p-[5px]
-                        shadow-sm
-                      "
-                    >
-                      <div className="w-full h-full rounded-full overflow-hidden">
-                        <img
-                          src={instructor.image}
-                          alt={instructor.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
+                  <div
+                    className="
+                      relative
+                      mb-3
+                      h-[80px]
+                      w-[80px]
+                      rounded-full
+                      border-[2px]
+                      border-primary-400
+                      bg-white
+                      p-[3px]
+                    "
+                  >
+                    <div className="h-full w-full overflow-hidden rounded-full">
+                      <img
+                        src={instructor.image}
+                        alt={instructor.name}
+                        className="h-full w-full object-cover"
+                      />
                     </div>
 
                     <div
                       className="
                         absolute
-                        bottom-1
-                        right-0
-                        translate-x-[18%]
-                        translate-y-[5%]
-                        w-[62px]
-                        h-[62px]
-                        rounded-full
-                        bg-[#789c59]
-                        border-[3px]
-                        border-white
+                        bottom-[-3px]
+                        right-[-8px]
                         flex
+                        h-[28px]
+                        w-[28px]
                         items-center
                         justify-center
-                        shadow-sm
+                        rounded-full
+                        border-2
+                        border-white
+                        bg-[#789C59]
                       "
                     >
                       <img
                         src="/assets/Lotus.png"
                         alt=""
-                        className="w-10 h-10 object-contain brightness-0 invert"
+                        className="h-4 w-4 object-contain brightness-0 invert"
                       />
                     </div>
                   </div>
@@ -387,12 +745,10 @@ export function About() {
                   <h3
                     className="
                       font-heading
-                      text-[2.15rem]
-                      md:text-[2.25rem]
-                      text-primary-600
+                      text-[15px]
                       font-bold
-                      leading-none
-                      mb-2
+                      leading-tight
+                      text-primary-600
                     "
                   >
                     {instructor.name}
@@ -400,58 +756,49 @@ export function About() {
 
                   <p
                     className="
+                      mt-1
                       font-body
-                      text-[14px]
-                      font-medium
-                      text-text
+                      text-[7px]
+                      font-bold
                       tracking-wide
-                      mb-5
+                      text-text
                     "
                   >
-                    {instructor.role}
+                    ★ {instructor.role}
                   </p>
 
                   <div
                     className="
-                      inline-flex
-                      items-center
-                      justify-center
-                      gap-2
+                      mt-3
+                      rounded-[5px]
                       bg-primary-100
-                      text-primary-900
-                      px-5
-                      py-2
-                      rounded-full
-                      text-[13px]
+                      px-3
+                      py-1.5
+                      text-[7px]
                       font-medium
-                      shadow-sm
-                      mb-5
+                      text-primary-900
                     "
                   >
-                    <span className="text-primary-300 text-[17px] leading-none">
-                      ★
-                    </span>
-
-                    <span>{instructor.specialty}</span>
+                    {instructor.specialty}
                   </div>
 
                   <div
                     className="
-                      w-[calc(100%-10px)]
-                      bg-surface-soft
-                      rounded-[1rem]
-                      px-6
-                      py-5
-                      mb-6
+                      mt-3
+                      w-full
+                      rounded-[7px]
+                      bg-[#E7EED9]
+                      px-3
+                      py-3
                     "
                   >
                     <p
                       className="
                         font-body
-                        text-primary-700
-                        text-[15px]
-                        leading-[1.45]
+                        text-[7px]
                         font-medium
+                        leading-[1.45]
+                        text-primary-700
                       "
                     >
                       {instructor.desc}
@@ -459,22 +806,22 @@ export function About() {
                   </div>
                 </div>
 
-                <div className="mt-auto relative">
+                <div className="relative mt-auto">
                   <div
                     className="
                       absolute
                       left-0
-                      top-[-52px]
-                      w-full
-                      h-[75px]
+                      top-[-22px]
                       z-10
+                      h-[32px]
+                      w-full
                       pointer-events-none
                     "
                   >
                     <svg
                       viewBox="0 0 500 100"
                       preserveAspectRatio="none"
-                      className="w-full h-full"
+                      className="h-full w-full"
                     >
                       <path
                         d="
@@ -495,10 +842,10 @@ export function About() {
                     className="
                       relative
                       z-20
-                      bg-surface-strong
-                      px-5
-                      pt-8
-                      pb-7
+                      bg-[#DCE8BD]
+                      px-2
+                      pb-4
+                      pt-4
                     "
                   >
                     <div className="grid grid-cols-3 divide-x divide-primary-400">
@@ -510,36 +857,35 @@ export function About() {
                             flex-col
                             items-center
                             text-center
-                            px-2
                           "
                         >
                           <div
                             className="
-                              w-[54px]
-                              h-[54px]
-                              rounded-full
-                              border-[2px]
-                              border-primary-400
-                              bg-surface-soft
+                              mb-1
                               flex
+                              h-[27px]
+                              w-[27px]
                               items-center
                               justify-center
-                              mb-3
+                              rounded-full
+                              border
+                              border-primary-400
+                              bg-[#EDF3E5]
                             "
                           >
                             <img
                               src={stat.icon}
                               alt=""
-                              className="w-7 h-7 object-contain"
+                              className="h-3.5 w-3.5 object-contain"
                             />
                           </div>
 
                           <span
                             className="
                               font-heading
-                              text-[16px]
-                              text-[#34432A]
+                              text-[6px]
                               leading-tight
+                              text-body-secondary
                             "
                           >
                             {stat.label}
@@ -548,9 +894,9 @@ export function About() {
                           <span
                             className="
                               font-heading
-                              text-[16px]
-                              text-[#34432A]
+                              text-[6px]
                               leading-tight
+                              text-body-secondary
                             "
                           >
                             {stat.sub}
@@ -570,16 +916,14 @@ export function About() {
         className="
           relative
           overflow-hidden
-          min-h-[650px]
-          md:min-h-[680px]
           bg-gradient-to-r
-          from-[#B9D995]
-          via-[#86A963]
-          to-[#4F683A]
+          from-[#D3E8C2]
+          via-[#B4D99D]
+          to-[#DCEBCB]
           px-6
-          md:px-10
-          py-20
-          md:py-24
+          py-12
+          sm:px-8
+          md:py-16
         "
       >
         <img
@@ -587,19 +931,14 @@ export function About() {
           alt=""
           aria-hidden="true"
           className="
-            absolute
-            z-[1]
             pointer-events-none
-            select-none
-            top-[-10px]
-            right-[-5px]
-            w-[150px]
-            sm:w-[175px]
-            md:w-[205px]
-            lg:w-[235px]
-            xl:w-[260px]
-            h-auto
-            object-contain
+            absolute
+            right-[-10px]
+            top-[-5px]
+            z-0
+            w-[105px]
+            opacity-60
+            md:w-[145px]
           "
         />
 
@@ -608,19 +947,14 @@ export function About() {
           alt=""
           aria-hidden="true"
           className="
-            absolute
-            z-[1]
             pointer-events-none
-            select-none
+            absolute
             bottom-[-10px]
             left-[-10px]
-            w-[125px]
-            sm:w-[150px]
-            md:w-[175px]
-            lg:w-[195px]
-            xl:w-[220px]
-            h-auto
-            object-contain
+            z-0
+            w-[100px]
+            opacity-60
+            md:w-[135px]
           "
         />
 
@@ -628,129 +962,111 @@ export function About() {
           className="
             relative
             z-10
-            max-w-[1320px]
             mx-auto
             grid
+            max-w-[1050px]
             grid-cols-1
-            lg:grid-cols-2
-            gap-12
-            lg:gap-20
             items-center
+            gap-8
+            md:grid-cols-[1fr_1fr]
+            md:gap-10
           "
         >
-          <div className="flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center">
             <div
               className="
                 w-full
-                max-w-[735px]
+                max-w-[600px]
                 overflow-hidden
-                shadow-[0_20px_45px_rgba(30,45,20,0.30)]
+                rounded-[6px]
+                shadow-[0_8px_20px_rgba(30,45,20,0.18)]
               "
             >
               <img
                 src="/assets/Yoga for Life - Review Post 1 (17) 1.png"
                 alt="Woman meditating in nature"
-                className="
-                  block
-                  w-full
-                  h-auto
-                  object-cover
-                "
+                className="block h-auto w-full object-cover"
               />
             </div>
 
             <Button
               className="
-                mt-10
+                mt-4
+                h-[32px]
                 w-full
-                max-w-[550px]
-                h-[72px]
-                bg-primary-500
-                hover:bg-primary-600
-                text-white
+                max-w-[280px]
+                rounded-[5px]
                 border
                 border-accent
-                rounded-[14px]
-                font-body
+                px-4
+                text-[8px]
                 font-bold
-                text-base
                 tracking-wide
-                shadow-[0_12px_25px_rgba(40,60,25,0.25)]
+                shadow-md
               "
             >
               START YOUR JOURNEY
-              <span className="ml-3 text-xl">→</span>
+              <span className="ml-2">→</span>
             </Button>
           </div>
 
-          <div
-            className="
-              relative
-              z-10
-              text-center
-              lg:text-left
-              max-w-[620px]
-              mx-auto
-              lg:mx-0
-            "
-          >
-            <h2
+          <div className="text-center md:text-left">
+            <p
               className="
-                font-heading
-                text-[#17220E]
-                text-[2.4rem]
-                md:text-[3rem]
-                lg:text-[3.2rem]
-                leading-[1.15]
-                font-extrabold
+                font-body
+                text-[8px]
+                font-black
                 uppercase
-                tracking-wide
-                mb-8
+                tracking-[0.08em]
+                text-[#26351D]
+                sm:text-[9px]
               "
             >
-              BEGIN YOUR WELLNESS
-              <br />
-              JOURNEY TODAY
+              BEGIN YOUR WELLNESS JOURNEY TODAY
+            </p>
+
+            <h2
+              className="
+                mt-2
+                font-heading
+                text-[18px]
+                font-bold
+                leading-tight
+                text-[#17220E]
+                sm:text-[21px]
+              "
+            >
+              Discover the Difference.
             </h2>
 
             <h3
               className="
                 font-heading
-                text-[#17220E]
-                text-[2rem]
-                md:text-[2.7rem]
-                lg:text-[3rem]
-                leading-[1.15]
+                text-[17px]
                 font-bold
-                mb-8
+                leading-tight
+                text-primary-600
+                sm:text-[20px]
               "
             >
-              Discover the Difference.
-              <br />
               Start Your{" "}
-              <span
-                className="
-                  text-white
-                  italic
-                  font-light
-                  tracking-wide
-                "
-              >
+              <span className="italic font-medium text-[#789C59]">
                 Journey.
               </span>
             </h3>
 
             <p
               className="
-                font-body
-                text-white
-                text-base
-                md:text-lg
-                leading-[1.9]
-                font-medium
-                max-w-[570px]
                 mx-auto
-                lg:mx-0
+                mt-4
+                max-w-[370px]
+                font-body
+                text-[9px]
+                font-medium
+                leading-[1.65]
+                text-[#30402A]
+                sm:text-[10px]
+                md:mx-0
               "
             >
               Learn more than just yoga—become part of a supportive community
@@ -761,6 +1077,6 @@ export function About() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

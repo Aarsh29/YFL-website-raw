@@ -5,57 +5,65 @@ export function Testimonials() {
   const features = [
     {
       title: "Personalized\nGuidance",
-      description: "Programs tailored to your goals,\nbody, and lifestyle.",
-      icon: "/assets/Handmade.png",
+      description: "Programs tailored to\nyour goals, body, and\nlifestyle.",
+      icon: "/assets/Lotus.png",
     },
     {
-      title: "Expert\nInstructors",
-      description: "Certified, experienced, and\npassionate yoga experts.",
-      icon: "/assets/Meditation.png",
+      title: "Real\nProgress",
+      description: "Celebrating every small\nstep forward to big\ntransformation.",
+      icon: "/assets/Lotus.png",
     },
     {
       title: "Supportive\nCommunity",
-      description: "A positive and encouraging\ncommunity that inspires you.",
-      icon: "/assets/Friends.png",
+      description: "A positive and\nencouraging community\nthat inspires you.",
+      icon: "/assets/Lotus.png",
     },
     {
-      title: "Lasting\nResults",
-      description:
-        "Improved strength, flexibility,\nmindfulness, and inner peace.",
-      icon: "/assets/Trophy.png",
+      title: "Expert\nInstructors",
+      description: "Certified, experienced,\nand passionate yoga\nexperts.",
+      icon: "/assets/Lotus.png",
     },
   ];
 
   const journey = [
     {
-      icon: "▦",
-      title: "Join Yoga for\nLife",
+      icon: "/assets/Yoga.png",
+      title: "Connect With\nYFL",
       description:
-        "Take the first step and become a\npart of our yoga community.",
+        "Discover the practice that\nsuits you with the right YFL\nprogram to begin your yoga\njourney with confidence.",
     },
     {
-      icon: "●",
-      title: "Attend Personalized\nSessions",
+      icon: "/assets/Yoga.png",
+      title: "Practice With\nPurpose",
       description:
-        "Take the first step and become a\npart of our yoga community.",
+        "Take the first step and\nbecome a part of our\nyoga community.",
     },
     {
-      icon: "♥",
-      title: "Build Healthy\nHabits",
+      icon: "/assets/Yoga.png",
+      title: "Progress With\nConsistency",
       description:
-        "Take the first step and become a\npart of our yoga community.",
+        "Take the first step and\nbecome a part of our\nyoga community.",
     },
     {
-      icon: "✦",
-      title: "Experience Positive\nTransformation",
+      icon: "/assets/Yoga.png",
+      title: "Thrive Beyond the\nMat",
       description:
-        "Take the first step and become a\npart of our yoga community.",
+        "Take the first step and\nbecome a part of our\nyoga community.",
     },
   ];
 
   return (
     <main className="w-full overflow-hidden bg-white">
-      <section className="relative h-[390px] w-full overflow-hidden md:h-[485px]">
+      <section
+        className="
+          relative
+          h-[560px]
+          w-full
+          overflow-hidden
+          sm:h-[600px]
+          lg:h-[672px]
+        "
+      >
         <img
           src="/assets/instructor-placeholder.png"
           alt="Yoga practice"
@@ -77,10 +85,11 @@ export function Testimonials() {
             z-[1]
             w-full
             bg-gradient-to-r
-            from-primary-50
-            via-primary-50/95
+            from-[#f6efd9]
+            via-[#f6efd9]/95
+            via-[55%]
             to-transparent
-            md:w-[68%]
+            lg:w-[67%]
           "
         />
 
@@ -92,29 +101,53 @@ export function Testimonials() {
             flex
             h-full
             w-full
-            max-w-[1280px]
+            max-w-[1120px]
             items-center
-            px-8
-            md:px-12
-            lg:px-16
+            px-6
+            sm:px-8
+            lg:px-0
           "
         >
-          <div className="w-full max-w-[650px] pt-2">
+          <div
+            className="
+              w-full
+              max-w-[520px]
+              pt-2
+              lg:max-w-[500px]
+            "
+          >
+            <p
+              className="
+                mb-5
+                font-body
+                text-[12px]
+                font-bold
+                uppercase
+                tracking-[0.17em]
+                text-heading-green
+                sm:text-[20px]
+              "
+            >
+              YOGA FOR LIFE · BALANCE, BREATHE, BLOOM.
+            </p>
+
             <h1
               className="
                 font-heading
                 text-[48px]
                 font-bold
-                leading-[0.98]
-                tracking-[-0.03em]
-                text-secondary-900
-                md:text-[64px]
-                lg:text-[70px]
+                leading-[0.96]
+                tracking-[-0.035em]
+                text-[#243a25]
+                sm:text-[56px]
+                lg:text-[58px]
               "
             >
-              <span className="block">Real Stories.</span>
+              <span className="block">
+                Real Stories.
+              </span>
 
-              <span className="block text-primary-400">
+              <span className="block text-link">
                 Real Transformations.
               </span>
             </h1>
@@ -122,12 +155,12 @@ export function Testimonials() {
             <p
               className="
                 mt-7
-                max-w-[620px]
+                max-w-[500px]
                 font-body
-                text-[17px]
-                leading-[1.55]
-                text-secondary-700
-                md:text-[19px]
+                text-[100px]
+                leading-[1.65]
+                text-[#354333]
+                sm:text-[16px]
               "
             >
               Discover how Yoga for Life has helped individuals improve their
@@ -140,40 +173,56 @@ export function Testimonials() {
               className="
                 mt-8
                 inline-flex
-                h-[62px]
-                min-w-[295px]
+                h-[48px]
+                min-w-[260px]
                 items-center
                 justify-center
-                rounded-[10px]
-                bg-primary-400
+                rounded-[8px]
+                bg-link
                 px-8
                 font-body
-                text-[17px]
+                text-[12px]
                 font-bold
-                tracking-wide
+                tracking-[0.07em]
                 text-white
-                shadow-[0_5px_12px_rgba(65,91,48,0.18)]
-                transition
-                hover:bg-primary-500
+                shadow-[0_5px_14px_rgba(65,91,48,0.20)]
+                transition-all
+                duration-200
+                hover:bg-[#62874d]
+                hover:shadow-[0_8px_18px_rgba(65,91,48,0.28)]
               "
             >
               START YOUR JOURNEY
+              <span className="ml-3 text-[17px] leading-none">
+                →
+              </span>
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20 md:px-10 md:py-24">
-        <div className="mx-auto max-w-[1280px]">
+      <section
+        className="
+          bg-white
+          px-5
+          py-14
+          sm:px-8
+          sm:py-16
+          lg:px-10
+          lg:py-[58px]
+        "
+      >
+        <div className="mx-auto max-w-[1120px]">
           <div className="max-w-[610px]">
             <p
               className="
                 font-body
-                text-[13px]
+                text-[11px]
                 font-bold
                 uppercase
-                tracking-[0.14em]
-                text-[#709a58]
+                tracking-[0.12em]
+                text-link
+                sm:text-[12px]
               "
             >
               SUCCESS STORIES FROM OUR COMMUNITY
@@ -181,11 +230,12 @@ export function Testimonials() {
 
             <p
               className="
-                mt-6
+                mt-4
                 font-body
-                text-[17px]
+                text-[14px]
                 leading-[1.65]
-                text-primary-700
+                text-[#40503e]
+                sm:text-[15px]
               "
             >
               Every journey is unique, but each story reflects the positive
@@ -194,38 +244,50 @@ export function Testimonials() {
             </p>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-8 text-center">
             <h2
               className="
                 font-heading
-                text-[38px]
+                text-[30px]
                 font-bold
                 leading-tight
-                text-[#739d5b]
-                md:text-[42px]
+                text-heading-green
+                sm:text-[34px]
+                lg:text-[36px]
               "
             >
               What Our Students Say
             </h2>
           </div>
 
-          <div className="mt-9">
+          <div className="mt-8">
             <TestimonialGrid />
           </div>
         </div>
       </section>
 
-      <section className="bg-primary-50 px-6 py-20 md:px-10 md:py-24">
-        <div className="mx-auto max-w-[1280px]">
+      <section
+        className="
+          bg-[#f2f6ed]
+          px-5
+          py-14
+          sm:px-8
+          sm:py-16
+          lg:px-10
+          lg:py-[48px]
+        "
+      >
+        <div className="mx-auto max-w-[1120px]">
           <div className="text-center">
             <p
               className="
                 font-body
-                text-[12px]
+                text-[10px]
                 font-bold
                 uppercase
-                tracking-[0.18em]
-                text-[#709a58]
+                tracking-[0.15em]
+                text-link
+                sm:text-[11px]
               "
             >
               WHY OUR STUDENTS LOVE US
@@ -233,20 +295,20 @@ export function Testimonials() {
 
             <h2
               className="
-                mt-4
+                mt-2
                 font-heading
-                text-[38px]
+                text-[29px]
                 font-bold
                 leading-tight
-                text-[#739d5b]
-                md:text-[42px]
+                text-heading-green
+                sm:text-[34px]
               "
             >
               More Than Just Yoga
             </h2>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-4">
             {features.map((feature, index) => (
               <div
                 key={feature.title}
@@ -254,26 +316,24 @@ export function Testimonials() {
                   flex
                   flex-col
                   items-center
-                  px-8
+                  px-6
                   text-center
                   ${
                     index !== 0
-                      ? "border-t border-[#b5cba5] md:border-l md:border-t-0"
+                      ? "border-t border-[#b8cbaa] pt-8 md:border-l md:border-t-0 md:pt-0"
                       : ""
                   }
-                  pt-10
-                  md:pt-0
                 `}
               >
                 <div
                   className="
                     flex
-                    h-[76px]
-                    w-[76px]
+                    h-[70px]
+                    w-[70px]
                     items-center
                     justify-center
                     rounded-full
-                    bg-primary-100
+                    bg-[#dce8d4]
                   "
                 >
                   <img
@@ -285,13 +345,13 @@ export function Testimonials() {
 
                 <h3
                   className="
-                    mt-7
+                    mt-5
                     whitespace-pre-line
                     font-heading
-                    text-[18px]
+                    text-[16px]
                     font-bold
                     leading-[1.05]
-                    text-primary-800
+                    text-[#3c5738]
                   "
                 >
                   {feature.title}
@@ -299,12 +359,12 @@ export function Testimonials() {
 
                 <p
                   className="
-                    mt-4
+                    mt-3
                     whitespace-pre-line
                     font-body
-                    text-[13px]
+                    text-[11px]
                     leading-[1.45]
-                    text-primary-700
+                    text-[#687363]
                   "
                 >
                   {feature.description}
@@ -315,47 +375,58 @@ export function Testimonials() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20 md:px-10 md:py-24">
-        <div className="mx-auto max-w-[1280px]">
+      <section
+        className="
+          bg-white
+          px-5
+          py-14
+          sm:px-8
+          sm:py-16
+          lg:px-10
+          lg:py-[48px]
+        "
+      >
+        <div className="mx-auto max-w-[1120px]">
           <div className="text-center">
             <p
               className="
                 font-body
-                text-[12px]
+                text-[10px]
                 font-bold
                 uppercase
-                tracking-[0.18em]
-                text-[#709a58]
+                tracking-[0.14em]
+                text-link
+                sm:text-[11px]
               "
             >
-              FROM FIRST CLASS TO LASTING WELLNESS
+              FROM YOUR FIRST MINDFUL BREATH TO A LIFESTYLE OF LASTING
+              WELLNESS.
             </p>
 
             <h2
               className="
-                mt-4
+                mt-2
                 font-heading
-                text-[38px]
+                text-[29px]
                 font-bold
-                text-[#739d5b]
-                md:text-[42px]
+                text-heading-green
+                sm:text-[34px]
               "
             >
-              Your Journey with Us
+              Your Path to a Better You
             </h2>
           </div>
 
-          <div className="relative mt-16">
+          <div className="relative mt-10 sm:mt-12">
             <div
               className="
                 absolute
                 left-[12.5%]
                 right-[12.5%]
-                top-[42px]
+                top-[34px]
                 hidden
                 border-t
-                border-dashed
-                border-[#a9c493]
+                border-[#9eb889]
                 md:block
               "
             />
@@ -365,9 +436,9 @@ export function Testimonials() {
                 relative
                 grid
                 grid-cols-1
-                gap-12
+                gap-10
                 md:grid-cols-4
-                md:gap-4
+                md:gap-3
               "
             >
               {journey.map((item) => (
@@ -385,27 +456,27 @@ export function Testimonials() {
                   <div
                     className="
                       flex
-                      h-[84px]
-                      w-[84px]
+                      h-[68px]
+                      w-[68px]
                       items-center
                       justify-center
                       rounded-full
-                      bg-[#91bd70]
-                      font-body
-                      text-[27px]
-                      font-bold
-                      text-white
+                      bg-[#dce8d4]
                     "
                   >
-                    {item.icon}
+                    <img
+                      src={item.icon}
+                      alt=""
+                      className="h-[42px] w-[42px] object-contain"
+                    />
                   </div>
 
                   <h3
                     className="
-                      mt-6
+                      mt-5
                       whitespace-pre-line
                       font-heading
-                      text-[18px]
+                      text-[15px]
                       font-bold
                       leading-[1.1]
                       text-[#334c33]
@@ -416,11 +487,11 @@ export function Testimonials() {
 
                   <p
                     className="
-                      mt-4
+                      mt-3
                       whitespace-pre-line
                       font-body
-                      text-[13px]
-                      leading-[1.45]
+                      text-[11px]
+                      leading-[1.5]
                       text-[#788277]
                     "
                   >
@@ -452,9 +523,25 @@ export function Testimonials() {
             absolute
             inset-0
             bg-gradient-to-r
-            from-[#dce6bd]/90
-            via-[#d5dfb3]/80
-            to-[#c8d69d]/75
+            from-[#dce6bd]/95
+            via-[#d5dfb3]/88
+            to-[#c8d69d]/78
+          "
+        />
+
+        <div
+          className="
+            absolute
+            right-[-30px]
+            top-1/2
+            hidden
+            h-[330px]
+            w-[330px]
+            -translate-y-1/2
+            rounded-full
+            border-[3px]
+            border-white/25
+            md:block
           "
         />
 
@@ -463,43 +550,42 @@ export function Testimonials() {
             relative
             z-10
             flex
-            min-h-[430px]
+            min-h-[330px]
             w-full
             items-center
             justify-center
             px-6
-            py-20
+            py-16
             text-center
-            md:min-h-[500px]
-            lg:min-h-[540px]
+            sm:min-h-[360px]
+            lg:min-h-[320px]
           "
         >
-          <div className="w-full max-w-[850px]">
+          <div className="w-full max-w-[760px]">
             <h2
               className="
                 font-heading
-                text-[30px]
+                text-[27px]
                 font-bold
                 leading-[1.15]
                 text-[#62834e]
-                md:text-[42px]
-                lg:text-[48px]
+                sm:text-[34px]
+                lg:text-[35px]
               "
             >
-              Ready to write your success story?
+              READY TO WRITE YOUR SUCCESS STORY?
             </h2>
 
             <p
               className="
                 mx-auto
-                mt-6
-                max-w-[720px]
+                mt-5
+                max-w-[620px]
                 font-body
-                text-[17px]
-                leading-[1.55]
-                text-[#1f2f1d]
-                md:text-[21px]
-                lg:text-[23px]
+                text-[14px]
+                leading-[1.6]
+                text-[#30412e]
+                sm:text-[16px]
               "
             >
               Join Yoga for Life and experience personalized guidance,
@@ -510,28 +596,32 @@ export function Testimonials() {
             <Link
               to="/join-now"
               className="
-                mt-9
+                mt-7
                 inline-flex
-                h-[62px]
-                min-w-[395px]
+                h-[44px]
+                w-full
+                max-w-[310px]
                 items-center
                 justify-center
-                rounded-[10px]
-                bg-[#7da65d]
-                px-10
+                rounded-[6px]
+                bg-[#78a05b]
+                px-8
                 font-body
-                text-[15px]
+                text-[12px]
                 font-bold
-                tracking-wide
+                tracking-[0.08em]
                 text-white
                 shadow-[0_5px_12px_rgba(70,90,50,0.25)]
                 transition-all
                 duration-200
-                hover:bg-[#6e9551]
+                hover:bg-[#688d4f]
                 hover:shadow-[0_7px_16px_rgba(70,90,50,0.3)]
               "
             >
-              START YOUR JOURNEY →
+              START YOUR JOURNEY
+              <span className="ml-2 text-[16px]">
+                →
+              </span>
             </Link>
           </div>
         </div>

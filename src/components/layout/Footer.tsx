@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-bg-cream pt-20 pb-8 px-6 md:px-10 border-t border-border-soft mt-auto">
+    <footer className="bg-white pt-20 pb-8 px-6 md:px-10 border-t border-border-soft mt-auto">
       <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div className="flex flex-col items-start">
           <img
@@ -67,7 +67,7 @@ export function Footer() {
           <ul className="flex flex-col gap-3 font-body text-text-muted">
             <li>
               <Link
-                to="/program"
+                to="/program/weight-loss-yoga"
                 className="hover:text-accent-green transition-colors"
               >
                 Weight Loss
@@ -75,7 +75,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                to="/program"
+                to="/program/prenatal-yoga"
                 className="hover:text-accent-green transition-colors"
               >
                 Prenatal
@@ -83,7 +83,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                to="/program"
+                to="/program/postnatal-yoga"
                 className="hover:text-accent-green transition-colors"
               >
                 Postnatal
@@ -91,10 +91,26 @@ export function Footer() {
             </li>
             <li>
               <Link
-                to="/program"
+                to="/program/general-yoga"
                 className="hover:text-accent-green transition-colors"
               >
-                Flexibility
+                General Yoga
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/program/senior-yoga"
+                className="hover:text-accent-green transition-colors"
+              >
+                Senior Yoga
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/program/private-session"
+                className="hover:text-accent-green transition-colors"
+              >
+                Private Session
               </Link>
             </li>
           </ul>

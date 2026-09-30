@@ -1,7 +1,10 @@
 import { Button } from "../components/ui/Button";
 import { Phone, Flower2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export function Consultation() {
+  const navigate = useNavigate();
+
   return (
     <div className="w-full overflow-hidden bg-white">
       <section className="relative w-full h-[420px] md:h-[430px] lg:h-[440px] overflow-hidden">
@@ -55,8 +58,8 @@ export function Consultation() {
                       h-[54px]
                       min-w-[310px]
                       px-8
-                      bg-[#7da65c]
-                      hover:bg-[#6e9650]
+                      bg-action
+                      hover:bg-action-hover
                       text-white
                       text-[15px]
                       font-bold
@@ -109,7 +112,7 @@ export function Consultation() {
               <p
                 className="
                   font-body
-                  text-[#273624]
+                  text-copy
                   text-[15px]
                   md:text-[16px]
                   leading-[1.65]
@@ -122,7 +125,10 @@ export function Consultation() {
               </p>
 
               <form
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  navigate("/consultation-success");
+                }}
                 className="w-full"
               >
                 
@@ -130,42 +136,44 @@ export function Consultation() {
                   <input
                     type="text"
                     placeholder="Full Name *"
+                    required
                     className="
                       h-[60px]
                       w-full
                       px-4
                       rounded-[8px]
                       border
-                      border-[#d5d9d2]
+                      border-border-input
                       bg-white
                       font-body
                       text-[14px]
-                      text-[#273624]
-                      placeholder:text-[#273624]
+                      text-copy
+                      placeholder:text-copy
                       focus:outline-none
                       focus:ring-1
-                      focus:ring-[#7da65c]
+                      focus:ring-action
                     "
                   />
 
                   <input
                     type="email"
                     placeholder="Email Address *"
+                    required
                     className="
                       h-[60px]
                       w-full
                       px-4
                       rounded-[8px]
                       border
-                      border-[#d5d9d2]
+                      border-border-input
                       bg-white
                       font-body
                       text-[14px]
-                      text-[#273624]
-                      placeholder:text-[#273624]
+                      text-copy
+                      placeholder:text-copy
                       focus:outline-none
                       focus:ring-1
-                      focus:ring-[#7da65c]
+                      focus:ring-action
                     "
                   />
                 </div>
@@ -175,40 +183,42 @@ export function Consultation() {
                   <input
                     type="tel"
                     placeholder="Phone Number *"
+                    required
                     className="
                       h-[60px]
                       w-full
                       px-4
                       rounded-[8px]
                       border
-                      border-[#d5d9d2]
+                      border-border-input
                       bg-white
                       font-body
                       text-[14px]
-                      text-[#273624]
-                      placeholder:text-[#273624]
+                      text-copy
+                      placeholder:text-copy
                       focus:outline-none
                       focus:ring-1
-                      focus:ring-[#7da65c]
+                      focus:ring-action
                     "
                   />
 
                   <input
                     type="date"
+                    required
                     className="
                       h-[60px]
                       w-full
                       px-4
                       rounded-[8px]
                       border
-                      border-[#d5d9d2]
+                      border-border-input
                       bg-white
                       font-body
                       text-[14px]
-                      text-[#273624]
+                      text-copy
                       focus:outline-none
                       focus:ring-1
-                      focus:ring-[#7da65c]
+                      focus:ring-action
                     "
                   />
                 </div>
@@ -216,20 +226,21 @@ export function Consultation() {
         
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
                   <select
+                    required
                     className="
                       h-[60px]
                       w-full
                       px-4
                       rounded-[8px]
                       border
-                      border-[#d5d9d2]
+                      border-border-input
                       bg-white
                       font-body
                       text-[14px]
-                      text-[#273624]
+                      text-copy
                       focus:outline-none
                       focus:ring-1
-                      focus:ring-[#7da65c]
+                      focus:ring-action
                     "
                     defaultValue=""
                   >
@@ -244,20 +255,21 @@ export function Consultation() {
                   </select>
 
                   <select
+                    required
                     className="
                       h-[60px]
                       w-full
                       px-4
                       rounded-[8px]
                       border
-                      border-[#d5d9d2]
+                      border-border-input
                       bg-white
                       font-body
                       text-[14px]
-                      text-[#273624]
+                      text-copy
                       focus:outline-none
                       focus:ring-1
-                      focus:ring-[#7da65c]
+                      focus:ring-action
                     "
                     defaultValue=""
                   >
@@ -273,6 +285,7 @@ export function Consultation() {
                 </div>
 
                 <select
+                  required
                   className="
                     h-[60px]
                     w-full
@@ -280,14 +293,14 @@ export function Consultation() {
                     mb-3
                     rounded-[8px]
                     border
-                    border-[#d5d9d2]
+                    border-border-input
                     bg-white
                     font-body
                     text-[14px]
-                    text-[#273624]
+                    text-copy
                     focus:outline-none
                     focus:ring-1
-                    focus:ring-[#7da65c]
+                    focus:ring-action
                   "
                   defaultValue=""
                 >
@@ -302,10 +315,10 @@ export function Consultation() {
                   <option value="other">Other</option>
                 </select>
 
-                {/* Message */}
                 <textarea
                   placeholder="Message*"
                   rows={4}
+                  required
                   className="
                     w-full
                     h-[115px]
@@ -314,16 +327,16 @@ export function Consultation() {
                     mb-4
                     rounded-[8px]
                     border
-                    border-[#d5d9d2]
+                    border-border-input
                     bg-white
                     font-body
                     text-[14px]
-                    text-[#273624]
-                    placeholder:text-[#273624]
+                    text-copy
+                    placeholder:text-copy
                     resize-none
                     focus:outline-none
                     focus:ring-1
-                    focus:ring-[#7da65c]
+                    focus:ring-action
                   "
                 />
 
@@ -331,12 +344,13 @@ export function Consultation() {
                   <input
                     type="checkbox"
                     id="terms"
+                    required
                     className="
                       w-[39px]
                       h-[39px]
                       rounded-[7px]
                       border
-                      border-[#d5d9d2]
+                      border-border-input
                       accent-[#7da65c]
                       cursor-pointer
                       shrink-0
@@ -349,21 +363,21 @@ export function Consultation() {
                       font-body
                       text-[13px]
                       md:text-[14px]
-                      text-[#273624]
+                      text-copy
                       leading-[1.5]
                     "
                   >
                     I agree to the{" "}
                     <a
                       href="#"
-                      className="text-[#7da65c] hover:underline"
+                      className="text-action hover:underline"
                     >
                       privacy policy
                     </a>{" "}
                     and{" "}
                     <a
                       href="#"
-                      className="text-[#7da65c] hover:underline"
+                      className="text-action hover:underline"
                     >
                       terms & conditions.
                     </a>
@@ -375,8 +389,8 @@ export function Consultation() {
                   className="
                     w-full
                     h-[55px]
-                    bg-[#7da65c]
-                    hover:bg-[#6e9650]
+                    bg-action
+                    hover:bg-action-hover
                     text-white
                     font-body
                     font-bold
@@ -393,7 +407,6 @@ export function Consultation() {
 
      
             <aside className="bg-[#e5eddd] border-l border-[#c7cfc0] px-7 py-9">
-              {/* Image */}
               <div className="flex justify-center">
                 <img
                   src="/assets/ChatGPT Image Aug 28, 2026, 04_56_39 PM 1.png"
@@ -435,7 +448,7 @@ export function Consultation() {
                       <Flower2
                         size={20}
                         strokeWidth={1.5}
-                        className="text-[#7da65c]"
+                        className="text-action"
                       />
                     </span>
 
@@ -443,7 +456,7 @@ export function Consultation() {
                       className="
                         font-body
                         text-[14px]
-                        text-[#273624]
+                        text-copy
                       "
                     >
                       {item}
@@ -459,7 +472,7 @@ export function Consultation() {
                     font-body
                     text-[13px]
                     font-semibold
-                    text-[#273624]
+                    text-copy
                     mb-6
                   "
                 >
@@ -470,7 +483,7 @@ export function Consultation() {
                   className="
                     font-body
                     text-[13px]
-                    text-[#273624]
+                    text-copy
                     mb-4
                   "
                 >
@@ -486,8 +499,8 @@ export function Consultation() {
                     font-body
                     text-[14px]
                     font-semibold
-                    text-[#7da65c]
-                    hover:text-[#6e9650]
+                    text-action
+                    hover:text-action-hover
                   "
                 >
                   <Phone size={16} />

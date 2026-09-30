@@ -230,7 +230,7 @@ export function PostnatalYoga() {
                 font-semibold
                 uppercase
                 leading-tight
-                text-[#557448]
+                text-heading
               "
             >
               ABOUT THE PROGRAM
@@ -249,11 +249,8 @@ export function PostnatalYoga() {
                 text-[#344334]
               "
             >
-              Our postnatal program focuses on gradually rebuilding strength,
-              mobility, core awareness, and confidence while encouraging
-              mindful recovery. Gentle core and pelvic floor recovery,
-              designed for the postpartum body. Safe to start once cleared
-              by your doctor.
+             Our postnatal program focuses on gradually rebuilding strength, mobility. core awareness, and confidence while encouraging mindful recovery.Gentle core and pelvic floor recovery, designed for the postpartum body. Safe to start once cleared by your doctor.
+Because a healthy mother deserves to feel her best. 🌿
             </p>
 
       
@@ -303,7 +300,7 @@ export function PostnatalYoga() {
               font-semibold
               uppercase
               leading-tight
-              text-[#557448]
+              text-heading
             "
           >
             WHAT YOU'LL GAIN
@@ -406,7 +403,7 @@ export function PostnatalYoga() {
               font-semibold
               uppercase
               leading-tight
-              text-[#557448]
+              text-heading
             "
           >
             WHO IS IT FOR?
@@ -425,10 +422,13 @@ export function PostnatalYoga() {
               text-[#344334]
             "
           >
-            For new mothers looking to gently return to movement and rebuild
-            their strength after childbirth, with appropriate medical
-            clearance.
+           Postnatal Yoga is for new mothers who want to gently reconnect with their body after childbirth. They rebuild their strength after childbirth, with appropriate medical clearance.
+The practice also supports relaxation, mindful breathing and taking a little time for self-care during motherhood.
           </p>
+
+            <p className="mt-2 font-body text-[13px] sm:text-[14px] md:text-[15px] font-bold leading-[1.75] text-[#344334]">
+              Every class is online, so you can practice comfortably from your own home while caring for your little one. 🌿.
+            </p>
         </div>
       </section>
 
@@ -514,7 +514,7 @@ export function PostnatalYoga() {
               font-bold
               uppercase
               leading-[1.2]
-              text-[#557448]
+              text-heading
             "
           >
             REBUILD YOUR STRENGTH WITH CONFIDENCE

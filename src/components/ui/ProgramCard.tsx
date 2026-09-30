@@ -26,12 +26,15 @@ export function ProgramCard({
               <img src={icon} alt="" className="w-8 h-8 object-contain" />
             </div>
           )}
+
           <h3 className="font-heading text-3xl text-primary-dark font-semibold mb-4">
             {title}
           </h3>
+
           <p className="font-body text-text-muted mb-8 line-clamp-3 leading-relaxed">
             {description}
           </p>
+
           <Link
             to={link}
             className="font-body font-bold text-accent-green uppercase tracking-wider text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
@@ -39,6 +42,7 @@ export function ProgramCard({
             LEARN MORE <span>→</span>
           </Link>
         </div>
+
         <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
           <img
             src={image}
@@ -60,12 +64,15 @@ export function ProgramCard({
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
       </div>
+
       <h3 className="font-heading text-2xl text-white font-semibold mb-4">
         {title}
       </h3>
+
       <p className="font-body text-white/80 text-[15px] leading-relaxed mb-8 flex-grow">
         {description}
       </p>
+
       <Link
         to={link}
         className="border-[1.5px] border-white/80 text-white rounded-full px-8 py-3 font-body text-sm font-semibold uppercase tracking-wider hover:bg-white hover:text-primary transition-colors"

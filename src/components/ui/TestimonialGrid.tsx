@@ -2,21 +2,21 @@ import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priya S.",
-    tag: "Weight loss yoga",
-    text: "Yoga for Life has completely changed my daily routine. I feel more energetic, flexible, and mentally calm than ever before.",
+    name: "Sudha",
+    tag: "General yoga",
+    text: "The experience with YFL was nothing short of extraordinary. As a long term member of YFL, I am really blessed to be part of this community.",
     avatar: "/assets/Customer.png",
   },
   {
-    name: "Ananya",
-    tag: "Prenatal yoga",
-    text: "The instructors are incredibly supportive, and every session feels personalized. I've gained strength, confidence, and inner peace.",
+    name: "Sangeetha",
+    tag: "Weight loss yoga",
+    text: "I weighed 91.7 kg. In just 7 months, I have lost approximately 16 kg, and my clothing size dropped from 4XL to XL.",
     avatar: "/assets/Ellipse 10.png",
   },
   {
-    name: "Meena",
-    tag: "Strength & Toning",
-    text: "I joined as a beginner and immediately felt welcomed. The classes are easy to follow, and I've noticed a huge improvement in my flexibility.",
+    name: "Muthu Murugan",
+    tag: "General yoga",
+    text: "After joining YFL about five months ago, I am now completely relieved of my shoulder pain, which was once diagnosed as frozen shoulder.",
     avatar: "/assets/Customer.png",
   },
 ];
@@ -27,7 +27,7 @@ export function TestimonialGrid() {
       <button
         type="button"
         aria-label="Previous testimonials"
-        className="absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#b9d0a9] text-[#709a58] transition hover:bg-primary-50 md:flex"
+        className="absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#b9d0a9] text-link transition hover:bg-primary-50 md:flex"
       >
         <ChevronLeft size={26} />
       </button>
@@ -36,7 +36,7 @@ export function TestimonialGrid() {
         {testimonials.map((testimonial) => (
           <div
             key={testimonial.name}
-            className="relative flex min-h-[310px] flex-col rounded-[16px] border border-[#99aa91] bg-[#f7f9f3] px-7 py-6 shadow-sm"
+            className="relative flex min-h-[280px] flex-col rounded-[12px] border border-[#99aa91] bg-[#f7f9f3] px-6 py-5 shadow-sm"
           >
             <Quote className="absolute left-7 top-5 h-8 w-8 text-accent-green" />
             <div className="mt-8 flex gap-1">
@@ -47,7 +47,7 @@ export function TestimonialGrid() {
                 />
               ))}
             </div>
-            <p className="relative z-10 mt-4 flex-1 text-center font-body text-[13px] leading-[1.45] text-text-muted">
+            <p className="relative z-10 mt-4 flex-1 text-center font-body text-[11px] leading-[1.45] text-text-muted">
               {testimonial.text}
             </p>
             <div className="my-4 border-t border-[#d4dfcc]" />
@@ -60,10 +60,10 @@ export function TestimonialGrid() {
                 />
               </div>
               <div>
-                <h4 className="font-heading text-base font-bold text-primary-dark">
+                <h4 className="font-heading text-sm font-bold uppercase text-primary-dark">
                   {testimonial.name}
                 </h4>
-                <p className="font-body text-xs font-medium text-accent-green">
+                <p className="font-body text-[11px] font-medium text-accent-green">
                   {testimonial.tag}
                 </p>
               </div>
@@ -75,7 +75,7 @@ export function TestimonialGrid() {
       <button
         type="button"
         aria-label="Next testimonials"
-        className="absolute right-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#b9d0a9] text-[#709a58] transition hover:bg-primary-50 md:flex"
+        className="absolute right-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#b9d0a9] text-link transition hover:bg-primary-50 md:flex"
       >
         <ChevronRight size={26} />
       </button>

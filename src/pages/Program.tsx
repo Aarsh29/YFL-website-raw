@@ -41,7 +41,7 @@ const programs = [
       "Safe and mindful practices designed to support flexibility, strength, balance, and overall well-being.",
     image: "/assets/ChatGPT Image Aug 28, 2026, 04_56_39 PM 1.png",
     icon: "/assets/Yoga (1).png",
-    link: "/program/general-yoga",
+    link: "/program/senior-yoga",
   },
   {
     title: "Private session",
@@ -49,14 +49,14 @@ const programs = [
       "Personalized one-to-one guidance designed around your needs, lifestyle, wellness goals, and practice.",
     image: "/assets/pexels-shootsaga-30945104 1.png",
     icon: "/assets/Yoga (1).png",
-    link: "/consultation",
+    link: "/program/private-session",
   },
 ];
 
 export function Program() {
   return (
     <div className="w-full overflow-hidden">
-      <section className="relative w-full h-[272px] sm:h-[380px] md:h-[430px] lg:h-[470px] overflow-hidden bg-primary-50">
+      <section className="relative w-full h-[272px] sm:h-[380px] md:h-[430px] lg:h-[672px] overflow-hidden bg-primary-50">
         <img
           src="/assets/Untitled design (2) 1.png"
           alt="Yoga program"
@@ -140,7 +140,7 @@ export function Program() {
                   sm:text-base
                   md:text-lg
                   leading-relaxed
-                  max-w-[520px]
+                  max-w-[1020px]
                   mb-6
                 "
               >

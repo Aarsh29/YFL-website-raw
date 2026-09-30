@@ -67,8 +67,8 @@ export function WeightLossYoga() {
                       px-7
                       md:px-8
                       rounded-md
-                      bg-[#7da65c]
-                      hover:bg-[#6e9650]
+                      bg-action
+                      hover:bg-action-hover
                       text-white
                       font-body
                       font-bold
@@ -97,7 +97,7 @@ export function WeightLossYoga() {
 
             <h2 className="
               font-heading
-              text-[#5e774c]
+              text-heading-muted
               font-bold
               text-[21px]
               md:text-[23px]
@@ -111,7 +111,7 @@ export function WeightLossYoga() {
 
               <p className="
                 font-body
-                text-[#34432a]
+                text-body-secondary
                 text-[15px]
                 md:text-[16px]
                 leading-[1.7]
@@ -124,7 +124,7 @@ export function WeightLossYoga() {
               <p className="
                 mt-2
                 font-body
-                text-[#34432a]
+                text-body-secondary
                 text-[15px]
                 md:text-[16px]
                 font-semibold
@@ -167,7 +167,7 @@ export function WeightLossYoga() {
 
           <h2 className="
             font-heading
-            text-[#5e774c]
+            text-heading-muted
             font-bold
             text-[21px]
             md:text-[23px]
@@ -218,7 +218,7 @@ export function WeightLossYoga() {
 
                   <p className="
                     font-body
-                    text-[#34432a]
+                    text-body-secondary
                     text-[14px]
                     md:text-[15px]
                     leading-[1.35]
@@ -248,7 +248,7 @@ export function WeightLossYoga() {
 
           <h2 className="
             font-heading
-            text-[#5e774c]
+            text-heading-muted
             font-bold
             text-[21px]
             md:text-[23px]
@@ -262,7 +262,7 @@ export function WeightLossYoga() {
 
             <p className="
               font-body
-              text-[#34432a]
+              text-body-secondary
               text-[15px]
               md:text-[16px]
               leading-[1.65]
@@ -272,7 +272,7 @@ export function WeightLossYoga() {
 
             <p className="
               font-body
-              text-[#34432a]
+              text-body-secondary
               text-[15px]
               md:text-[16px]
               leading-[1.65]
@@ -284,7 +284,7 @@ export function WeightLossYoga() {
             <p className="
               mt-1
               font-body
-              text-[#34432a]
+              text-body-secondary
               font-bold
               text-[15px]
               md:text-[16px]
@@ -357,7 +357,7 @@ export function WeightLossYoga() {
 
             <h2 className="
               font-heading
-              text-[#5e774c]
+              text-heading-muted
               font-bold
               uppercase
               text-[28px]
@@ -372,7 +372,7 @@ export function WeightLossYoga() {
             <p className="
               mt-5
               font-body
-              text-[#34432a]
+              text-body-secondary
               text-[15px]
               md:text-[17px]
               leading-[1.55]
@@ -393,8 +393,8 @@ export function WeightLossYoga() {
                     h-[50px]
                     px-8
                     rounded-md
-                    bg-[#7da65c]
-                    hover:bg-[#6e9650]
+                    bg-action
+                    hover:bg-action-hover
                     text-white
                     font-body
                     font-bold

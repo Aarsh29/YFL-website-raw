@@ -29,22 +29,16 @@ export function PrenatalYoga() {
   return (
     <div className="w-full overflow-hidden bg-white text-[#253725]">
 
-      {/* =========================================================
-          HERO SECTION
-      ========================================================= */}
       <section className="relative w-full overflow-hidden bg-[#f8f6ed]">
 
-        {/* Hero background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-[#e8efd9]/70 via-[#f8f6ed]/30 to-[#f8f6ed]/10" />
 
-          {/* Decorative soft circle */}
           <div className="absolute left-[8%] top-[12%] h-[360px] w-[360px] rounded-full border border-[#cfd8bd]/60" />
 
           <div className="absolute left-[13%] top-[19%] h-[300px] w-[300px] rounded-full bg-[#e9efdd]/50" />
         </div>
 
-        {/* Breadcrumb */}
         <div className="relative z-20 mx-auto max-w-[1280px] px-8 pt-6 lg:px-12">
           <div className="flex items-center gap-3 font-body text-[12px] uppercase tracking-wide text-[#354633]">
             <span>Home</span>
@@ -55,10 +49,8 @@ export function PrenatalYoga() {
           </div>
         </div>
 
-        {/* Hero content */}
         <div className="relative z-10 mx-auto flex min-h-[500px] max-w-[1280px] items-center px-8 lg:px-12">
 
-          {/* Woman */}
           <div className="absolute bottom-0 left-0 flex w-[49%] items-end justify-center">
 
             <img
@@ -75,7 +67,6 @@ export function PrenatalYoga() {
               "
             />
 
-            {/* soft background circle */}
             <div
               className="
                 absolute
@@ -89,7 +80,6 @@ export function PrenatalYoga() {
             />
           </div>
 
-          {/* Hero text */}
           <div className="ml-auto w-[51%] max-w-[610px] pb-8 pl-8">
 
             <h1
@@ -113,7 +103,7 @@ export function PrenatalYoga() {
                 font-heading
                 text-[20px]
                 leading-[1.35]
-                text-[#7da65c]
+                text-action
                 md:text-[23px]
               "
             >
@@ -141,7 +131,7 @@ export function PrenatalYoga() {
                   className="
                     h-[52px]
                     rounded-lg
-                    bg-[#7da65c]
+                    bg-action
                     px-8
                     font-body
                     text-[15px]
@@ -150,7 +140,7 @@ export function PrenatalYoga() {
                     text-white
                     shadow-[0_6px_14px_rgba(83,112,65,0.25)]
                     transition-all
-                    hover:bg-[#6e9650]
+                    hover:bg-action-hover
                   "
                 >
                   BOOK A FREE CONSULTATION
@@ -161,9 +151,6 @@ export function PrenatalYoga() {
         </div>
       </section>
 
-      {/* =========================================================
-          ABOUT THE PROGRAM
-      ========================================================= */}
       <section className="relative w-full bg-white px-8 py-[70px] lg:px-12">
 
         <div className="relative mx-auto max-w-[1200px]">
@@ -175,7 +162,7 @@ export function PrenatalYoga() {
               font-bold
               uppercase
               leading-tight
-              text-[#5c7648]
+              text-sage-muted
             "
           >
             About the Program
@@ -188,7 +175,7 @@ export function PrenatalYoga() {
                 font-body
                 text-[16px]
                 leading-[1.8]
-                text-[#34432a]
+                text-body-secondary
                 md:text-[17px]
               "
             >
@@ -234,7 +221,7 @@ export function PrenatalYoga() {
               font-bold
               uppercase
               leading-tight
-              text-[#5c7648]
+              text-sage-muted
             "
           >
             What You'll Gain
@@ -281,7 +268,7 @@ export function PrenatalYoga() {
                         text-[14px]
                         font-medium
                         leading-[1.4]
-                        text-[#263526]
+                        text-ink
                         md:text-[15px]
                       "
                     >
@@ -311,7 +298,7 @@ export function PrenatalYoga() {
               font-bold
               uppercase
               leading-tight
-              text-[#5c7648]
+              text-sage-muted
             "
           >
             Who Is It For?
@@ -324,7 +311,7 @@ export function PrenatalYoga() {
                 font-body
                 text-[16px]
                 leading-[1.8]
-                text-[#34432a]
+                text-body-secondary
                 md:text-[17px]
               "
             >
@@ -382,7 +369,7 @@ export function PrenatalYoga() {
                 uppercase
                 leading-[1.15]
                 tracking-[-0.02em]
-                text-[#5c7648]
+                text-sage-muted
                 md:text-[43px]
               "
             >
@@ -413,7 +400,7 @@ export function PrenatalYoga() {
                     h-[50px]
                     min-w-[285px]
                     rounded-lg
-                    bg-[#7da65c]
+                    bg-action
                     px-8
                     font-body
                     text-[14px]
@@ -422,7 +409,7 @@ export function PrenatalYoga() {
                     text-white
                     shadow-[0_6px_16px_rgba(80,110,60,0.25)]
                     transition-all
-                    hover:bg-[#6e9650]
+                    hover:bg-action-hover
                   "
                 >
                   START YOUR JOURNEY →
