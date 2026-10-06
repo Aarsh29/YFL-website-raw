@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { StepCard } from "../components/ui/StepCard";
+import rightLeafFlag from "../assets/svgs/Right leaf flag.svg";
 
 const programs = [
   {
@@ -344,21 +345,18 @@ export function Program() {
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <StepCard
-              number="1"
               title="Book a Free Consultation"
               description="Share your goals, lifestyle, and wellness needs with our experienced yoga instructors for personalized guidance."
               icon="/assets/Time Span.png"
             />
 
             <StepCard
-              number="2"
               title="Choose Your Ideal Program"
               description="Based on your goals, we'll recommend the perfect yoga program to support your health, fitness, and overall well-being."
               icon="/assets/Floating Guru (2).png"
             />
 
             <StepCard
-              number="3"
               title="Start Your Yoga Journey"
               description="Join your classes, stay consistent, and experience the benefits of a stronger body, a calmer mind, and a healthier lifestyle."
               icon="/assets/Sprout.png"
@@ -396,7 +394,7 @@ export function Program() {
         />
 
         <img
-          src="/assets/flag (1) 1.svg"
+          src={rightLeafFlag}
           alt=""
           className="
             absolute

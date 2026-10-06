@@ -59,7 +59,7 @@ export function PrivateSession() {
 						</p>
 					</div>
 					<img
-						src="/assets/Leaf.png"
+						src="/assets/Meditation.png"
 						alt=""
 						aria-hidden="true"
 						className="pointer-events-none absolute bottom-0 right-0 hidden h-[105px] w-[105px] object-contain sm:block"

@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "../components/ui/Button";
+import { contactDetails } from "../constants/contactDetails";
 
 export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
   const benefits = [
@@ -386,12 +387,12 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
             "
           >
             Every class is conducted online, so you can practice comfortably
-            and safely from the comfort of your own home. 🌿
+            and safely from the comfort of your own home.
           </p>
 
 
           <img
-            src="/assets/Leaf.png"
+            src="/assets/Meditation.png"
             alt=""
             aria-hidden="true"
             className="
@@ -566,7 +567,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
             </p>
 
             <p className="font-bold">
-              Join from home. Move at your pace. Feel the difference. 🌿
+              Join from home. Move at your pace. Feel the difference.
             </p>
 
           </div>
@@ -590,7 +591,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
 
 
         <img
-          src="/assets/senior-yoga-cta.png"
+          src="/assets/hero-yoga-studio.png"
           alt=""
           aria-hidden="true"
           className="
@@ -845,21 +846,21 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
             <div className="mt-[18px] flex flex-col gap-[11px]">
 
               <a
-                href="/program/weight-loss"
+                href="/program/weight-loss-yoga"
                 className="font-body text-[12px] text-heading hover:text-link"
               >
                 Weight Loss
               </a>
 
               <a
-                href="/program/prenatal"
+                href="/program/prenatal-yoga"
                 className="font-body text-[12px] text-heading hover:text-link"
               >
                 Prenatal
               </a>
 
               <a
-                href="/program/postnatal"
+                href="/program/postnatal-yoga"
                 className="font-body text-[12px] text-heading hover:text-link"
               >
                 Postnatal
@@ -880,7 +881,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
               </a>
 
               <a
-                href="/program/private-sessions"
+                href="/program/private-session"
                 className="font-body text-[12px] text-heading hover:text-link"
               >
                 Private sessions
@@ -930,9 +931,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
                 />
 
                 <span className="font-body text-[12px] leading-[1.5] text-heading">
-                  +91 8870461152
-                  <br />
-                  +91 9876044683
+                  {contactDetails.phoneDisplay}
                 </span>
 
               </div>
@@ -946,10 +945,10 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
                 />
 
                 <a
-                  href="mailto:hello@yogaforlife.com"
+                  href={`mailto:${contactDetails.email}`}
                   className="font-body text-[12px] text-heading"
                 >
-                  hello@yogaforlife.com
+                  {contactDetails.email}
                 </a>
 
               </div>
@@ -1007,8 +1006,12 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
               sm:text-[11px]
             "
           >
-            © Creaviatechnologies.com All Rights Reserved.
-            Privacy Policy • Terms & Conditions
+            © Copyright {new Date().getFullYear()} Yoga for Life. All rights reserved.
+            <br />
+            Privacy Policy • Terms & Conditions - Designed and Developed by{" "}
+            <a href="https://creaviq.com/" target="_blank" rel="noreferrer" className="font-semibold text-[#405A2A] hover:underline">
+              Creaviq Technologies
+            </a>
           </p>
         </div>
 

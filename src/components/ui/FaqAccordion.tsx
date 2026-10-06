@@ -12,17 +12,11 @@ export function FaqAccordion({ question, answer }: FaqAccordionProps) {
   return (
     <div className="bg-white border border-border-soft rounded-2xl mb-4 overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md">
       <button
-        className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
+        type="button"
+        className="w-full cursor-pointer px-6 py-5 flex items-center justify-between text-left focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex items-center gap-4">
-          <div className="w-10 h-10 rounded-full bg-bg-cream flex items-center justify-center shrink-0">
-            <img
-              src="/assets/Lotus.png"
-              alt=""
-              className="w-5 h-5 object-contain"
-            />
-          </div>
           <span className="font-heading text-lg font-semibold text-primary-dark">
             {question}
           </span>

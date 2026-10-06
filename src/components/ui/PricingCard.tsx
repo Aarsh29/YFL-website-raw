@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import { Button } from "./Button";
 
 interface PricingCardProps {
@@ -31,7 +31,8 @@ export function PricingCard({
     >
       {isPopular && (
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-terracotta text-white font-body text-[11px] font-bold uppercase tracking-widest px-5 py-2 rounded-full whitespace-nowrap shadow-sm">
-          ★ Most Popular
+          <Star aria-hidden="true" className="mr-1 inline h-3 w-3 fill-current" />
+          Most Popular
         </div>
       )}
 

@@ -5,6 +5,7 @@ import {
   Heart,
   Scale,
 } from "lucide-react";
+import rightLeafFlag from "../assets/svgs/Right leaf flag.svg";
 
 export function WeightLossYoga() {
   const benefits = [
@@ -131,14 +132,14 @@ export function WeightLossYoga() {
                 leading-[1.6]
               ">
                 No extreme routines. No quick fixes. Just consistent steps
-                towards a healthier you. 🌿
+                towards a healthier you.
               </p>
 
             </div>
 
          
             <img
-              src="/assets/leaves.png"
+              src={rightLeafFlag}
               alt=""
               className="
                 hidden
@@ -278,7 +279,7 @@ export function WeightLossYoga() {
               leading-[1.65]
             ">
               Whether you're starting fresh or getting back on track, you can
-              begin from where you are—right from the comfort of your home.
+              begin from where you are - right from the comfort of your home.
             </p>
 
             <p className="
@@ -290,7 +291,7 @@ export function WeightLossYoga() {
               md:text-[16px]
               leading-[1.6]
             ">
-              Start Where You Are. Move From Home. Transform Your Life. 🌿
+              Start Where You Are. Move From Home. Transform Your Life.
             </p>
 
           </div>

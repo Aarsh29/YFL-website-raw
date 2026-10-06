@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { contactDetails } from "../../constants/contactDetails";
 
 export function Footer() {
   return (
@@ -43,10 +44,10 @@ export function Footer() {
             </li>
             <li>
               <Link
-                to="/#pricing"
+                to="/program"
                 className="hover:text-accent-green transition-colors"
               >
-                Pricing
+                Program
               </Link>
             </li>
             <li>
@@ -55,6 +56,22 @@ export function Footer() {
                 className="hover:text-accent-green transition-colors"
               >
                 Testimonials
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="hover:text-accent-green transition-colors"
+              >
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/faq"
+                className="hover:text-accent-green transition-colors"
+              >
+                FAQ
               </Link>
             </li>
           </ul>
@@ -123,21 +140,21 @@ export function Footer() {
           <ul className="flex flex-col gap-4 font-body text-text-muted">
             <li className="flex items-start gap-3">
               <MapPin size={20} className="text-accent-green shrink-0 mt-0.5" />
-              <span>Chennai, Tamil Nadu</span>
+              <span>{contactDetails.address}</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={20} className="text-accent-green shrink-0" />
-              <span>+91 8870461152</span>
+              <a href={contactDetails.phoneHref}>{contactDetails.phoneDisplay}</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={20} className="text-accent-green shrink-0" />
-              <span>hello@yogaforlife.com</span>
+              <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
             </li>
             <li className="flex items-center gap-3">
               <span className="font-bold text-accent-green text-lg pl-1 shrink-0">
                 @
               </span>
-              <span className="pl-1">yogaforlifeyfl</span>
+              <a href={contactDetails.instagramUrl} className="pl-1">{contactDetails.instagramHandle}</a>
             </li>
             <li className="flex items-center gap-3">
               <Clock size={20} className="text-accent-green shrink-0" />
@@ -149,10 +166,21 @@ export function Footer() {
 
       <div className="max-w-[1320px] mx-auto pt-8 border-t border-border-soft flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="font-body text-sm text-text-muted">
-          © 2026 Yoga for Life. All Rights Reserved.
+          © Copyright {new Date().getFullYear()} Yoga for Life. All rights reserved.
         </p>
         <p className="font-body text-sm text-text-muted">
           Privacy Policy • Terms & Conditions
+        </p>
+        <p className="font-body text-sm text-text-muted">
+          - Designed and Developed by{" "}
+          <a
+            href="https://creaviq.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold text-primary-dark transition-colors hover:text-accent-green"
+          >
+            Creaviq Technologies
+          </a>
         </p>
       </div>
     </footer>

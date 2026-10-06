@@ -183,6 +183,7 @@ export function Navbar() {
             aria-label="Toggle navigation menu"
             className="
               flex
+              cursor-pointer
               items-center
               justify-center
               text-ink

@@ -14,7 +14,13 @@ import {
   Heart,
   Crown,
   CircleUserRound,
+  MapPin,
+  Star,
+  AtSign,
+  Clock,
 } from "lucide-react";
+import { sendInquiry } from "../utils/sendInquiry";
+import { contactDetails } from "../constants/contactDetails";
 
 type Program = {
   id: string;
@@ -125,6 +131,8 @@ export function JoinNow() {
   const navigate = useNavigate();
   const [selectedProgram, setSelectedProgram] = useState("");
   const [selectedPlan, setSelectedPlan] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionMessage, setSubmissionMessage] = useState("");
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -145,7 +153,7 @@ export function JoinNow() {
     }));
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!selectedProgram) {
@@ -168,7 +176,24 @@ export function JoinNow() {
       return;
     }
 
-    navigate("/join-success");
+    setIsSubmitting(true);
+    setSubmissionMessage("");
+
+    try {
+      await sendInquiry("New Yoga for Life enrollment", {
+        ...formData,
+        program: programs.find((program) => program.id === selectedProgram)?.name ?? selectedProgram,
+        plan: plans.find((plan) => plan.id === selectedPlan)?.name ?? selectedPlan,
+        planPrice: plans.find((plan) => plan.id === selectedPlan)?.price ?? "",
+      });
+      navigate("/join-success");
+    } catch (error) {
+      setSubmissionMessage(
+        error instanceof Error ? error.message : "Your registration could not be sent. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -477,10 +502,19 @@ export function JoinNow() {
               </div>
             </div>
 
+            {submissionMessage && (
+              <p role="alert" className="mt-5 text-left font-body text-sm text-red-700">
+                {submissionMessage}
+              </p>
+            )}
+
             <button
               type="submit"
+              disabled={isSubmitting}
               className="
                 mt-7
+                cursor-pointer
+                disabled:cursor-not-allowed
                 flex
                 h-[48px]
                 w-full
@@ -500,7 +534,7 @@ export function JoinNow() {
                 active:scale-[0.99]
               "
             >
-              JOIN NOW →
+              {isSubmitting ? "SENDING..." : "JOIN NOW →"}
             </button>
 
             <div className="mt-8 flex items-center justify-center gap-2">
@@ -575,11 +609,11 @@ export function JoinNow() {
             </h3>
 
             <div className="mt-4 flex flex-col gap-2.5">
-              <FooterLink to="/weight-loss-yoga" label="Weight Loss" />
-              <FooterLink to="/prenatal-yoga" label="Prenatal" />
-              <FooterLink to="/postnatal-yoga" label="Postnatal" />
-              <FooterLink to="/general-yoga" label="General yoga" />
-              <FooterLink to="/senior-yoga" label="Senior yoga" />
+              <FooterLink to="/program/weight-loss-yoga" label="Weight Loss" />
+              <FooterLink to="/program/prenatal-yoga" label="Prenatal" />
+              <FooterLink to="/program/postnatal-yoga" label="Postnatal" />
+              <FooterLink to="/program/general-yoga" label="General yoga" />
+              <FooterLink to="/program/senior-yoga" label="Senior yoga" />
               <FooterLink to="/program/private-session" label="Private sessions" />
             </div>
           </div>
@@ -590,28 +624,32 @@ export function JoinNow() {
             </h3>
 
             <div className="mt-4 flex flex-col gap-3 font-body text-[11px] text-[#65705e]">
-              <p>📍 Hosur, Tamil Nadu</p>
+              <p><MapPin aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.address}</p>
 
               <p className="leading-4">
-                ☎ +91 8870461152
-                <br />
-                &nbsp;&nbsp;&nbsp; +91 9976044683
+                <Phone aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.phoneDisplay}
               </p>
 
-              <p>✉ hello@yogaforlife.com</p>
+              <p><Mail aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.email}</p>
 
-              <p>◎ yogaforlifeyf1</p>
+              <p><AtSign aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.instagramHandle}</p>
 
-              <p>◷ Mon–Sat</p>
+              <p><Clock aria-hidden="true" className="mr-1 inline h-3 w-3" />Mon–Sat</p>
             </div>
           </div>
         </div>
 
         <div className="mx-auto mt-10 max-w-[1120px] border-t border-[#9ba49a] pt-5 text-center">
           <p className="font-body text-[10px] text-[#687260]">
-            © Creavitechologies.com All Rights Reserved.
+            © Copyright {new Date().getFullYear()} Yoga for Life. All rights reserved.
             <span className="mx-1">Privacy Policy</span> •{" "}
             <span className="ml-1">Terms & Conditions</span>
+          </p>
+          <p className="mt-2 font-body text-[10px] text-[#687260]">
+            - Designed and Developed by{" "}
+            <a href="https://creaviq.com/" target="_blank" rel="noreferrer" className="font-semibold text-[#405A2A] hover:underline">
+              Creaviq Technologies
+            </a>
           </p>
         </div>
       </footer>
@@ -696,6 +734,7 @@ function ProgramCard({
         flex
         min-h-[195px]
         w-full
+        cursor-pointer
         flex-col
         items-center
         rounded-[9px]
@@ -802,6 +841,7 @@ function PlanCard({
         flex
         min-h-[255px]
         w-full
+        cursor-pointer
         flex-col
         rounded-[10px]
         border
@@ -837,7 +877,8 @@ function PlanCard({
             text-white
           "
         >
-          ★ MOST POPULAR
+          <Star aria-hidden="true" className="mr-1 inline h-3 w-3 fill-current" />
+          MOST POPULAR
         </span>
       )}
 

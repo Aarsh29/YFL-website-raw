@@ -1,7 +1,36 @@
 import { Button } from "../components/ui/Button";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useState } from "react";
+import { sendInquiry } from "../utils/sendInquiry";
+import { contactDetails } from "../constants/contactDetails";
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionMessage, setSubmissionMessage] = useState("");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setSubmissionMessage("");
+
+    const form = event.currentTarget;
+    const fields = Object.fromEntries(
+      Array.from(new FormData(form).entries(), ([name, value]) => [name, String(value)])
+    );
+
+    try {
+      await sendInquiry("New contact message", fields);
+      setSubmissionMessage("Your message has been sent. We will be in touch soon.");
+      form.reset();
+    } catch (error) {
+      setSubmissionMessage(
+        error instanceof Error ? error.message : "Your message could not be sent. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="w-full overflow-hidden bg-white">
       <section
@@ -60,11 +89,11 @@ export function Contact() {
                 font-heading
                 text-[#304333]
                 font-bold
-                text-[360px]
+                text-[36px]
                 leading-[1.08]
                 tracking-[-0.025em]
-                sm:text-[430px]
-                lg:text-[90px]
+                sm:text-[48px]
+                lg:text-[56px]
               "
             >
               Let's Begin Your Wellness
@@ -223,7 +252,7 @@ export function Contact() {
                         text-muted
                       "
                     >
-                      Hosur, Krishnagiri, Tamil Nadu
+                      {contactDetails.address}
                     </p>
                   </div>
                 </div>
@@ -282,9 +311,7 @@ export function Contact() {
                         text-muted
                       "
                     >
-                      +91 8870461152
-                      <br />
-                      +91 9976044683
+                      {contactDetails.phoneDisplay}
                     </p>
                   </div>
                 </div>
@@ -342,7 +369,7 @@ export function Contact() {
                         text-muted
                       "
                     >
-                      hello@yogaforlife.com
+                      {contactDetails.email}
                     </p>
                   </div>
                 </div>
@@ -471,13 +498,11 @@ export function Contact() {
                 shortly.
               </p>
 
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="mt-8 w-full"
-              >
+              <form onSubmit={handleSubmit} className="mt-8 w-full">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <input
                     type="text"
+                    name="fullName"
                     placeholder="Full Name"
                     required
                     className="
@@ -499,6 +524,7 @@ export function Contact() {
 
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email Address"
                     required
                     className="
@@ -521,6 +547,7 @@ export function Contact() {
 
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Phone Number"
                   required
                   className="
@@ -543,6 +570,7 @@ export function Contact() {
 
                 <input
                   type="text"
+                  name="subject"
                   placeholder="Subject"
                   required
                   className="
@@ -564,6 +592,7 @@ export function Contact() {
                 />
 
                 <textarea
+                  name="message"
                   rows={5}
                   placeholder="Your Message"
                   required
@@ -587,8 +616,15 @@ export function Contact() {
                   "
                 />
 
+                {submissionMessage && (
+                  <p role="status" className="mt-4 font-body text-sm text-body-deep">
+                    {submissionMessage}
+                  </p>
+                )}
+
                 <Button
                   type="submit"
+                  disabled={isSubmitting}
                   className="
                     mt-5
                     h-[40px]
@@ -600,7 +636,7 @@ export function Contact() {
                     shadow-[0_4px_9px_rgba(70,90,50,0.20)]
                   "
                 >
-                  SEND MESSAGE
+                  {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
                 </Button>
               </form>
             </div>

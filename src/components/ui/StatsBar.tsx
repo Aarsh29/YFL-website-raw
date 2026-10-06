@@ -13,7 +13,7 @@ export function StatsBar() {
   return (
     <section className="bg-bg-cream py-16 px-6 md:px-10 relative overflow-hidden">
       <img
-        src="/assets/Leaf.png"
+        src="/assets/Meditation.png"
         alt=""
         className="absolute top-0 right-0 w-48 opacity-10 pointer-events-none"
       />

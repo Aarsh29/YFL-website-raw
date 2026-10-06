@@ -1,15 +1,15 @@
 import { Button } from "../components/ui/Button";
 import {
-  Leaf,
-  Dumbbell,
   Heart,
+  Dumbbell,
   PersonStanding,
 } from "lucide-react";
+import rightLeafFlag from "../assets/svgs/Right leaf flag.svg";
 
 export function PrenatalYoga() {
   const benefits = [
     {
-      icon: Leaf,
+      icon: Heart,
       title: "Gentle movement and mobility",
     },
     {
@@ -190,7 +190,7 @@ export function PrenatalYoga() {
 
   
           <img
-            src="/assets/leaves.png"
+            src={rightLeafFlag}
             alt=""
             className="
               pointer-events-none

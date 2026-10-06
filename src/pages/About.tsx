@@ -1,4 +1,7 @@
 import { Button } from "../components/ui/Button";
+import { Link } from "react-router-dom";
+import { Star } from "lucide-react";
+import rightLeafFlag from "../assets/svgs/Right leaf flag.svg";
 
 export function About() {
   const instructors = [
@@ -22,7 +25,7 @@ export function About() {
         {
           label: "Women's",
           sub: "Wellness",
-          icon: "/assets/Lotus.png",
+          icon: "/assets/Meditation.png",
         },
       ],
     },
@@ -46,7 +49,7 @@ export function About() {
         {
           label: "Flexibility",
           sub: "Expert",
-          icon: "/assets/Lotus.png",
+          icon: "/assets/Meditation.png",
         },
       ],
     },
@@ -70,7 +73,7 @@ export function About() {
         {
           label: "Wellness",
           sub: "Expert",
-          icon: "/assets/Lotus.png",
+          icon: "/assets/Meditation.png",
         },
       ],
     },
@@ -83,63 +86,19 @@ export function About() {
     "/assets/Mask group (3).png",
   ];
 
-  const storyCollage = (reverse = false) => {
-    const positions = reverse
-      ? [
-          "bottom-0 left-1/2 -translate-x-1/2 translate-y-[12%]",
-          "top-1/2 right-0 translate-x-[12%] -translate-y-1/2",
-          "top-1/2 left-0 -translate-x-[12%] -translate-y-1/2",
-          "top-0 left-1/2 -translate-x-1/2 -translate-y-[12%]",
-        ]
-      : [
-          "top-0 left-1/2 -translate-x-1/2 -translate-y-[12%]",
-          "top-1/2 left-0 -translate-x-[12%] -translate-y-1/2",
-          "top-1/2 right-0 translate-x-[12%] -translate-y-1/2",
-          "bottom-0 left-1/2 -translate-x-1/2 translate-y-[12%]",
-        ];
-
-    return (
-      <div className="relative mx-auto h-[210px] w-[210px] sm:h-[245px] sm:w-[245px] lg:h-[270px] lg:w-[270px]">
-        {storyImages.map((image, index) => (
-          <div
-            key={`${image}-${reverse}`}
-            className={`
-              absolute
-              h-[78px]
-              w-[78px]
-              rotate-45
-              overflow-hidden
-              rounded-[15px]
-              border-[5px]
-              border-[#F4F7EE]
-              bg-white
-              shadow-sm
-              sm:h-[88px]
-              sm:w-[88px]
-              lg:h-[100px]
-              lg:w-[100px]
-              lg:rounded-[18px]
-              ${positions[index]}
-            `}
-          >
-            <img
-              src={image}
-              alt=""
-              className="
-                h-[150%]
-                w-[150%]
-                max-w-none
-                -translate-x-[15%]
-                -translate-y-[15%]
-                -rotate-45
-                object-cover
-              "
-            />
-          </div>
-        ))}
-      </div>
-    );
-  };
+  const storyCollage = (reverse = false) => (
+    <div className={`grid w-[210px] grid-cols-2 gap-3 sm:w-[250px] sm:gap-4 ${reverse ? "rotate-180" : ""}`}>
+      {storyImages.map((image) => (
+        <img
+          key={`${image}-${reverse}`}
+          src={image}
+          alt=""
+          aria-hidden="true"
+          className={`h-[92px] w-[92px] object-contain sm:h-[110px] sm:w-[110px] ${reverse ? "rotate-180" : ""}`}
+        />
+      ))}
+    </div>
+  );
 
   return (
     <main className="w-full overflow-hidden bg-[#F7F9F2]">
@@ -198,6 +157,7 @@ export function About() {
               practice of yoga.
             </p>
 
+            <a href="#instructors" className="mt-5 inline-flex">
             <Button
               className="
                 mt-5
@@ -212,8 +172,8 @@ export function About() {
               "
             >
               MEET OUR INSTRUCTORS
-              <span className="ml-2 text-[15px]">→</span>
             </Button>
+            </a>
           </div>
 
           <div className="flex items-center justify-center">
@@ -244,24 +204,10 @@ export function About() {
           lg:px-12
         "
       >
-        <img
-          src="/assets/leaves.png"
-          alt=""
-          className="
-            pointer-events-none
-            absolute
-            bottom-0
-            right-0
-            w-[65px]
-            opacity-75
-            sm:w-[85px]
-            md:w-[105px]
-          "
-        />
-
         <div
           className="
             mx-auto
+            relative
             grid
             max-w-[1080px]
             grid-cols-1
@@ -273,19 +219,19 @@ export function About() {
           "
         >
           <div>
-            {storyCollage()}
+            <div className="flex justify-center">{storyCollage()}</div>
 
             <div className="mx-auto mt-9 max-w-[400px]">
               <span
                 className="
                   block
                   font-body
-                  text-[10px]
+                  text-[12px]
                   font-black
                   uppercase
                   tracking-[0.08em]
                   text-primary-600
-                  sm:text-[11px]
+                  sm:text-[15px]
                 "
               >
                 YOGA REIMAGINED FOR REAL LIFE
@@ -295,11 +241,11 @@ export function About() {
                 className="
                   mt-3
                   font-body
-                  text-[11px]
+                  text-[15px]
                   font-medium
                   leading-[1.65]
                   text-primary-800
-                  sm:text-[12px]
+                  sm:text-[16px]
                 "
               >
                 It is about how you feel when you wake up.
@@ -335,12 +281,12 @@ export function About() {
               className="
                 block
                 font-body
-                text-[10px]
+                text-[14px]
                 font-black
                 uppercase
                 tracking-[0.12em]
                 text-primary-600
-                sm:text-[11px]
+                sm:text-[15px]
               "
             >
               OUR STORY
@@ -352,12 +298,12 @@ export function About() {
                 mt-4
                 max-w-[380px]
                 font-body
-                text-[10px]
+                text-[14px]
                 font-medium
                 leading-[1.7]
                 text-primary-800
-                sm:text-[11px]
-                md:text-[12px]
+                sm:text-[15px]
+                md:text-[16px]
               "
             >
               YFL began in Nov 2021 with a simple belief - Yoga should not be
@@ -369,9 +315,18 @@ export function About() {
               goals, challenges and stories of transformation.
             </p>
 
-            <div className="mt-8">
-              {storyCollage(true)}
-            </div>
+          </div>
+
+          <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block">
+            <img
+              src="/assets/YFL LOGO (5) 2.png"
+              alt="Yoga For Life"
+              className="h-[92px] w-[92px] object-contain lg:h-[110px] lg:w-[110px]"
+            />
+          </div>
+
+          <div className="flex justify-center md:col-start-2 md:row-start-2">
+            {storyCollage(true)}
           </div>
         </div>
       </section>
@@ -379,22 +334,20 @@ export function About() {
       <section className="bg-white px-7 py-12 sm:px-10 md:py-16">
         <div className="mx-auto max-w-[850px]">
           <div className="mb-10 flex items-center justify-center gap-3">
-            <span className="text-primary-500">❧</span>
 
             <h2
               className="
                 font-heading
-                text-[15px]
+                text-[22px]
                 font-bold
                 tracking-wide
                 text-primary-600
-                sm:text-[17px]
+                sm:text-[24px]
               "
             >
               OUR MISSION & VISION
             </h2>
 
-            <span className="text-primary-500">❧</span>
           </div>
 
           <div
@@ -411,7 +364,7 @@ export function About() {
               className="
                 relative
                 flex
-                h-[245px]
+                min-h-[300px]
                 w-full
                 max-w-[235px]
                 flex-col
@@ -447,7 +400,7 @@ export function About() {
 
               <div className="mt-8 flex w-full items-center gap-2">
                 <div className="h-px flex-1 bg-primary-soft" />
-                <span className="text-[7px] font-medium text-primary">
+                <span className="text-[12px] font-medium text-primary">
                   OUR
                 </span>
                 <div className="h-px flex-1 bg-primary-soft" />
@@ -471,11 +424,11 @@ export function About() {
                   mt-2
                   max-w-[185px]
                   font-body
-                  text-[8px]
+                  text-[14px]
                   font-medium
                   leading-[1.55]
                   text-text-body
-                  sm:text-[9px]
+                  sm:text-[15px]
                 "
               >
                 To make yoga simple, accessible and meaningful part of
@@ -497,7 +450,7 @@ export function About() {
               className="
                 relative
                 flex
-                h-[245px]
+                min-h-[300px]
                 w-full
                 max-w-[235px]
                 flex-col
@@ -533,7 +486,7 @@ export function About() {
 
               <div className="mt-8 flex w-full items-center gap-2">
                 <div className="h-px flex-1 bg-primary-soft" />
-                <span className="text-[7px] font-medium text-primary">
+                <span className="text-[12px] font-medium text-primary">
                   OUR
                 </span>
                 <div className="h-px flex-1 bg-primary-soft" />
@@ -557,11 +510,11 @@ export function About() {
                   mt-2
                   max-w-[185px]
                   font-body
-                  text-[8px]
+                  text-[14px]
                   font-medium
                   leading-[1.55]
                   text-text-body
-                  sm:text-[9px]
+                  sm:text-[15px]
                 "
               >
                 To inspire a healthier world, one mindful life at a time, our
@@ -585,7 +538,7 @@ export function About() {
               mt-5
               text-center
               font-body
-              text-[9px]
+              text-[13px]
               font-bold
               tracking-wide
               text-primary-600
@@ -596,14 +549,14 @@ export function About() {
         </div>
       </section>
 
-      <section className="bg-[#F1F5E9] px-6 py-12 sm:px-8 md:py-16">
+        <section id="instructors" className="bg-[#F1F5E9] px-6 py-12 sm:px-8 md:py-16">
         <div className="mx-auto max-w-[1080px]">
           <div className="mb-8">
             <span
               className="
                 block
                 font-heading
-                text-[10px]
+                  text-[14px]
                 font-bold
                 tracking-[0.1em]
                 text-primary-600
@@ -629,12 +582,12 @@ export function About() {
               className="
                 mt-3
                 max-w-[930px]
-                font-body
-                text-[10px]
+                  font-body
+                  text-[14px]
                 font-medium
                 leading-[1.7]
                 text-primary-800
-                sm:text-[11px]
+                sm:text-[15px]
               "
             >
               Our certified instructors are passionate about helping you
@@ -670,7 +623,7 @@ export function About() {
                 "
               >
                 <img
-                  src="/assets/Leaf.png"
+                  src="/assets/Yoga for Life - Review Post 1 (25) 1.png"
                   alt=""
                   className="
                     pointer-events-none
@@ -678,10 +631,9 @@ export function About() {
                     right-0
                     top-0
                     z-0
-                    h-[65px]
-                    w-[65px]
+                    w-[82px]
                     object-contain
-                    opacity-20
+                    opacity-100
                   "
                 />
 
@@ -699,7 +651,6 @@ export function About() {
                 >
                   <div
                     className="
-                      relative
                       mb-3
                       h-[80px]
                       w-[80px]
@@ -735,7 +686,7 @@ export function About() {
                       "
                     >
                       <img
-                        src="/assets/Lotus.png"
+                        src="/assets/Meditation.png"
                         alt=""
                         className="h-4 w-4 object-contain brightness-0 invert"
                       />
@@ -758,13 +709,14 @@ export function About() {
                     className="
                       mt-1
                       font-body
-                      text-[7px]
+                      text-[13px]
                       font-bold
                       tracking-wide
                       text-text
                     "
                   >
-                    ★ {instructor.role}
+                    <Star aria-hidden="true" className="mr-1 inline h-3 w-3 fill-current" />
+                    {instructor.role}
                   </p>
 
                   <div
@@ -774,7 +726,7 @@ export function About() {
                       bg-primary-100
                       px-3
                       py-1.5
-                      text-[7px]
+                      text-[13px]
                       font-medium
                       text-primary-900
                     "
@@ -795,7 +747,7 @@ export function About() {
                     <p
                       className="
                         font-body
-                        text-[7px]
+                        text-[14px]
                         font-medium
                         leading-[1.45]
                         text-primary-700
@@ -883,7 +835,7 @@ export function About() {
                           <span
                             className="
                               font-heading
-                              text-[6px]
+                              text-[12px]
                               leading-tight
                               text-body-secondary
                             "
@@ -894,7 +846,7 @@ export function About() {
                           <span
                             className="
                               font-heading
-                              text-[6px]
+                              text-[12px]
                               leading-tight
                               text-body-secondary
                             "
@@ -927,7 +879,7 @@ export function About() {
         "
       >
         <img
-          src="/assets/flag (1) 3.svg"
+          src={rightLeafFlag}
           alt=""
           aria-hidden="true"
           className="
@@ -943,7 +895,7 @@ export function About() {
         />
 
         <img
-          src="/assets/flag (1) 2.svg"
+          src={rightLeafFlag}
           alt=""
           aria-hidden="true"
           className="
@@ -989,6 +941,7 @@ export function About() {
               />
             </div>
 
+            <Link to="/join-now" className="mt-4 inline-flex w-full max-w-[360px]">
             <Button
               className="
                 mt-4
@@ -999,27 +952,27 @@ export function About() {
                 border
                 border-accent
                 px-4
-                text-[8px]
+                text-[12px]
                 font-bold
                 tracking-wide
                 shadow-md
               "
             >
               START YOUR JOURNEY
-              <span className="ml-2">→</span>
             </Button>
+            </Link>
           </div>
 
           <div className="text-center md:text-left">
             <p
               className="
                 font-body
-                text-[8px]
+                text-[12px]
                 font-black
                 uppercase
                 tracking-[0.08em]
                 text-[#26351D]
-                sm:text-[9px]
+                sm:text-[13px]
               "
             >
               BEGIN YOUR WELLNESS JOURNEY TODAY
@@ -1029,11 +982,11 @@ export function About() {
               className="
                 mt-2
                 font-heading
-                text-[18px]
+                text-[30px]
                 font-bold
                 leading-tight
                 text-[#17220E]
-                sm:text-[21px]
+                sm:text-[36px]
               "
             >
               Discover the Difference.
@@ -1042,11 +995,11 @@ export function About() {
             <h3
               className="
                 font-heading
-                text-[17px]
+                text-[26px]
                 font-bold
                 leading-tight
                 text-primary-600
-                sm:text-[20px]
+                sm:text-[32px]
               "
             >
               Start Your{" "}
@@ -1061,15 +1014,15 @@ export function About() {
                 mt-4
                 max-w-[370px]
                 font-body
-                text-[9px]
+                text-[15px]
                 font-medium
                 leading-[1.65]
                 text-[#30402A]
-                sm:text-[10px]
+                sm:text-[16px]
                 md:mx-0
               "
             >
-              Learn more than just yoga—become part of a supportive community
+              Learn more than just yoga - become part of a supportive community
               dedicated to helping you build strength, find balance, and embrace
               a healthier lifestyle. Take the first step toward lasting wellness
               with expert guidance and personalized programs.

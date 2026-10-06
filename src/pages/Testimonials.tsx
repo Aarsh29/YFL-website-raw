@@ -6,22 +6,22 @@ export function Testimonials() {
     {
       title: "Personalized\nGuidance",
       description: "Programs tailored to\nyour goals, body, and\nlifestyle.",
-      icon: "/assets/Lotus.png",
+      icon: "/assets/Meditation.png",
     },
     {
       title: "Real\nProgress",
       description: "Celebrating every small\nstep forward to big\ntransformation.",
-      icon: "/assets/Lotus.png",
+      icon: "/assets/Meditation.png",
     },
     {
       title: "Supportive\nCommunity",
       description: "A positive and\nencouraging community\nthat inspires you.",
-      icon: "/assets/Lotus.png",
+      icon: "/assets/Meditation.png",
     },
     {
       title: "Expert\nInstructors",
       description: "Certified, experienced,\nand passionate yoga\nexperts.",
-      icon: "/assets/Lotus.png",
+      icon: "/assets/Meditation.png",
     },
   ];
 
@@ -157,7 +157,7 @@ export function Testimonials() {
                 mt-7
                 max-w-[500px]
                 font-body
-                text-[100px]
+                text-[14px]
                 leading-[1.65]
                 text-[#354333]
                 sm:text-[16px]
@@ -202,65 +202,44 @@ export function Testimonials() {
       </section>
 
       <section
+        id="student-testimonials"
         className="
           bg-white
           px-5
-          py-14
+          py-10
           sm:px-8
-          sm:py-16
-          lg:px-10
-          lg:py-[58px]
+          sm:py-12
+          scroll-mt-[80px]
         "
       >
-        <div className="mx-auto max-w-[1120px]">
-          <div className="max-w-[610px]">
-            <p
-              className="
-                font-body
-                text-[11px]
-                font-bold
-                uppercase
-                tracking-[0.12em]
-                text-link
-                sm:text-[12px]
-              "
-            >
-              SUCCESS STORIES FROM OUR COMMUNITY
-            </p>
-
-            <p
-              className="
-                mt-4
-                font-body
-                text-[14px]
-                leading-[1.65]
-                text-[#40503e]
-                sm:text-[15px]
-              "
-            >
-              Every journey is unique, but each story reflects the positive
-              impact of consistent practice, expert guidance, and a supportive
-              community.
-            </p>
+        <div className="mx-auto max-w-[1120px] text-center">
+          <div className="mx-auto flex items-center justify-center gap-2.5">
+            <h2 className="border-b border-[#aebba4] px-1 pb-1 font-heading text-[22px] font-bold uppercase leading-none text-[#455f37] sm:text-[24px]">
+              Testimonials
+            </h2>
           </div>
 
-          <div className="mt-8 text-center">
+          <p className="mx-auto mt-3 max-w-[470px] font-body text-[13px] leading-[1.65] text-[#485744] sm:text-[14px]">
+            Real stories from real people who have transformed their lives with
+            Yoga for Life.
+          </p>
+
+          <div className="mt-4">
             <h2
               className="
                 font-heading
-                text-[30px]
+                text-[21px]
                 font-bold
                 leading-tight
-                text-heading-green
-                sm:text-[34px]
-                lg:text-[36px]
+                text-[#66884d]
+                sm:text-[22px]
               "
             >
               What Our Students Say
             </h2>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 sm:mt-10">
             <TestimonialGrid />
           </div>
         </div>

@@ -153,7 +153,7 @@ export function GeneralYoga() {
             >
               Whether you are a beginner or an experienced practitioner,
               the program is thoughtfully structured to help you improve
-              flexibility, strength, posture, balance, and inner awareness—
+              flexibility, strength, posture, balance, and inner awareness -
               one step at a time.
             </p>
 
@@ -273,7 +273,7 @@ export function GeneralYoga() {
 
 
           <img
-            src="/assets/Leaf.png"
+            src="/assets/Meditation.png"
             alt=""
             aria-hidden="true"
             className="
@@ -452,7 +452,7 @@ export function GeneralYoga() {
 
             <p className="font-bold">
               Suitable for all adults who want to make yoga a part of their
-              daily wellness routine. 🌿
+              daily wellness routine.
             </p>
 
           </div>

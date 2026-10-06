@@ -1,9 +1,35 @@
 import { Button } from "../components/ui/Button";
 import { Phone, Flower2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { sendInquiry } from "../utils/sendInquiry";
+import { contactDetails } from "../constants/contactDetails";
 
 export function Consultation() {
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionMessage, setSubmissionMessage] = useState("");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setSubmissionMessage("");
+
+    const fields = Object.fromEntries(
+      Array.from(new FormData(event.currentTarget).entries(), ([name, value]) => [name, String(value)])
+    );
+
+    try {
+      await sendInquiry("Free consultation request", fields);
+      navigate("/consultation-success");
+    } catch (error) {
+      setSubmissionMessage(
+        error instanceof Error ? error.message : "Your request could not be sent. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="w-full overflow-hidden bg-white">
@@ -124,17 +150,12 @@ export function Consultation() {
                 to schedule your free consultation
               </p>
 
-              <form
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  navigate("/consultation-success");
-                }}
-                className="w-full"
-              >
+              <form onSubmit={handleSubmit} className="w-full">
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
                   <input
                     type="text"
+                    name="fullName"
                     placeholder="Full Name *"
                     required
                     className="
@@ -157,6 +178,7 @@ export function Consultation() {
 
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email Address *"
                     required
                     className="
@@ -182,6 +204,7 @@ export function Consultation() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="Phone Number *"
                     required
                     className="
@@ -204,6 +227,7 @@ export function Consultation() {
 
                   <input
                     type="date"
+                    name="preferredDate"
                     required
                     className="
                       h-[60px]
@@ -226,6 +250,7 @@ export function Consultation() {
         
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
                   <select
+                    name="preferredTime"
                     required
                     className="
                       h-[60px]
@@ -255,6 +280,7 @@ export function Consultation() {
                   </select>
 
                   <select
+                    name="referralSource"
                     required
                     className="
                       h-[60px]
@@ -285,6 +311,7 @@ export function Consultation() {
                 </div>
 
                 <select
+                  name="programInterest"
                   required
                   className="
                     h-[60px]
@@ -316,6 +343,7 @@ export function Consultation() {
                 </select>
 
                 <textarea
+                  name="message"
                   placeholder="Message*"
                   rows={4}
                   required
@@ -344,6 +372,8 @@ export function Consultation() {
                   <input
                     type="checkbox"
                     id="terms"
+                    name="termsAccepted"
+                    value="Yes"
                     required
                     className="
                       w-[39px]
@@ -368,27 +398,26 @@ export function Consultation() {
                     "
                   >
                     I agree to the{" "}
-                    <a
-                      href="#"
-                      className="text-action hover:underline"
-                    >
-                      privacy policy
-                    </a>{" "}
+                    privacy policy{" "}
                     and{" "}
-                    <a
-                      href="#"
-                      className="text-action hover:underline"
-                    >
-                      terms & conditions.
-                    </a>
+                    terms & conditions.
                   </label>
                 </div>
 
+                {submissionMessage && (
+                  <p role="alert" className="mb-4 font-body text-sm text-red-700">
+                    {submissionMessage}
+                  </p>
+                )}
+
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="
                     w-full
                     h-[55px]
+                    cursor-pointer
+                    disabled:cursor-not-allowed
                     bg-action
                     hover:bg-action-hover
                     text-white
@@ -400,7 +429,7 @@ export function Consultation() {
                     transition-colors
                   "
                 >
-                  BOOK A FREE CONSULTATION&nbsp; →
+                  {isSubmitting ? "SENDING..." : "BOOK A FREE CONSULTATION →"}
                 </button>
               </form>
             </div>
@@ -428,11 +457,7 @@ export function Consultation() {
                   "Program Overview",
                   "Q&A Session",
                 ].map((item) => (
-                  <button
-                    key={item}
-                    type="button"
-                    className="flex items-center gap-4 w-full text-left"
-                  >
+                  <div key={item} className="flex items-center gap-4 w-full text-left">
                     <span
                       className="
                         flex
@@ -461,7 +486,7 @@ export function Consultation() {
                     >
                       {item}
                     </span>
-                  </button>
+                  </div>
                 ))}
               </div>
 
@@ -491,7 +516,7 @@ export function Consultation() {
                 </p>
 
                 <a
-                  href="tel:+918870461152"
+                  href={contactDetails.phoneHref}
                   className="
                     flex
                     items-center
@@ -504,7 +529,7 @@ export function Consultation() {
                   "
                 >
                   <Phone size={16} />
-                  +91 8870461152
+                  {contactDetails.phoneDisplay}
                 </a>
               </div>
             </aside>

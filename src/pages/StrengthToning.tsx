@@ -1,9 +1,10 @@
 import { Button } from "../components/ui/Button";
+import { Link } from "react-router-dom";
 
 export function StrengthToning() {
   const benefits = [
     {
-      icon: "/assets/Leaf.png",
+      icon: "/assets/Meditation.png",
       title: "Gentle movement and mobility",
     },
     {
@@ -11,7 +12,7 @@ export function StrengthToning() {
       title: "Relaxation and stress relief",
     },
     {
-      icon: "/assets/Check.png",
+      icon: "/assets/Goal.png",
       title: "Better body awareness",
     },
     {
@@ -44,9 +45,9 @@ export function StrengthToning() {
               <p className="text-primary-dark text-sm sm:text-base mb-8 max-w-md">
                 A dynamic yoga program designed to improve muscular strength, endurance, and overall fitness
               </p>
-              <Button className="bg-primary-600 hover:bg-primary-700 text-white font-semibold px-8 py-3">
+              <Link to="/consultation" className="inline-flex"><Button className="bg-primary-600 hover:bg-primary-700 text-white font-semibold px-8 py-3">
                 BOOK A FREE CONSULTATION
-              </Button>
+              </Button></Link>
             </div>
           </div>
         </div>
@@ -101,9 +102,9 @@ export function StrengthToning() {
           <p className="text-primary-dark text-lg md:text-xl mb-8 max-w-2xl mx-auto">
             Join our Strength & Toning program and feel the difference in your body and mind.
           </p>
-          <Button className="bg-primary-600 hover:bg-primary-700 text-white font-semibold px-10 py-3 text-lg">
-            START YOUR JOURNEY →
-          </Button>
+          <Link to="/join-now" className="inline-flex"><Button className="bg-primary-600 hover:bg-primary-700 text-white font-semibold px-10 py-3 text-lg">
+            START YOUR JOURNEY
+          </Button></Link>
         </div>
       </section>
     </div>

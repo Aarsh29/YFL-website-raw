@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaqAccordion } from "../components/ui/FaqAccordion";
 import { ArrowRight } from "lucide-react";
+import { contactDetails } from "../constants/contactDetails";
 
 export function Faq() {
   const faqs = [
@@ -119,6 +120,7 @@ export function Faq() {
               className="
                 mt-[18px]
                 inline-flex
+                cursor-pointer
                 h-[39px]
                 min-w-[257px]
                 items-center
@@ -363,7 +365,7 @@ export function Faq() {
 
 
               <a
-                href="mailto:hello@yogaforlife.com"
+                href={`mailto:${contactDetails.email}`}
                 className="
                   mt-[22px]
                   flex
@@ -407,7 +409,7 @@ export function Faq() {
                 </svg>
 
                 <span>
-                  hello@yogaforlife.com
+                  {contactDetails.email}
                 </span>
 
               </a>
@@ -616,6 +618,7 @@ export function Faq() {
               className="
                 mt-[22px]
                 inline-flex
+                cursor-pointer
                 h-[38px]
                 min-w-[260px]
                 items-center

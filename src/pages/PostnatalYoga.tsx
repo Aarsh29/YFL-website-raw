@@ -1,9 +1,11 @@
 import { Button } from "../components/ui/Button";
+import { Link } from "react-router-dom";
+import rightLeafFlag from "../assets/svgs/Right leaf flag.svg";
 
 export function PostnatalYoga() {
   const benefits = [
     {
-      icon: "/assets/Leaf.png",
+      icon: "/assets/Meditation.png",
       title: "Gentle movement and mobility",
     },
     {
@@ -11,7 +13,7 @@ export function PostnatalYoga() {
       title: "Relaxation and stress relief",
     },
     {
-      icon: "/assets/Check.png",
+      icon: "/assets/Goal.png",
       title: "Better body awareness",
     },
     {
@@ -172,24 +174,25 @@ export function PostnatalYoga() {
                 well-being after childbirth.
               </p>
 
-              <Button
-                className="
-                  mt-[23px]
-                  h-[47px]
-                  min-w-[280px]
-                  rounded-[8px]
-                  bg-[#7ea65c]
-                  px-7
-                  text-[14px]
-                  md:text-[15px]
-                  font-bold
-                  text-white
-                  shadow-[0_3px_7px_rgba(0,0,0,0.20)]
-                  hover:bg-[#6f9650]
-                "
-              >
-                BOOK A FREE CONSULTATION
-              </Button>
+              <Link to="/consultation" className="mt-[23px] inline-flex">
+                <Button
+                  className="
+                    h-[47px]
+                    min-w-[280px]
+                    rounded-[8px]
+                    bg-[#7ea65c]
+                    px-7
+                    text-[14px]
+                    md:text-[15px]
+                    font-bold
+                    text-white
+                    shadow-[0_3px_7px_rgba(0,0,0,0.20)]
+                    hover:bg-[#6f9650]
+                  "
+                >
+                  BOOK A FREE CONSULTATION
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -250,12 +253,12 @@ export function PostnatalYoga() {
               "
             >
              Our postnatal program focuses on gradually rebuilding strength, mobility. core awareness, and confidence while encouraging mindful recovery.Gentle core and pelvic floor recovery, designed for the postpartum body. Safe to start once cleared by your doctor.
-Because a healthy mother deserves to feel her best. 🌿
+Because a healthy mother deserves to feel her best.
             </p>
 
       
             <img
-              src="/assets/leaf-branch.png"
+              src={rightLeafFlag}
               alt=""
               aria-hidden="true"
               className="
@@ -427,7 +430,7 @@ The practice also supports relaxation, mindful breathing and taking a little tim
           </p>
 
             <p className="mt-2 font-body text-[13px] sm:text-[14px] md:text-[15px] font-bold leading-[1.75] text-[#344334]">
-              Every class is online, so you can practice comfortably from your own home while caring for your little one. 🌿.
+              Every class is online, so you can practice comfortably from your own home while caring for your little one.
             </p>
         </div>
       </section>
@@ -537,9 +540,9 @@ The practice also supports relaxation, mindful breathing and taking a little tim
             forward in your recovery journey.
           </p>
 
+          <a href="/join-now" className="mt-[27px] inline-flex">
           <Button
             className="
-              mt-[27px]
               h-[47px]
               min-w-[275px]
               rounded-[8px]
@@ -554,8 +557,9 @@ The practice also supports relaxation, mindful breathing and taking a little tim
               hover:bg-[#6f9650]
             "
           >
-            START YOUR JOURNEY →
+            START YOUR JOURNEY
           </Button>
+          </a>
         </div>
       </section>
 

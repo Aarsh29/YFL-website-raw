@@ -19,7 +19,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center rounded-full px-8 py-4 font-body font-semibold uppercase tracking-wider transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none disabled:hover:-translate-y-0";
+    "inline-flex cursor-pointer items-center justify-center rounded-full px-8 py-4 font-body font-semibold uppercase tracking-wider transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:shadow-none disabled:hover:-translate-y-0";
 
   const variants = {
     primary: "bg-accent-green text-white hover:bg-accent-green/90",
