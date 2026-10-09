@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 
 type Testimonial = {
@@ -106,11 +106,14 @@ export function TestimonialGrid({
   const [transitionEnabled, setTransitionEnabled] = useState(true);
   const slides = [...testimonials, ...testimonials, ...testimonials];
   const pageCount = Math.ceil(testimonials.length / visibleCards);
-  const activePage = Math.floor((activeIndex % testimonials.length) / visibleCards);
+  const activePage =
+    ((Math.floor((activeIndex - testimonials.length) / visibleCards) % pageCount) + pageCount) %
+    pageCount;
 
   useEffect(() => {
     const updateVisibleCards = () => {
-      setVisibleCards(window.matchMedia("(min-width: 768px)").matches ? 3 : 1);
+      const nextVisibleCards = window.matchMedia("(min-width: 768px)").matches ? 3 : 1;
+      setVisibleCards((current) => current === nextVisibleCards ? current : nextVisibleCards);
     };
 
     updateVisibleCards();
@@ -127,21 +130,26 @@ export function TestimonialGrid({
   }, [visibleCards]);
 
   useEffect(() => {
+    setTransitionEnabled(false);
+    setActiveIndex(testimonials.length);
+  }, [testimonials.length, visibleCards]);
+
+  useEffect(() => {
     if (!transitionEnabled) {
       const frame = window.requestAnimationFrame(() => setTransitionEnabled(true));
       return () => window.cancelAnimationFrame(frame);
     }
   }, [transitionEnabled]);
 
-  useLayoutEffect(() => {
-    if (activeIndex >= testimonials.length * 2) {
+  const handleTransitionEnd = () => {
+    if (activeIndex >= testimonials.length + pageCount * visibleCards) {
       setTransitionEnabled(false);
-      setActiveIndex((index) => index - testimonials.length);
+      setActiveIndex(testimonials.length);
     } else if (activeIndex < testimonials.length) {
       setTransitionEnabled(false);
-      setActiveIndex((index) => index + testimonials.length);
+      setActiveIndex(testimonials.length + (pageCount - 1) * visibleCards);
     }
-  }, [activeIndex, testimonials.length]);
+  };
 
   const move = (direction: number) => {
     setTransitionEnabled(true);
@@ -163,6 +171,7 @@ export function TestimonialGrid({
         <div
           aria-live="polite"
           className={`flex ${transitionEnabled ? "transition-transform duration-500 ease-in-out" : "transition-none"}`}
+          onTransitionEnd={handleTransitionEnd}
           style={{
             width: `${(slides.length / visibleCards) * 100}%`,
             transform: `translateX(-${(activeIndex * 100) / slides.length}%)`,
@@ -186,7 +195,7 @@ export function TestimonialGrid({
                     />
                   ))}
                 </div>
-                <p className="mt-2 line-clamp-5 flex-1 text-center font-body text-[12px] leading-[1.55] text-[#394334]">
+                <p className="mt-2 line-clamp-5 flex-1 text-center font-body text-sm leading-[1.55] text-[#394334]">
                   {testimonial.text}
                 </p>
                 <div className="mt-2 border-t border-[#d4dfcc]" />
@@ -199,14 +208,14 @@ export function TestimonialGrid({
                     />
                   </div>
                   <div className="min-w-0">
-                    <h4 className="truncate font-heading text-[11px] font-bold uppercase leading-tight text-[#68864c] sm:text-[12px]">
+                    <h4 className="truncate font-heading text-sm font-bold uppercase leading-tight text-[#68864c]">
                       {testimonial.name}
                     </h4>
-                    <p className="truncate font-heading text-[11px] leading-tight text-[#789b56] sm:text-[12px]">
+                    <p className="truncate font-heading text-xs leading-tight text-[#789b56]">
                       {testimonial.tag}
                     </p>
                     {testimonial.location && (
-                      <p className="truncate font-body text-[10px] leading-tight text-[#596354]">
+                      <p className="truncate font-body text-xs leading-tight text-[#596354]">
                         {testimonial.location}
                       </p>
                     )}
@@ -242,7 +251,7 @@ export function TestimonialGrid({
               setTransitionEnabled(true);
               setActiveIndex(testimonials.length + index * visibleCards);
             }}
-            className={`h-3 w-3 cursor-pointer rounded-full ${activeIndex % testimonials.length === index ? "bg-[#24341d]" : "bg-[#d5e0d0]"}`}
+            className={`h-3 w-3 cursor-pointer rounded-full ${activePage === index ? "bg-[#24341d]" : "bg-[#d5e0d0]"}`}
           />
         ))}
       </div>

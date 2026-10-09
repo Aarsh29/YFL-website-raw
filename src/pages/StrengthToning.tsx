@@ -31,7 +31,7 @@ export function StrengthToning() {
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent via-transparent to-white/10" />
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent via-transparent to-white/10 lg:hidden" />
 
         <div className="absolute inset-0 flex items-center">
           <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 md:px-14 lg:px-20 xl:px-24">

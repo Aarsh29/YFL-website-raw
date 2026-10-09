@@ -21,7 +21,7 @@ import { Button } from "../components/ui/Button";
 import { defaultTestimonials, TestimonialGrid } from "../components/ui/TestimonialGrid";
 import { contactDetails } from "../constants/contactDetails";
 
-const HERO_IMAGE = "/assets/yfl 1.png";
+const HERO_IMAGE = "/assets/BG/Home.png";
 
 const pricingPlans = [
   {
@@ -133,7 +133,7 @@ export function Home() {
       
       <section className="home-hero relative min-h-[520px] overflow-hidden bg-[#D9CBAE] sm:min-h-[620px] lg:min-h-[700px]">
         <img src={HERO_IMAGE} alt="Woman meditating in a peaceful yoga studio" className="absolute inset-0 h-full w-full object-cover object-center" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(223,211,181,.88)_0%,rgba(223,211,181,.6)_43%,rgba(223,211,181,0)_72%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(223,211,181,.88)_0%,rgba(223,211,181,.6)_43%,rgba(223,211,181,0)_72%)] lg:hidden" />
         <div className="relative mx-auto flex min-h-[520px] max-w-[1320px] items-center px-6 py-20 sm:min-h-[620px] sm:px-10 lg:min-h-[700px] lg:px-24">
           <div className="z-10 max-w-[610px] text-left">
             <span className="mb-5 inline-block text-[10px] font-semibold tracking-[0.18em] text-[#3D5A2B] uppercase sm:text-xs">
@@ -168,7 +168,7 @@ export function Home() {
                 <span className="font-serif text-3xl font-bold tracking-tight text-[#486331] sm:text-4xl">
                   {stat.value}
                 </span>
-                <span className="mt-1 text-[10px] font-semibold tracking-wider text-[#69775E] uppercase">
+                <span className="mt-1 text-xs font-semibold tracking-wider text-[#69775E] uppercase">
                   {stat.label}
                 </span>
               </div>
@@ -178,7 +178,7 @@ export function Home() {
       </section>
 
       <section className="relative bg-[#F8FAF3] px-6 py-16 lg:py-20">
-        <div className="mx-auto max-w-[1120px] text-center">
+        <div className="mx-auto max-w-[1280px] text-center">
           <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent-deep">
             OUR GOALS
           </span>
@@ -191,55 +191,31 @@ export function Home() {
             Helping You Build a Healthier Life
           </h2>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {programs.slice(0, 4).map((program) => (
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+            {programs.map((program) => (
               <div
                 key={program.title}
-                className="flex flex-col items-center rounded-[10px] border border-[#DCE4D1] bg-[#EFF4E7] p-4 text-center shadow-[0_2px_5px_rgba(55,75,43,0.16)] transition hover:-translate-y-1 hover:shadow-md sm:p-5"
+                className="flex flex-col items-center rounded-[10px] border border-[#DCE4D1] bg-[#EFF4E7] p-5 text-center shadow-[0_2px_5px_rgba(55,75,43,0.16)] transition hover:-translate-y-1 hover:shadow-md sm:p-6 lg:p-7"
               >
-                <div className="mb-4 h-20 w-20 overflow-hidden rounded-full border-2 border-white shadow-sm bg-white">
+                <div className="mb-5 h-24 w-24 overflow-hidden rounded-full border-2 border-white bg-white shadow-sm">
                   <img src={program.image} alt={program.title} className="h-full w-full object-cover" />
                 </div>
-                <h3 className="font-serif text-base font-bold text-[#405A2A]">{program.title}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#5E6C53] flex-grow">
+                <h3 className="font-serif text-lg font-bold text-[#405A2A]">{program.title}</h3>
+                <p className="mt-3 flex-grow pb-4 text-sm leading-relaxed text-[#5E6C53]">
                   {program.description}
                 </p>
                 <Link to={program.route} className="mt-4 w-full">
                   <Button
                     variant="outline-light"
-                    className="h-7 w-full rounded-[5px] border-[#92AD76] bg-white px-3 py-1 text-[9px] font-bold tracking-wider text-[#4E6B34] hover:bg-forest-strong hover:text-white"
+                    className="h-9 w-full rounded-[5px] border-[#92AD76] bg-white px-3 py-1 text-xs font-bold tracking-wider text-[#4E6B34] hover:bg-forest-strong hover:text-white"
                   >
-                    EXPLORE <ArrowRight aria-hidden="true" className="ml-1 inline h-3 w-3" />
+                    EXPLORE <ArrowRight aria-hidden="true" className="ml-1 inline h-4 w-4" />
                   </Button>
                 </Link>
               </div>
             ))}
           </div>
 
-          <div className="mt-6 flex flex-wrap justify-center gap-6">
-            {programs.slice(4).map((program) => (
-              <div
-                key={program.title}
-                className="w-full max-w-[260px] flex flex-col items-center rounded-[10px] border border-[#DCE4D1] bg-[#EFF4E7] p-4 text-center shadow-[0_2px_5px_rgba(55,75,43,0.16)] transition hover:-translate-y-1 hover:shadow-md sm:p-5"
-              >
-                <div className="mb-4 h-20 w-20 overflow-hidden rounded-full border-2 border-white shadow-sm bg-white">
-                  <img src={program.image} alt={program.title} className="h-full w-full object-cover" />
-                </div>
-                <h3 className="font-serif text-base font-bold text-[#405A2A]">{program.title}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-[#5E6C53] flex-grow">
-                  {program.description}
-                </p>
-                <Link to={program.route} className="mt-4 w-full">
-                  <Button
-                    variant="outline-light"
-                    className="h-7 w-full rounded-[5px] border-[#92AD76] bg-white px-3 py-1 text-[9px] font-bold tracking-wider text-[#4E6B34] hover:bg-forest-strong hover:text-white"
-                  >
-                    EXPLORE <ArrowRight aria-hidden="true" className="ml-1 inline h-3 w-3" />
-                  </Button>
-                </Link>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -252,7 +228,7 @@ export function Home() {
             <h2 className="mt-2 max-w-[560px] font-sans text-xl font-bold leading-tight text-[#587B44] sm:text-2xl">
               Empowering<br className="sm:hidden" /> Every Step of Your Wellness Journey
             </h2>
-            <p className="mt-3 max-w-[1020px] text-[11px] leading-[1.9] text-[#263524] sm:text-xs">
+            <p className="mt-3 max-w-[1020px] text-xs leading-[1.9] text-[#263524] sm:text-sm">
               At Yoga for Life, we believe true wellness is more than physical
               fitness. It is about creating balance between your body, mind,
               and everyday life. Our experienced instructors guide you through
@@ -265,7 +241,7 @@ export function Home() {
               become part of your lifestyle. Because every YFL class is online,
               you can practice comfortably from your own home.
             </p>
-            <p className="mt-1 text-[11px] font-semibold leading-relaxed text-[#263524] sm:text-xs">
+            <p className="mt-1 text-xs font-semibold leading-relaxed text-[#263524] sm:text-sm">
               YFL is not just a yoga class. It is a simple step towards a
               healthier, happier, and more balanced life.
             </p>
@@ -280,7 +256,7 @@ export function Home() {
                   className="flex min-h-[70px] items-center gap-3 rounded-[8px] border border-[#9BA895] bg-[#F4F7EF] px-5 py-3 text-left"
                 >
                   <Icon className="h-5 w-5 shrink-0 text-[#759B59]" strokeWidth={2} />
-                  <p className="text-[11px] leading-[1.25] text-[#2D382A]">{item.text}</p>
+                  <p className="text-xs leading-[1.35] text-[#2D382A]">{item.text}</p>
                 </div>
               );
             })}
@@ -313,7 +289,7 @@ export function Home() {
               <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#E3ECCE] text-[#4A6734]">
                 <Calendar aria-hidden="true" className="h-6 w-6" />
               </span>
-              <h3 className="font-serif text-[11px] font-bold uppercase text-forest">Book a Free Consultation</h3>
+              <h3 className="font-serif text-xs font-bold uppercase text-forest">Book a Free Consultation</h3>
               <p className="mt-2 text-xs leading-relaxed text-[#62715A]">
                 Share your goals and wellness needs with our guides for a tailored assessment.
               </p>
@@ -325,7 +301,7 @@ export function Home() {
               <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#E3ECCE] text-[#4A6734]">
                 <Compass aria-hidden="true" className="h-6 w-6" />
               </span>
-              <h3 className="font-serif text-[11px] font-bold uppercase text-forest">Choose Your Ideal Program</h3>
+              <h3 className="font-serif text-xs font-bold uppercase text-forest">Choose Your Ideal Program</h3>
               <p className="mt-2 text-xs leading-relaxed text-[#62715A]">
                 We recommend the perfect yoga path suited to your routine, health, and schedule.
               </p>
@@ -335,7 +311,7 @@ export function Home() {
               <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#E3ECCE] text-[#4A6734]">
                 <HeartHandshake aria-hidden="true" className="h-6 w-6" />
               </span>
-              <h3 className="font-serif text-[11px] font-bold uppercase text-forest">Start Your Yoga Journey</h3>
+              <h3 className="font-serif text-xs font-bold uppercase text-forest">Start Your Yoga Journey</h3>
               <p className="mt-2 text-xs leading-relaxed text-[#62715A]">
                 Join your classes, build consistency, and experience physical and mental harmony.
               </p>
@@ -401,29 +377,29 @@ export function Home() {
                   className="relative flex min-h-[290px] flex-col rounded-[10px] border border-[#d6dfcc] bg-[#fbfff5] px-4 pb-9 pt-5 text-center shadow-[0_2px_5px_rgba(48,67,37,0.12)]"
                 >
                   {plan.popular && (
-                    <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#6f984f] px-3 py-1 font-body text-[8px] font-bold uppercase text-white">
+                    <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#6f984f] px-3 py-1 font-body text-[10px] font-bold uppercase text-white">
                       Most Popular
                     </span>
                   )}
                   <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#e5eedc] text-[#54743e]">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </span>
-                  <h3 className="mt-1.5 font-heading text-[10px] font-bold text-[#486438]">
+                  <h3 className="mt-1.5 font-heading text-xs font-bold text-[#486438]">
                     {plan.name}
                   </h3>
                   <ul className="mt-2.5 flex-1 space-y-1 border-t border-[#e2e9dc] pt-2 text-left">
                     {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-1.5 font-body text-[9px] leading-tight text-[#485344] sm:text-[10px]">
+                      <li key={feature} className="flex items-center gap-1.5 font-body text-xs leading-tight text-[#485344]">
                         <Check aria-hidden="true" className="h-3 w-3 shrink-0 rounded-full bg-[#79a45a] p-[2px] text-white" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-2 border-t border-[#e2e9dc] pt-2 font-heading text-[12px] font-bold text-[#405b30]">
-                    {plan.price}<span className="ml-1 font-body text-[8px] font-normal text-[#727d6d]">{plan.period}</span>
+                  <p className="mt-2 border-t border-[#e2e9dc] pt-2 font-heading text-sm font-bold text-[#405b30]">
+                    {plan.price}<span className="ml-1 font-body text-xs font-normal text-[#727d6d]">{plan.period}</span>
                   </p>
                   <Link to="/join-now" className="mt-2 inline-flex w-full">
-                    <Button className="h-7 w-full rounded-[6px] bg-[#6f984f] px-2 py-1 text-[9px] font-bold text-white shadow-[0_2px_4px_rgba(54,76,39,0.2)] hover:bg-[#5f8542]">
+                    <Button className="h-9 w-full rounded-[6px] bg-[#6f984f] px-2 py-1 text-xs font-bold text-white shadow-[0_2px_4px_rgba(54,76,39,0.2)] hover:bg-[#5f8542]">
                       GET STARTED <ArrowRight aria-hidden="true" className="ml-1 h-3 w-3" />
                     </Button>
                   </Link>
@@ -437,15 +413,15 @@ export function Home() {
               <Phone aria-hidden="true" className="h-5 w-5" />
             </span>
             <div className="min-w-0 flex-1">
-              <h3 className="font-heading text-[10px] font-bold text-[#587545]">
+              <h3 className="font-heading text-xs font-bold text-[#587545]">
                 PREFER TO DISCUSS PRICING PRIVATELY?
               </h3>
-              <p className="mt-1 font-body text-[9px] leading-relaxed text-[#56624e]">
+              <p className="mt-1 font-body text-xs leading-relaxed text-[#56624e]">
                 We&apos;re happy to help you find the right plan for your goals.
                 Contact us for personalized support.
               </p>
             </div>
-            <div className="grid w-full gap-2 border-t border-[#d7e0d0] pt-3 font-body text-[9px] text-[#4e6040] min-[500px]:w-[170px] min-[500px]:shrink-0 min-[500px]:border-l min-[500px]:border-t-0 min-[500px]:pl-7 min-[500px]:pt-0">
+            <div className="grid w-full gap-2 border-t border-[#d7e0d0] pt-3 font-body text-xs text-[#4e6040] min-[500px]:w-[170px] min-[500px]:shrink-0 min-[500px]:border-l min-[500px]:border-t-0 min-[500px]:pl-7 min-[500px]:pt-0">
               <a href={contactDetails.phoneHref} className="inline-flex cursor-pointer items-center gap-1.5 hover:text-[#315326]">
                 <Phone aria-hidden="true" className="h-3 w-3 text-[#658746]" /> {contactDetails.phoneDisplay}
               </a>
@@ -460,7 +436,10 @@ export function Home() {
         </div>
       </section>
 
-      <section className="relative isolate flex min-h-[320px] items-center justify-center overflow-hidden bg-[#EAF2D8] bg-cover bg-center px-5 py-12 text-center" style={{ backgroundImage: "url('/assets/Untitled design (3) 1.png')" }}>
+      <section
+        className="relative isolate flex min-h-[320px] items-center justify-center overflow-hidden bg-[#EAF2D8] bg-cover bg-right px-5 py-12 text-center sm:bg-center"
+        style={{ backgroundImage: "url('/assets/BG/HomeCta.png')" }}
+      >
         <div className="relative z-10 mx-auto max-w-[620px] px-6">
           <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#5A793F]">
             READY TO BEGIN?

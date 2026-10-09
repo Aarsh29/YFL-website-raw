@@ -71,7 +71,7 @@ export function Navbar() {
             "
           >
             <img
-              src="/assets/YFL LOGO (5) 1.png"
+              src="/assets/YFL Logo.png"
               alt="Yoga For Life"
               className="
                 h-[66px]

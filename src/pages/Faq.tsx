@@ -37,7 +37,7 @@ export function Faq() {
       <section className="relative h-[640px] w-full overflow-hidden sm:h-[655px] lg:h-[670px]">
 
         <img
-          src="/assets/Yoga for Life - Review Post 1 (20) 2.png"
+          src="/assets/BG/FAQ.png"
           alt="Yoga for Life"
           className="
             absolute
@@ -53,6 +53,7 @@ export function Faq() {
           className="
             absolute
             inset-0
+            lg:hidden
             bg-gradient-to-r
             from-[#f2e7c4]/95
             via-[#f2e7c4]/80
@@ -194,22 +195,10 @@ export function Faq() {
           </div>
 
 
-          <div className="space-y-[12px]">
+          <div className="space-y-[10px]">
 
             {faqs.map((faq) => (
-              <div
-                key={faq.q}
-                className="
-                  overflow-hidden
-                  rounded-[7px]
-                  border
-                  border-[#dce4d9]
-                  bg-[#f3f7f0]
-                  transition-all
-                  duration-200
-                  hover:border-[#cbd8c5]
-                "
-              >
+              <div key={faq.q}>
                 <FaqAccordion
                   question={faq.q}
                   answer={faq.a}
@@ -430,6 +419,7 @@ export function Faq() {
           sm:min-h-[370px]
           lg:min-h-[395px]
         "
+        style={{ backgroundImage: "url('/assets/BG/FAQcta.png')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
 
         <div

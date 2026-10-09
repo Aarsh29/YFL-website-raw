@@ -226,7 +226,7 @@ export function JoinNow() {
               mt-3
               max-w-[900px]
               font-body
-              text-[11px]
+              text-[13px]
               uppercase
               tracking-[0.03em]
               text-[#303c2c]
@@ -576,7 +576,7 @@ export function JoinNow() {
             <div className="mt-3 flex items-center justify-center gap-2 md:justify-start">
               <span className="h-px w-5 bg-[#789963]" />
 
-              <p className="font-heading text-[10px] font-semibold tracking-wide text-heading-secondary">
+              <p className="font-heading text-[12px] font-semibold tracking-wide text-heading-secondary">
                 YOGA FOR LIFE · BALANCE. BREATHE. BLOOM.
               </p>
 
@@ -590,7 +590,7 @@ export function JoinNow() {
           </div>
 
           <div>
-            <h3 className="font-heading text-[11px] font-bold uppercase text-[#587448]">
+            <h3 className="font-heading text-[13px] font-bold uppercase text-[#587448]">
               QUICK LINKS
             </h3>
 
@@ -604,7 +604,7 @@ export function JoinNow() {
           </div>
 
           <div>
-            <h3 className="font-heading text-[11px] font-bold uppercase text-[#587448]">
+            <h3 className="font-heading text-[13px] font-bold uppercase text-[#587448]">
               PROGRAMS
             </h3>
 
@@ -619,11 +619,11 @@ export function JoinNow() {
           </div>
 
           <div>
-            <h3 className="font-heading text-[11px] font-bold uppercase text-[#587448]">
+            <h3 className="font-heading text-[13px] font-bold uppercase text-[#587448]">
               CONTACT
             </h3>
 
-            <div className="mt-4 flex flex-col gap-3 font-body text-[11px] text-[#65705e]">
+            <div className="mt-4 flex flex-col gap-3 font-body text-[13px] text-[#65705e]">
               <p><MapPin aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.address}</p>
 
               <p className="leading-4">
@@ -634,18 +634,18 @@ export function JoinNow() {
 
               <p><AtSign aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.instagramHandle}</p>
 
-              <p><Clock aria-hidden="true" className="mr-1 inline h-3 w-3" />Mon–Sat</p>
+              <p><Clock aria-hidden="true" className="mr-1 inline h-3 w-3" />Mon-Sat</p>
             </div>
           </div>
         </div>
 
         <div className="mx-auto mt-10 max-w-[1120px] border-t border-[#9ba49a] pt-5 text-center">
-          <p className="font-body text-[10px] text-[#687260]">
+          <p className="font-body text-[12px] text-[#687260]">
             © Copyright {new Date().getFullYear()} Yoga for Life. All rights reserved.
             <span className="mx-1">Privacy Policy</span> •{" "}
             <span className="ml-1">Terms & Conditions</span>
           </p>
-          <p className="mt-2 font-body text-[10px] text-[#687260]">
+          <p className="mt-2 font-body text-[12px] text-[#687260]">
             - Designed and Developed by{" "}
             <a href="https://creaviq.com/" target="_blank" rel="noreferrer" className="font-semibold text-[#405A2A] hover:underline">
               Creaviq Technologies
@@ -898,7 +898,7 @@ function PlanCard({
         {plan.features.map((feature) => (
           <li
             key={feature}
-            className="flex items-start gap-2 font-body text-[10px] leading-4 text-[#44513d]"
+            className="flex items-start gap-2 font-body text-[12px] leading-5 text-[#44513d]"
           >
             <Check
               size={12}

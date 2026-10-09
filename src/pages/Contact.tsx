@@ -44,7 +44,7 @@ export function Contact() {
         "
       >
         <img
-          src="/assets/hero-yoga-studio.png"
+          src="/assets/BG/Contact.png"
           alt="Yoga studio"
           className="
             absolute
@@ -60,6 +60,7 @@ export function Contact() {
           className="
             absolute
             inset-0
+            lg:hidden
             bg-gradient-to-r
             from-[#f4e9c8]/95
             via-[#f4e9c8]/75
@@ -158,7 +159,7 @@ export function Contact() {
                 className="
                   block
                   font-body
-                  text-[11px]
+                  text-[13px]
                   font-bold
                   tracking-[0.08em]
                   text-[#668c52]
@@ -247,7 +248,7 @@ export function Contact() {
                       className="
                         mt-1
                         font-body
-                        text-[11px]
+                        text-[13px]
                         leading-[1.45]
                         text-muted
                       "
@@ -306,7 +307,7 @@ export function Contact() {
                       className="
                         mt-1
                         font-body
-                        text-[11px]
+                        text-[13px]
                         leading-[1.5]
                         text-muted
                       "
@@ -365,7 +366,7 @@ export function Contact() {
                       className="
                         mt-1
                         font-body
-                        text-[11px]
+                        text-[13px]
                         text-muted
                       "
                     >
@@ -423,12 +424,12 @@ export function Contact() {
                       className="
                         mt-1
                         font-body
-                        text-[11px]
+                        text-[13px]
                         leading-[1.5]
                         text-muted
                       "
                     >
-                      Mon–Sat
+                      Mon-Sat
                       <br />
                       Sunday: Closed
                     </p>
@@ -461,7 +462,7 @@ export function Contact() {
                 className="
                   block
                   font-body
-                  text-[11px]
+                  text-[13px]
                   font-bold
                   tracking-[0.08em]
                   text-[#668c52]
@@ -514,7 +515,7 @@ export function Contact() {
                       bg-surface-soft
                       px-4
                       font-body
-                      text-[11px]
+                      text-[13px]
                       text-body-deep
                       placeholder:text-muted
                       focus:border-accent
@@ -653,9 +654,10 @@ export function Contact() {
           sm:min-h-[360px]
           lg:min-h-[395px]
         "
+        style={{ backgroundImage: "url('/assets/BG/Contactcta.png')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <img
-          src="/assets/Untitled design (3) 1.png"
+          src="/assets/BG/Contactcta.png"
           alt=""
           className="
             absolute
@@ -671,7 +673,8 @@ export function Contact() {
           className="
             absolute
             inset-0
-            bg-white/55
+            bg-[linear-gradient(90deg,rgba(248,250,239,.94)_0%,rgba(248,250,239,.82)_48%,rgba(248,250,239,.3)_100%)]
+            sm:bg-[linear-gradient(90deg,rgba(248,250,239,.9)_0%,rgba(248,250,239,.72)_52%,rgba(248,250,239,.26)_100%)]
           "
         />
 

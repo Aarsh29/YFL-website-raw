@@ -59,7 +59,7 @@ export function Program() {
     <div className="w-full overflow-hidden">
       <section className="relative w-full h-[272px] sm:h-[380px] md:h-[430px] lg:h-[672px] overflow-hidden bg-primary-50">
         <img
-          src="/assets/Untitled design (2) 1.png"
+          src="/assets/BG/programs.png"
           alt="Yoga program"
           className="
             absolute
@@ -76,6 +76,7 @@ export function Program() {
             absolute
             inset-0
             pointer-events-none
+            lg:hidden
             bg-gradient-to-r
             from-transparent
             via-transparent
@@ -265,7 +266,7 @@ export function Program() {
                       sm:mt-4
                       sm:max-w-[185px]
                       font-heading
-                      text-[10px]
+                      text-xs
                       sm:text-[18px]
                       font-bold
                       leading-[1.15]
@@ -284,7 +285,7 @@ export function Program() {
                       sm:mt-5
                       sm:max-w-[175px]
                       font-body
-                      text-[8px]
+                      text-xs
                       leading-[1.25]
                       sm:text-[13px]
                       sm:leading-[1.4]
@@ -307,7 +308,7 @@ export function Program() {
                       bg-transparent
                       p-0
                       font-body
-                      text-[8px]
+                      text-xs
                       sm:text-[12px]
                       font-bold
                       text-[#456d32]
@@ -378,6 +379,7 @@ export function Program() {
           to-[#729d51]
           text-center
         "
+        style={{ backgroundImage: "url('/assets/BG/programscta.png')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <img
           src="/assets/Yoga for Life - Review Post 1 (14) 1 (1).png"

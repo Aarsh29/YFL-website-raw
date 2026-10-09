@@ -314,7 +314,7 @@ export function WeightLossYoga() {
         "
         style={{
           backgroundImage:
-            "url('/assets/Weight Loss CTA Background.png')",
+            "url('/assets/BG/Weightlossyogacta.png')",
         }}
       >
 

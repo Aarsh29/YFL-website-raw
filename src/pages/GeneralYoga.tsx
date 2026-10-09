@@ -65,6 +65,7 @@ export function GeneralYoga() {
             pointer-events-none
             absolute
             inset-0
+            lg:hidden
             bg-gradient-to-r
             from-[#eee5bd]/20
             via-transparent
@@ -475,7 +476,7 @@ export function GeneralYoga() {
 
 
         <img
-          src="/assets/Yoga%20for%20Life%20-%20Review%20Post%201%20(44)%201.png"
+          src="/assets/BG/Generalyogacta.png"
           alt=""
           aria-hidden="true"
           className="

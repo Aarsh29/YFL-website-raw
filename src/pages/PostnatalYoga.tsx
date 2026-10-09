@@ -56,6 +56,7 @@ export function PostnatalYoga() {
             absolute
             inset-0
             pointer-events-none
+            lg:hidden
             bg-gradient-to-r
             from-transparent
             via-transparent
@@ -443,8 +444,9 @@ The practice also supports relaxation, mindful breathing and taking a little tim
           lg:min-h-[390px]
           w-full
           overflow-hidden
-          bg-[#e2e9c9]
+          bg-[#e2e9c9] bg-cover bg-center
         "
+        style={{ backgroundImage: "url('/assets/BG/Postnatalyogacta.png')" }}
       >
    
         <div className="absolute inset-0 pointer-events-none">

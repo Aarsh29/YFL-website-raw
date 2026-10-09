@@ -8,8 +8,8 @@ export function Footer() {
       <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div className="flex flex-col items-start">
           <img
-            src="/assets/YFL LOGO (5) 2.png"
-            alt="Yoga For Life Logo"
+            src="/assets/YFL Logo.png"
+            alt="Yoga For Life logo"
             className="w-24 h-24 object-contain mb-6"
           />
           <p className="font-body text-xs font-bold uppercase tracking-[0.2em] text-accent-green mb-4">
@@ -151,14 +151,23 @@ export function Footer() {
               <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
             </li>
             <li className="flex items-center gap-3">
-              <span className="font-bold text-accent-green text-lg pl-1 shrink-0">
-                @
-              </span>
+              <svg
+                aria-hidden="true"
+                className="h-5 w-5 shrink-0 text-accent-green"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
               <a href={contactDetails.instagramUrl} className="pl-1">{contactDetails.instagramHandle}</a>
             </li>
             <li className="flex items-center gap-3">
               <Clock size={20} className="text-accent-green shrink-0" />
-              <span>Mon–Sat</span>
+              <span>Mon-Sat</span>
             </li>
           </ul>
         </div>

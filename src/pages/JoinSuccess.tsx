@@ -5,8 +5,8 @@ import { Button } from "../components/ui/Button";
 export function JoinSuccess({ type = "plan" }: { type?: "plan" | "consultation" }) {
   const backgroundImage =
     type === "consultation"
-      ? "/assets/ChatGPT Image Aug 28, 2026, 05_01_17 PM 1.png"
-      : "/assets/hero-yoga-studio.png";
+      ? "/assets/ChatGPT Image Aug 28, 2026, 05_01_17 PM 1.jpg"
+      : "/assets/hero-yoga-studio.jpg";
 
   return (
     <section className="relative flex min-h-[calc(100svh-68px)] items-center overflow-hidden bg-hero-overlay">
@@ -15,7 +15,7 @@ export function JoinSuccess({ type = "plan" }: { type?: "plan" | "consultation" 
         alt="A peaceful yoga studio"
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay/90 via-hero-overlay/65 to-hero-overlay/5" />
+      <div className="absolute inset-0 bg-gradient-to-r from-hero-overlay/90 via-hero-overlay/65 to-hero-overlay/5 lg:hidden" />
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100svh-68px)] w-full max-w-[1280px] items-center px-6 py-14 sm:px-10 lg:px-14">
         <div className="w-full max-w-[720px]">

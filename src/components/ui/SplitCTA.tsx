@@ -63,7 +63,7 @@ export function SplitCTA({
                   className="w-full h-full object-cover"
                 />
               )}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/90 hidden md:block" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/90 hidden" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent block md:hidden" />
             </div>
             <div className="md:w-1/2">{textContent}</div>
@@ -90,7 +90,7 @@ export function SplitCTA({
                   className="w-full h-full object-cover"
                 />
               )}
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-primary/90 hidden md:block" />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-primary/90 hidden" />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/90 block md:hidden" />
             </div>
           </>

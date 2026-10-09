@@ -18,7 +18,7 @@ export function PrivateSession() {
 					alt="A woman practicing a personalized yoga session at home"
 					className="absolute inset-0 h-full w-full object-cover object-[38%_center]"
 				/>
-				<div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#dce2ca]/35 to-[#dce2ca]/90" />
+				<div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#dce2ca]/35 to-[#dce2ca]/90 lg:hidden" />
 
 				<div className="relative z-10 mx-auto min-h-[390px] max-w-[1200px] px-6 pb-12 pt-5 sm:min-h-[430px] sm:px-8 lg:px-10">
 					<div className="ml-auto flex min-h-[320px] w-full max-w-[610px] flex-col justify-center pt-8 sm:min-h-[550px] sm:pt-0">
@@ -105,7 +105,7 @@ export function PrivateSession() {
 
 			<section
 				className="relative overflow-hidden bg-cover bg-center"
-				style={{ backgroundImage: "url('/assets/Weight Loss CTA Background.png')" }}
+				style={{ backgroundImage: "url('/assets/BG/Privatesessioncta.png')" }}
 			>
 				<div className="absolute inset-0 bg-[#dce9b7]/45" />
 				<div className="relative z-10 mx-auto flex min-h-[340px] max-w-[900px] flex-col items-center justify-center px-6 py-14 text-center sm:min-h-[390px]">

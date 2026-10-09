@@ -32,7 +32,7 @@ export function PrenatalYoga() {
       <section className="relative w-full overflow-hidden bg-[#f8f6ed]">
 
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#e8efd9]/70 via-[#f8f6ed]/30 to-[#f8f6ed]/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#e8efd9]/70 via-[#f8f6ed]/30 to-[#f8f6ed]/10 lg:hidden" />
 
           <div className="absolute left-[8%] top-[12%] h-[360px] w-[360px] rounded-full border border-[#cfd8bd]/60" />
 
@@ -335,7 +335,7 @@ export function PrenatalYoga() {
         "
         style={{
           backgroundImage:
-            "url('/assets/Yoga for Life - Review Post 1 (33) 1.png')",
+            "url('/assets/BG/PrenatalYogacta.png')",
         }}
       >
 

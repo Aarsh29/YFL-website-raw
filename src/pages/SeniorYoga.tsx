@@ -49,7 +49,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
             className="flex h-full items-center"
           >
             <img
-              src="/assets/logo.png"
+              src="/assets/YFL LOGO (5) 2.png"
               alt="Yoga For Life"
               className="h-[62px] w-auto object-contain"
             />
@@ -185,6 +185,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
             pointer-events-none
             absolute
             inset-0
+            lg:hidden
             bg-gradient-to-r
             from-[#b6ce83]/10
             via-transparent
@@ -584,6 +585,8 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
           w-full
           overflow-hidden
           bg-[#c9dc91]
+          bg-cover
+          bg-center
           sm:min-h-[390px]
           lg:min-h-[440px]
         "
@@ -591,7 +594,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
 
 
         <img
-          src="/assets/hero-yoga-studio.png"
+          src="/assets/BG/SeniorYogacta.png"
           alt=""
           aria-hidden="true"
           className="
@@ -722,7 +725,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
           <div className="text-center lg:text-left">
 
             <img
-              src="/assets/logo.png"
+              src="/assets/YFL LOGO (5) 2.png"
               alt="Yoga For Life"
               className="
                 mx-auto
@@ -740,7 +743,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
                 items-center
                 justify-center
                 gap-[10px]
-                text-[9px]
+                text-xs
                 font-bold
                 tracking-[0.05em]
                 text-heading
@@ -976,7 +979,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
                 />
 
                 <span className="font-body text-[12px] text-heading">
-                  Mon–Sat
+                  Mon-Sat
                 </span>
 
               </div>
@@ -1001,9 +1004,9 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
           <p
             className="
               font-body
-              text-[10px]
+              text-xs
               text-heading
-              sm:text-[11px]
+              sm:text-xs
             "
           >
             © Copyright {new Date().getFullYear()} Yoga for Life. All rights reserved.

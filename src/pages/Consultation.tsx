@@ -36,12 +36,12 @@ export function Consultation() {
       <section className="relative w-full h-[420px] md:h-[430px] lg:h-[440px] overflow-hidden">
       
         <img
-          src="/assets/ChatGPT Image Aug 28, 2026, 05_01_17 PM 1.png"
+          src="/assets/BG/FreeConsultation.png"
           alt="Yoga for Life"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#e7d79c]/85 via-[#e7d79c]/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#e7d79c]/85 via-[#e7d79c]/55 to-transparent lg:hidden" />
         <div className="relative z-10 h-full max-w-[1200px] mx-auto px-8 md:px-12 lg:px-16">
           <div className="h-full flex items-center">
             <div className="w-full lg:w-[53%] pt-4">

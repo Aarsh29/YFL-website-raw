@@ -6,22 +6,22 @@ export function Testimonials() {
     {
       title: "Personalized\nGuidance",
       description: "Programs tailored to\nyour goals, body, and\nlifestyle.",
-      icon: "/assets/Meditation.png",
+      icon: "/assets/Lotus.png",
     },
     {
       title: "Real\nProgress",
       description: "Celebrating every small\nstep forward to big\ntransformation.",
-      icon: "/assets/Meditation.png",
+      icon: "/assets/Lotus.png",
     },
     {
       title: "Supportive\nCommunity",
       description: "A positive and\nencouraging community\nthat inspires you.",
-      icon: "/assets/Meditation.png",
+      icon: "/assets/Lotus.png",
     },
     {
       title: "Expert\nInstructors",
       description: "Certified, experienced,\nand passionate yoga\nexperts.",
-      icon: "/assets/Meditation.png",
+      icon: "/assets/Lotus.png",
     },
   ];
 
@@ -65,7 +65,7 @@ export function Testimonials() {
         "
       >
         <img
-          src="/assets/instructor-placeholder.png"
+          src="/assets/testimonials-hero.png"
           alt="Yoga practice"
           className="
             absolute
@@ -84,6 +84,7 @@ export function Testimonials() {
             left-0
             z-[1]
             w-full
+            lg:hidden
             bg-gradient-to-r
             from-[#f6efd9]
             via-[#f6efd9]/95
@@ -485,7 +486,7 @@ export function Testimonials() {
 
       <section className="relative w-full overflow-hidden">
         <img
-          src="/assets/instructor-meera.png"
+          src="/assets/BG/Testimonialscta.png"
           alt="Yoga meditation"
           className="
             absolute
@@ -501,6 +502,7 @@ export function Testimonials() {
           className="
             absolute
             inset-0
+            lg:hidden
             bg-gradient-to-r
             from-[#dce6bd]/95
             via-[#d5dfb3]/88

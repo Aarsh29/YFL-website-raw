@@ -868,15 +868,14 @@ export function About() {
         className="
           relative
           overflow-hidden
-          bg-gradient-to-r
-          from-[#D3E8C2]
-          via-[#B4D99D]
-          to-[#DCEBCB]
+          bg-cover
+          bg-center
           px-6
           py-12
           sm:px-8
           md:py-16
         "
+        style={{ backgroundImage: "url('/assets/BG/Aboutcta2.png')" }}
       >
         <img
           src={rightLeafFlag}
