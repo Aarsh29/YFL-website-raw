@@ -178,7 +178,13 @@ export function Footer() {
           © Copyright {new Date().getFullYear()} Yoga for Life. All rights reserved.
         </p>
         <p className="font-body text-sm text-text-muted">
-          Privacy Policy • Terms & Conditions
+          <Link to="/privacy-policy" className="transition-colors hover:text-accent-green">
+            Privacy Policy
+          </Link>{" "}
+          •{" "}
+          <Link to="/terms-conditions" className="transition-colors hover:text-accent-green">
+            Terms & Conditions
+          </Link>
         </p>
         <p className="font-body text-sm text-text-muted">
           - Designed and Developed by{" "}
