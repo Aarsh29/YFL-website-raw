@@ -59,7 +59,7 @@ export function Program() {
     <div className="w-full overflow-hidden">
       <section className="relative w-full h-[272px] sm:h-[380px] md:h-[430px] lg:h-[672px] overflow-hidden bg-primary-50">
         <img
-          src="/assets/BG/programs.png"
+          src="/assets/BG/programs.webp"
           alt="Yoga program"
           className="
             absolute
@@ -379,7 +379,7 @@ export function Program() {
           to-[#729d51]
           text-center
         "
-        style={{ backgroundImage: "url('/assets/BG/programscta.png')", backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: "url('/assets/BG/programscta.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <img
           src="/assets/Yoga for Life - Review Post 1 (14) 1 (1).png"

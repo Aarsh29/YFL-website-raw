@@ -65,7 +65,7 @@ export function Testimonials() {
         "
       >
         <img
-          src="/assets/testimonials-hero.png"
+          src="/assets/testimonials-hero.webp"
           alt="Yoga practice"
           className="
             absolute

@@ -21,7 +21,7 @@ import { Button } from "../components/ui/Button";
 import { defaultTestimonials, TestimonialGrid } from "../components/ui/TestimonialGrid";
 import { contactDetails } from "../constants/contactDetails";
 
-const HERO_IMAGE = "/assets/BG/Home.png";
+const HERO_IMAGE = "/assets/BG/Home.webp";
 
 const pricingPlans = [
   {
@@ -438,7 +438,7 @@ export function Home() {
 
       <section
         className="relative isolate flex min-h-[320px] items-center justify-center overflow-hidden bg-[#EAF2D8] bg-cover bg-right px-5 py-12 text-center sm:bg-center"
-        style={{ backgroundImage: "url('/assets/BG/HomeCta.png')" }}
+        style={{ backgroundImage: "url('/assets/BG/HomeCta.webp')" }}
       >
         <div className="relative z-10 mx-auto max-w-[620px] px-6">
           <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#5A793F]">

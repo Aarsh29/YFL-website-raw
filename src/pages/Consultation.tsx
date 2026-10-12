@@ -36,7 +36,7 @@ export function Consultation() {
       <section className="relative w-full h-[420px] md:h-[430px] lg:h-[440px] overflow-hidden">
       
         <img
-          src="/assets/BG/FreeConsultation.png"
+          src="/assets/BG/FreeConsultation.webp"
           alt="Yoga for Life"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />

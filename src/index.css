@@ -5,7 +5,6 @@
 /* Decorative leaf artwork has been removed from the site design. */
 img[src*="leaves"],
 img[src*="Leaf"],
-img[src*="Lotus"],
 img[src*="leaf"] {
   display: none;
 }

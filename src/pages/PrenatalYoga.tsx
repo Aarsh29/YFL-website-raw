@@ -335,7 +335,7 @@ export function PrenatalYoga() {
         "
         style={{
           backgroundImage:
-            "url('/assets/BG/PrenatalYogacta.png')",
+            "url('/assets/BG/PrenatalYogacta.webp')",
         }}
       >
 

@@ -37,7 +37,7 @@ export function Faq() {
       <section className="relative h-[640px] w-full overflow-hidden sm:h-[655px] lg:h-[670px]">
 
         <img
-          src="/assets/BG/FAQ.png"
+          src="/assets/BG/FAQ.webp"
           alt="Yoga for Life"
           className="
             absolute
@@ -426,6 +426,7 @@ export function Faq() {
           className="
             absolute
             inset-0
+            lg:hidden
             bg-gradient-to-br
             from-[#b7d78d]
             via-[#c8e4a5]

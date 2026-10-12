@@ -455,7 +455,8 @@ The practice also supports relaxation, mindful breathing and taking a little tim
             className="
               absolute
               inset-0
-              bg-gradient-to-b
+            lg:hidden
+            bg-gradient-to-b
               from-[#d9e1ba]
               via-[#e5eacb]
               to-[#f3f2e6]

@@ -44,7 +44,7 @@ export function Contact() {
         "
       >
         <img
-          src="/assets/BG/Contact.png"
+          src="/assets/BG/Contact.webp"
           alt="Yoga studio"
           className="
             absolute
@@ -654,10 +654,10 @@ export function Contact() {
           sm:min-h-[360px]
           lg:min-h-[395px]
         "
-        style={{ backgroundImage: "url('/assets/BG/Contactcta.png')", backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: "url('/assets/BG/Contactcta.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <img
-          src="/assets/BG/Contactcta.png"
+          src="/assets/BG/Contactcta.webp"
           alt=""
           className="
             absolute
@@ -673,6 +673,7 @@ export function Contact() {
           className="
             absolute
             inset-0
+            lg:hidden
             bg-[linear-gradient(90deg,rgba(248,250,239,.94)_0%,rgba(248,250,239,.82)_48%,rgba(248,250,239,.3)_100%)]
             sm:bg-[linear-gradient(90deg,rgba(248,250,239,.9)_0%,rgba(248,250,239,.72)_52%,rgba(248,250,239,.26)_100%)]
           "
