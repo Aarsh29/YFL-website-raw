@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "../components/ui/Button";
+import { Navbar } from "../components/layout/Navbar";
 import { contactDetails } from "../constants/contactDetails";
 
 export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
@@ -37,118 +38,7 @@ export function SeniorYoga({ embedded = false }: { embedded?: boolean }) {
   return (
     <main className="w-full overflow-hidden bg-white text-body">
       {!embedded && (
-        <>
-
-
-      <header className="sticky top-0 z-50 w-full bg-white shadow-[0_1px_5px_rgba(0,0,0,0.08)]">
-        <div className="mx-auto flex h-[68px] w-full max-w-[1320px] items-center justify-between px-6 sm:px-8 lg:px-10">
-
-
-          <a
-            href="/"
-            className="flex h-full items-center"
-          >
-            <img
-              src="/assets/YFL LOGO (5) 2.png"
-              alt="Yoga For Life"
-              className="h-[62px] w-auto object-contain"
-            />
-          </a>
-
-
-          <nav className="hidden items-center gap-[30px] lg:flex">
-            <a
-              href="/"
-              className="font-body text-[13px] text-body transition-colors hover:text-link"
-            >
-              Home
-            </a>
-
-            <a
-              href="/about"
-              className="font-body text-[13px] text-body transition-colors hover:text-link"
-            >
-              About
-            </a>
-
-            <a
-              href="/program"
-              className="font-body text-[13px] text-body transition-colors hover:text-link"
-            >
-              Program
-            </a>
-
-            <a
-              href="/testimonials"
-              className="font-body text-[13px] text-body transition-colors hover:text-link"
-            >
-              Testimonials
-            </a>
-
-            <a
-              href="/contact"
-              className="font-body text-[13px] text-body transition-colors hover:text-link"
-            >
-              Contact
-            </a>
-
-            <a
-              href="/faq"
-              className="font-body text-[13px] text-body transition-colors hover:text-link"
-            >
-              FAQ
-            </a>
-          </nav>
-
-
-          <a
-            href="/join-now"
-            className="hidden lg:inline-flex"
-          >
-            <Button
-              className="
-                h-[38px]
-                min-w-[115px]
-                rounded-[7px]
-                bg-link
-                px-[22px]
-                font-body
-                text-[12px]
-                font-bold
-                tracking-[0.03em]
-                text-white
-                shadow-[0_3px_7px_rgba(70,90,50,0.2)]
-                hover:bg-action-dark
-              "
-            >
-              JOIN NOW
-            </Button>
-          </a>
-
-
-          <a
-            href="/join-now"
-            className="lg:hidden"
-          >
-            <Button
-              className="
-                h-[36px]
-                rounded-[6px]
-                bg-link
-                px-[17px]
-                font-body
-                text-[11px]
-                font-bold
-                text-white
-              "
-            >
-              JOIN NOW
-            </Button>
-          </a>
-
-        </div>
-      </header>
-        </>
+        <Navbar />
       )}
 
 

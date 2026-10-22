@@ -180,7 +180,7 @@ export function Program() {
                 key={program.title}
                 className="
                   relative
-                  h-[190px]
+                  h-[250px]
                   sm:h-[310px]
                   w-full
                   overflow-hidden
@@ -199,7 +199,7 @@ export function Program() {
                     absolute
                     inset-y-0
                     right-0
-                    w-[56%]
+                    w-[50%]
                   "
                 >
                   <img
@@ -230,10 +230,11 @@ export function Program() {
                     z-10
                     flex
                     h-full
-                    w-[50%]
+                    w-[64%]
                     flex-col
-                    px-5
+                    px-3
                     py-4
+                    sm:w-[50%]
                     sm:px-9
                     sm:py-8
                   "
@@ -262,11 +263,11 @@ export function Program() {
                   <h3
                     className="
                       mt-2
-                      max-w-[150px]
+                      max-w-none
                       sm:mt-4
                       sm:max-w-[185px]
                       font-heading
-                      text-xs
+                      text-[11px]
                       sm:text-[18px]
                       font-bold
                       leading-[1.15]
@@ -281,11 +282,11 @@ export function Program() {
                   <p
                     className="
                       mt-2
-                      max-w-[115px]
+                      max-w-none
                       sm:mt-5
                       sm:max-w-[175px]
                       font-body
-                      text-xs
+                      text-[10px]
                       leading-[1.25]
                       sm:text-[13px]
                       sm:leading-[1.4]
@@ -299,6 +300,7 @@ export function Program() {
                     to={program.link}
                     className="
                       mt-2
+                      text-[10px]
                       sm:mt-auto
                       flex
                       w-fit
@@ -390,7 +392,7 @@ export function Program() {
             left-0
             w-28
             md:w-40
-            opacity-200
+            opacity-100
             pointer-events-none
           "
         />
@@ -403,7 +405,7 @@ export function Program() {
             bottom-0
             right-0
             w-28
-            md:w-50
+            md:w-48
             opacity-100
             scale-x-[1]
             pointer-events-none
@@ -430,7 +432,7 @@ export function Program() {
           <p
             className="
               font-body
-              text-white
+              text-primary-dark
               text-sm
               md:text-base
               leading-relaxed
@@ -446,7 +448,7 @@ export function Program() {
           </p>
 
           <Link to="/join-now">
-            <Button variant="outline-dark">START YOUR JOURNEY →</Button>
+            <Button variant="outline-light">START YOUR JOURNEY →</Button>
           </Link>
         </div>
       </section>

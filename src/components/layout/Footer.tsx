@@ -4,28 +4,28 @@ import { contactDetails } from "../../constants/contactDetails";
 
 export function Footer() {
   return (
-    <footer className="bg-white pt-20 pb-8 px-6 md:px-10 border-t border-border-soft mt-auto">
-      <div className="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <footer className="bg-white border-t border-border-soft px-5 pt-10 pb-6 md:px-10 md:pt-20 md:pb-8">
+      <div className="max-w-[1320px] mx-auto grid grid-cols-1 gap-8 mb-10 md:grid-cols-2 md:gap-12 md:mb-16 lg:grid-cols-4">
         <div className="flex flex-col items-start">
           <img
             src="/assets/YFL Logo.png"
             alt="Yoga For Life logo"
-            className="w-24 h-24 object-contain mb-6"
+            className="h-16 w-16 object-contain mb-4 md:h-24 md:w-24 md:mb-6"
           />
-          <p className="font-body text-xs font-bold uppercase tracking-[0.2em] text-accent-green mb-4">
+          <p className="font-body text-[10px] font-bold uppercase tracking-[0.16em] text-accent-green mb-3 md:text-xs md:tracking-[0.2em] md:mb-4">
             ⟶ YOGA FOR LIFE · BALANCE. BREATHE. BLOOM. ⟵
           </p>
-          <p className="font-body text-text-muted leading-relaxed">
+          <p className="font-body text-sm text-text-muted leading-relaxed md:text-base">
             Helping you build strength, balance, and inner peace through
             authentic yoga.
           </p>
         </div>
 
         <div>
-          <h4 className="font-heading text-xl text-primary-dark font-semibold mb-6">
+          <h4 className="font-heading text-lg text-primary-dark font-semibold mb-4 md:text-xl md:mb-6">
             Quick Links
           </h4>
-          <ul className="flex flex-col gap-3 font-body text-text-muted">
+          <ul className="flex flex-col gap-2 font-body text-sm text-text-muted md:gap-3 md:text-base">
             <li>
               <Link
                 to="/"
@@ -78,10 +78,10 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="font-heading text-xl text-primary-dark font-semibold mb-6">
+          <h4 className="font-heading text-lg text-primary-dark font-semibold mb-4 md:text-xl md:mb-6">
             Programs
           </h4>
-          <ul className="flex flex-col gap-3 font-body text-text-muted">
+          <ul className="flex flex-col gap-2 font-body text-sm text-text-muted md:gap-3 md:text-base">
             <li>
               <Link
                 to="/program/weight-loss-yoga"
@@ -134,10 +134,10 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="font-heading text-xl text-primary-dark font-semibold mb-6">
+          <h4 className="font-heading text-lg text-primary-dark font-semibold mb-4 md:text-xl md:mb-6">
             Contact
           </h4>
-          <ul className="flex flex-col gap-4 font-body text-text-muted">
+          <ul className="flex flex-col gap-3 font-body text-sm text-text-muted md:gap-4 md:text-base">
             <li className="flex items-start gap-3">
               <MapPin size={20} className="text-accent-green shrink-0 mt-0.5" />
               <span>{contactDetails.address}</span>
@@ -173,11 +173,11 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="max-w-[1320px] mx-auto pt-8 border-t border-border-soft flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="font-body text-sm text-text-muted">
+      <div className="max-w-[1320px] mx-auto flex flex-col items-center justify-between gap-3 border-t border-border-soft pt-6 md:flex-row md:gap-4 md:pt-8">
+        <p className="font-body text-xs text-center text-text-muted md:text-sm">
           © Copyright {new Date().getFullYear()} Yoga for Life. All rights reserved.
         </p>
-        <p className="font-body text-sm text-text-muted">
+        <p className="font-body text-xs text-center text-text-muted md:text-sm">
           <Link to="/privacy-policy" className="transition-colors hover:text-accent-green">
             Privacy Policy
           </Link>{" "}
@@ -186,7 +186,7 @@ export function Footer() {
             Terms & Conditions
           </Link>
         </p>
-        <p className="font-body text-sm text-text-muted">
+        <p className="font-body text-xs text-center text-text-muted md:text-sm">
           - Designed and Developed by{" "}
           <a
             href="https://creaviq.com/"

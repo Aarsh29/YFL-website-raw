@@ -49,7 +49,8 @@ export function Navbar() {
           grid
           h-[68px]
           w-full
-          grid-cols-[1fr_auto_1fr]
+          grid-cols-[auto_1fr_auto]
+          lg:grid-cols-[1fr_auto_1fr]
           items-center
           px-6
           sm:px-8
@@ -57,13 +58,13 @@ export function Navbar() {
           xl:px-12
         "
       >
-        <div className="flex items-center justify-start">
+        <div className="flex items-center justify-start gap-2.5">
           <Link
             to="/"
             className="
               flex
               h-[68px]
-              w-[105px]
+              w-[92px]
               items-center
               justify-start
               outline-none
@@ -81,6 +82,22 @@ export function Navbar() {
                 object-left
               "
             />
+          </Link>
+          <Link
+            to="/"
+            className="
+              whitespace-nowrap
+              font-heading
+              text-[17px]
+              font-semibold
+              leading-none
+              text-primary-dark
+              outline-none
+              focus:outline-none
+              sm:text-[19px]
+            "
+          >
+            Yoga for Life
           </Link>
         </div>
 
@@ -152,7 +169,7 @@ export function Navbar() {
           </div>
         </div>
 
-        <div className="flex items-center justify-end">
+        <div className="flex items-center justify-end justify-self-end">
           <Link
             to="/join-now"
             className="
