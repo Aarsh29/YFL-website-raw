@@ -18,6 +18,7 @@ import { PrivateSession } from "./pages/PrivateSession";
 import { JoinSuccess } from "./pages/JoinSuccess";
 import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 import { TermsConditions } from "./pages/TermsConditions";
+import { NotFound } from "./pages/NotFound";
 import ScrollToTop from "./components/utils/ScrollToTop";
 import Test from './pages/Test'
 
@@ -45,9 +46,10 @@ function App() {
           <Route path="consultation" element={<Consultation />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-conditions" element={<TermsConditions />} />
+          <Route path="join-now" element={<JoinNow />} />
+          <Route path="test" element={<Test />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
-        <Route path="/join-now" element={<JoinNow />} />
-        <Route path="/test" element={<Test />} />
       </Routes>
     </Router>
   );

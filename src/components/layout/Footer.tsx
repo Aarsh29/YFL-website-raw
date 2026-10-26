@@ -7,11 +7,19 @@ export function Footer() {
     <footer className="bg-white border-t border-border-soft px-5 pt-10 pb-6 md:px-10 md:pt-20 md:pb-8">
       <div className="max-w-[1320px] mx-auto grid grid-cols-1 gap-8 mb-10 md:grid-cols-2 md:gap-12 md:mb-16 lg:grid-cols-4">
         <div className="flex flex-col items-start">
-          <img
-            src="/assets/YFL Logo.png"
-            alt="Yoga For Life logo"
-            className="h-16 w-16 object-contain mb-4 md:h-24 md:w-24 md:mb-6"
-          />
+          <Link
+            to="/"
+            className="flex items-center gap-3 outline-none focus:outline-none"
+          >
+            <img
+              src="/assets/YFL Logo.png"
+              alt="Yoga For Life"
+              className="h-[100px] w-[138px] scale-[1.08] object-contain object-left"
+            />
+            <span className="whitespace-nowrap font-heading text-[21px] font-semibold leading-none text-primary-dark sm:text-[24px]">
+              Yoga for Life
+            </span>
+          </Link>
           <p className="font-body text-[10px] font-bold uppercase tracking-[0.16em] text-accent-green mb-3 md:text-xs md:tracking-[0.2em] md:mb-4">
             ⟶ YOGA FOR LIFE · BALANCE. BREATHE. BLOOM. ⟵
           </p>

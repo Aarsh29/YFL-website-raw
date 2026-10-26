@@ -57,23 +57,24 @@ export function Testimonials() {
       <section
         className="
           relative
-          h-[560px]
+          h-[520px]
           w-full
           overflow-hidden
-          sm:h-[600px]
+          sm:h-[560px]
           lg:h-[672px]
         "
       >
         <img
           src="/assets/testimonials-hero.webp"
-          alt="Yoga practice"
+          alt="Woman practicing yoga in a bright studio"
           className="
             absolute
             inset-0
             h-full
             w-full
             object-cover
-            object-center
+            object-[68%_center]
+            lg:object-center
           "
         />
 

@@ -57,102 +57,52 @@ const programs = [
 export function Program() {
   return (
     <div className="w-full overflow-hidden">
-      <section className="relative w-full h-[272px] sm:h-[380px] md:h-[430px] lg:h-[672px] overflow-hidden bg-primary-50">
-        <img
-          src="/assets/BG/programs.webp"
-          alt="Yoga program"
-          className="
-            absolute
-            inset-0
-            w-full
-            h-full
-            object-cover
-            object-center
-          "
-        />
-
-        <div
-          className="
-            absolute
-            inset-0
-            pointer-events-none
-            lg:hidden
-            bg-gradient-to-r
-            from-transparent
-            via-transparent
-            to-white/10
-          "
-        />
-
-        <div
-          className="
-            absolute
-            inset-0
-            flex
-            items-center
-          "
-        >
-          <div
-            className="
-              w-full
-              max-w-[1400px]
-              mx-auto
-              px-6
-              sm:px-10
-              md:px-14
-              lg:px-20
-              xl:px-24
-            "
-          >
-            <div
+      <section
+        className="relative grid h-[300px] w-full grid-cols-[46%_54%] overflow-hidden bg-cover bg-center sm:h-[340px] md:h-[400px] lg:h-[672px] lg:grid-cols-2"
+        style={{ backgroundImage: "url('/assets/BG/programs.webp')" }}
+      >
+        <div className="relative z-10 col-start-2 flex items-center bg-white/80 px-3 py-5 sm:bg-white/70 sm:px-6 md:bg-white/55 md:px-10 lg:bg-white/35 lg:px-16 xl:px-24">
+          <div className="relative z-10 w-full max-w-[620px]">
+            <h1
               className="
-                ml-auto
-                w-[48%]
-                max-w-[620px]
-                pr-0
-                sm:pr-4
-                md:pr-8
-                lg:pr-12
+                mb-3
+                font-heading
+                text-[25px]
+                font-medium
+                leading-[1.08]
+                text-primary-dark
+                sm:mb-4
+                sm:text-4xl
+                md:text-5xl
+                lg:text-[56px]
+                xl:text-[62px]
               "
             >
-              <h1
-                className="
-                  font-heading
-                  text-primary-dark
-                  font-medium
-                  leading-[1.08]
-                  text-3xl
-                  sm:text-4xl
-                  md:text-5xl
-                  lg:text-[56px]
-                  xl:text-[62px]
-                  mb-4
-                "
-              >
-                <span className="block">Find the Right Yoga</span>
+              <span className="block">Find the Right Yoga</span>
+              <span className="block">Program for You</span>
+            </h1>
 
-                <span className="block">Program for You</span>
-              </h1>
+            <p
+              className="
+                mb-4
+                max-w-[420px]
+                font-body
+                text-[11px]
+                leading-relaxed
+                text-[#33402d]
+                sm:mb-6
+                sm:text-base
+                md:text-lg
+              "
+            >
+              Every body is different, Every journey is unique.
+            </p>
 
-              <p
-                className="
-                  font-body
-                  text-[#33402d]
-                  text-sm
-                  sm:text-base
-                  md:text-lg
-                  leading-relaxed
-                  max-w-[1020px]
-                  mb-6
-                "
-              >
-                Every body is different, Every journey is unique.
-              </p>
-
-              <Link to="/join-now">
-                <Button>EXPLORE OUR PROGRAMS</Button>
-              </Link>
-            </div>
+            <Link to="/join-now">
+              <Button className="px-4 py-3 text-[10px] sm:px-8 sm:py-4 sm:text-xs">
+                EXPLORE OUR PROGRAMS
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -34,18 +34,19 @@ export function Faq() {
   return (
     <main className="w-full overflow-hidden bg-white text-[#304333]">
 
-      <section className="relative h-[640px] w-full overflow-hidden sm:h-[655px] lg:h-[670px]">
+      <section className="relative h-[520px] w-full overflow-hidden sm:h-[560px] lg:h-[670px]">
 
         <img
           src="/assets/BG/FAQ.webp"
-          alt="Yoga for Life"
+          alt="Yoga meditation room with a wall mural"
           className="
             absolute
             inset-0
             h-full
             w-full
             object-cover
-            object-center
+            object-[65%_center]
+            lg:object-center
           "
         />
 

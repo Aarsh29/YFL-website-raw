@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   User,
   Mail,
@@ -14,13 +14,9 @@ import {
   Heart,
   Crown,
   CircleUserRound,
-  MapPin,
   Star,
-  AtSign,
-  Clock,
 } from "lucide-react";
 import { sendInquiry } from "../utils/sendInquiry";
-import { contactDetails } from "../constants/contactDetails";
 
 type Program = {
   id: string;
@@ -552,107 +548,6 @@ export function JoinNow() {
         </div>
       </section>
 
-      <footer className="border-t border-[#e7ece1] bg-white px-6 pb-5 pt-14 sm:px-10 md:pt-16">
-        <div
-          className="
-            mx-auto
-            grid
-            max-w-[1120px]
-            grid-cols-1
-            gap-12
-            md:grid-cols-[1.6fr_0.8fr_0.9fr_1.1fr]
-            md:gap-8
-          "
-        >
-          <div className="text-center md:text-left">
-            <Link to="/" className="inline-flex">
-              <img
-                src="/assets/YFL LOGO (5) 2.png"
-                alt="Yoga For Life"
-                className="mx-auto h-[105px] w-[105px] object-contain md:mx-0"
-              />
-            </Link>
-
-            <div className="mt-3 flex items-center justify-center gap-2 md:justify-start">
-              <span className="h-px w-5 bg-[#789963]" />
-
-              <p className="font-heading text-[12px] font-semibold tracking-wide text-heading-secondary">
-                YOGA FOR LIFE · BALANCE. BREATHE. BLOOM.
-              </p>
-
-              <span className="h-px w-5 bg-[#789963]" />
-            </div>
-
-            <p className="mx-auto mt-4 max-w-[285px] font-body text-[12px] leading-5 text-[#65705e] md:mx-0">
-              Helping you build strength, balance, and inner peace through
-              authentic yoga.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-heading text-[13px] font-bold uppercase text-[#587448]">
-              QUICK LINKS
-            </h3>
-
-            <div className="mt-4 flex flex-col gap-2.5">
-              <FooterLink to="/" label="Home" />
-              <FooterLink to="/about" label="About" />
-              <FooterLink to="/testimonials" label="Testimonials" />
-              <FooterLink to="/contact" label="Contact" />
-              <FooterLink to="/join-now" label="Join Now" />
-            </div>
-          </div>
-
-          <div>
-            <h3 className="font-heading text-[13px] font-bold uppercase text-[#587448]">
-              PROGRAMS
-            </h3>
-
-            <div className="mt-4 flex flex-col gap-2.5">
-              <FooterLink to="/program/weight-loss-yoga" label="Weight Loss" />
-              <FooterLink to="/program/prenatal-yoga" label="Prenatal" />
-              <FooterLink to="/program/postnatal-yoga" label="Postnatal" />
-              <FooterLink to="/program/general-yoga" label="General yoga" />
-              <FooterLink to="/program/senior-yoga" label="Senior yoga" />
-              <FooterLink to="/program/private-session" label="Private sessions" />
-            </div>
-          </div>
-
-          <div>
-            <h3 className="font-heading text-[13px] font-bold uppercase text-[#587448]">
-              CONTACT
-            </h3>
-
-            <div className="mt-4 flex flex-col gap-3 font-body text-[13px] text-[#65705e]">
-              <p><MapPin aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.address}</p>
-
-              <p className="leading-4">
-                <Phone aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.phoneDisplay}
-              </p>
-
-              <p><Mail aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.email}</p>
-
-              <p><AtSign aria-hidden="true" className="mr-1 inline h-3 w-3" />{contactDetails.instagramHandle}</p>
-
-              <p><Clock aria-hidden="true" className="mr-1 inline h-3 w-3" />Mon-Sat</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="mx-auto mt-10 max-w-[1120px] border-t border-[#9ba49a] pt-5 text-center">
-          <p className="font-body text-[12px] text-[#687260]">
-            © Copyright {new Date().getFullYear()} Yoga for Life. All rights reserved.
-            <span className="mx-1">Privacy Policy</span> •{" "}
-            <span className="ml-1">Terms & Conditions</span>
-          </p>
-          <p className="mt-2 font-body text-[12px] text-[#687260]">
-            - Designed and Developed by{" "}
-            <a href="https://creaviq.com/" target="_blank" rel="noreferrer" className="font-semibold text-[#405A2A] hover:underline">
-              Creaviq Technologies
-            </a>
-          </p>
-        </div>
-      </footer>
     </main>
   );
 }
@@ -941,29 +836,5 @@ function PlanCard({
         </div>
       </div>
     </button>
-  );
-}
-
-
-function FooterLink({
-  to,
-  label,
-}: {
-  to: string;
-  label: string;
-}) {
-  return (
-    <Link
-      to={to}
-      className="
-        font-body
-        text-[11px]
-        text-[#65705e]
-        transition-colors
-        hover:text-[#557946]
-      "
-    >
-      {label}
-    </Link>
   );
 }

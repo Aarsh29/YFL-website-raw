@@ -37,22 +37,23 @@ export function Contact() {
         className="
           relative
           w-full
-          h-[380px]
-          sm:h-[710px]
+          h-[350px]
+          sm:h-[560px]
           lg:h-[672px]
           overflow-hidden
         "
       >
         <img
           src="/assets/BG/Contact.webp"
-          alt="Yoga studio"
+          alt="Peaceful yoga studio with a meditation space"
           className="
             absolute
             inset-0
             h-full
             w-full
             object-cover
-            object-center
+            object-[65%_center]
+            lg:object-center
           "
         />
 

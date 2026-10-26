@@ -131,10 +131,14 @@ export function Home() {
   return (
     <main className="w-full bg-[#FCFDF9] text-[#2D3823] font-sans antialiased selection:bg-[#CCD9BE]">
       
-      <section className="home-hero relative min-h-[520px] overflow-hidden bg-[#D9CBAE] sm:min-h-[620px] lg:min-h-[700px]">
-        <img src={HERO_IMAGE} alt="Woman meditating in a peaceful yoga studio" className="absolute inset-0 h-full w-full object-cover object-center" />
+      <section className="home-hero relative min-h-[480px] overflow-hidden bg-[#D9CBAE] sm:min-h-[560px] lg:min-h-[700px]">
+        <img
+          src={HERO_IMAGE}
+          alt="Woman practicing yoga in a peaceful studio"
+          className="absolute inset-0 h-full w-full object-cover object-[65%_center] sm:object-center"
+        />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(223,211,181,.88)_0%,rgba(223,211,181,.6)_43%,rgba(223,211,181,0)_72%)] lg:hidden" />
-        <div className="relative mx-auto flex min-h-[520px] max-w-[1320px] items-center px-6 py-20 sm:min-h-[620px] sm:px-10 lg:min-h-[700px] lg:px-24">
+        <div className="relative mx-auto flex min-h-[480px] max-w-[1320px] items-center px-6 py-16 sm:min-h-[560px] sm:px-10 sm:py-20 lg:min-h-[700px] lg:px-24">
           <div className="z-10 max-w-[610px] text-left">
             <span className="mb-5 inline-block text-[10px] font-semibold tracking-[0.18em] text-[#3D5A2B] uppercase sm:text-xs">
               YOGA FOR LIFE · BALANCE. BREATHE. BLOOM.
@@ -342,9 +346,9 @@ export function Home() {
       </section>
 
       <section id="pricing" className="relative isolate overflow-hidden bg-[#F4F7EF] px-5 pb-[60px] pt-12 sm:px-8">
-        <div className="relative z-10 mx-auto max-w-[920px] text-center">
-          <p className="font-heading text-[16px] font-bold text-[#4a6636]">PRICING</p>
-          <p className="mx-auto mt-3 max-w-[400px] font-body text-[12px] leading-[1.8] text-[#5f6d56]">
+        <div className="relative z-10 mx-auto max-w-[1040px] text-center">
+          <p className="font-heading text-[17px] font-bold text-[#4a6636]">PRICING</p>
+          <p className="mx-auto mt-3 max-w-[460px] font-body text-[14px] leading-[1.7] text-[#5f6d56]">
             Simple, flexible membership options designed to help you stay
             consistent and achieve lasting results.
           </p>
@@ -368,13 +372,13 @@ export function Home() {
             />
           </div>
 
-          <div className="mx-auto mt-10 grid max-w-[556px] grid-cols-1 items-stretch gap-3 min-[500px]:grid-cols-3 min-[500px]:gap-8">
+          <div className="mx-auto mt-10 grid max-w-[680px] grid-cols-1 items-stretch gap-5 min-[500px]:grid-cols-3 min-[500px]:gap-6">
             {pricingPlans.map((plan) => {
               const Icon = plan.icon;
               return (
                 <article
                   key={plan.name}
-                  className="relative flex min-h-[290px] flex-col rounded-[10px] border border-[#d6dfcc] bg-[#fbfff5] px-4 pb-9 pt-5 text-center shadow-[0_2px_5px_rgba(48,67,37,0.12)]"
+                  className="relative flex min-h-[320px] flex-col rounded-[10px] border border-[#d6dfcc] bg-[#fbfff5] px-5 pb-9 pt-6 text-center shadow-[0_2px_5px_rgba(48,67,37,0.12)]"
                 >
                   {plan.popular && (
                     <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#6f984f] px-3 py-1 font-body text-[10px] font-bold uppercase text-white">
@@ -384,23 +388,23 @@ export function Home() {
                   <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#e5eedc] text-[#54743e]">
                     <Icon aria-hidden="true" className="h-5 w-5" />
                   </span>
-                  <h3 className="mt-1.5 font-heading text-xs font-bold text-[#486438]">
+                  <h3 className="mt-2 font-heading text-[14px] font-bold text-[#486438]">
                     {plan.name}
                   </h3>
                   <ul className="mt-2.5 flex-1 space-y-1 border-t border-[#e2e9dc] pt-2 text-left">
                     {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-1.5 font-body text-xs leading-tight text-[#485344]">
-                        <Check aria-hidden="true" className="h-3 w-3 shrink-0 rounded-full bg-[#79a45a] p-[2px] text-white" />
+                      <li key={feature} className="flex items-center gap-2 font-body text-[14px] leading-snug text-[#485344]">
+                        <Check aria-hidden="true" className="h-3.5 w-3.5 shrink-0 rounded-full bg-[#79a45a] p-[2px] text-white" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-2 border-t border-[#e2e9dc] pt-2 font-heading text-sm font-bold text-[#405b30]">
+                  <p className="mt-3 border-t border-[#e2e9dc] pt-3 font-heading text-[16px] font-bold text-[#405b30]">
                     {plan.price}<span className="ml-1 font-body text-xs font-normal text-[#727d6d]">{plan.period}</span>
                   </p>
-                  <Link to="/join-now" className="mt-2 inline-flex w-full">
-                    <Button className="h-9 w-full rounded-[6px] bg-[#6f984f] px-2 py-1 text-xs font-bold text-white shadow-[0_2px_4px_rgba(54,76,39,0.2)] hover:bg-[#5f8542]">
-                      GET STARTED <ArrowRight aria-hidden="true" className="ml-1 h-3 w-3" />
+                  <Link to="/join-now" className="mt-3 inline-flex w-full">
+                    <Button className="h-10 w-full rounded-[6px] bg-[#6f984f] px-2 py-1 text-[13px] font-bold text-white shadow-[0_2px_4px_rgba(54,76,39,0.2)] hover:bg-[#5f8542]">
+                      GET STARTED <ArrowRight aria-hidden="true" className="ml-1 h-3.5 w-3.5" />
                     </Button>
                   </Link>
                 </article>
@@ -408,20 +412,20 @@ export function Home() {
             })}
           </div>
 
-          <div className="relative mx-auto mt-[54px] flex min-h-[134px] max-w-[556px] flex-col items-center gap-4 rounded-[9px] border border-[#ccd7c2] bg-[#f8fbf4] px-4 py-6 text-left min-[500px]:flex-row min-[500px]:gap-4">
+          <div className="relative mx-auto mt-[54px] flex min-h-[150px] max-w-[680px] flex-col items-center gap-4 rounded-[9px] border border-[#ccd7c2] bg-[#f8fbf4] px-5 py-7 text-left min-[500px]:flex-row min-[500px]:gap-5">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e5eedc] text-[#789b56]">
               <Phone aria-hidden="true" className="h-5 w-5" />
             </span>
             <div className="min-w-0 flex-1">
-              <h3 className="font-heading text-xs font-bold text-[#587545]">
+              <h3 className="font-heading text-[13px] font-bold text-[#587545]">
                 PREFER TO DISCUSS PRICING PRIVATELY?
               </h3>
-              <p className="mt-1 font-body text-xs leading-relaxed text-[#56624e]">
+              <p className="mt-1 font-body text-[14px] leading-relaxed text-[#56624e]">
                 We&apos;re happy to help you find the right plan for your goals.
                 Contact us for personalized support.
               </p>
             </div>
-            <div className="grid w-full gap-2 border-t border-[#d7e0d0] pt-3 font-body text-xs text-[#4e6040] min-[500px]:w-[170px] min-[500px]:shrink-0 min-[500px]:border-l min-[500px]:border-t-0 min-[500px]:pl-7 min-[500px]:pt-0">
+            <div className="grid w-full gap-2 border-t border-[#d7e0d0] pt-3 font-body text-[13px] text-[#4e6040] min-[500px]:w-[190px] min-[500px]:shrink-0 min-[500px]:border-l min-[500px]:border-t-0 min-[500px]:pl-7 min-[500px]:pt-0">
               <a href={contactDetails.phoneHref} className="inline-flex cursor-pointer items-center gap-1.5 hover:text-[#315326]">
                 <Phone aria-hidden="true" className="h-3 w-3 text-[#658746]" /> {contactDetails.phoneDisplay}
               </a>
